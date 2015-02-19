@@ -1,0 +1,60 @@
+{
+  "path": "Treatment.csv",
+  "schema": {
+    "fields": [
+      {
+        "name": "CompanyPlotNumber",
+        "type": "string",
+        "constraints": {
+          "required": true
+        }
+      },
+      {
+        "name": "TreatmentNumber",
+        "type": "number",
+        "constraints": {
+          "min": 1,
+          "max": 12
+        }
+      },
+      {
+        "name": "TreatmentCode",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(NT|P|H|M|C|B|TH|TW|F|PC|CT|S|UP|UA|D|NK)$/"
+        }
+      },
+      {
+        "name": "TreatmentYear",
+        "type": "number",
+        "constraints": {
+          "min": 1800,
+          "max": 2050
+        }
+      },
+      {
+        "name": "TreatmentMonth",
+        "type": "number",
+        "constraints": {
+          "min": 1,
+          "max": 12
+        }
+      },
+      {
+        "name": "TreatmentDay",
+        "type": "number",
+        "constraints": {
+          "min": 1,
+          "max": 31
+        }
+      },
+      {
+        "name": "TreatmentComment",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "path": "Admin.csv",
+  "schema": {
+    "fields": [
+      {
+        "name": "Company",
+        "type": "string",
+        "constraints": {
+          "required": true,
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WEYR|WEYR|UNKN|HPFP)$/"
+        }
+      },
+      {
+        "name": "NumberPlotsSubmitted",
+        "type": "string",
+        "constraints": {
+          "type": true
+        }
+      },
+      {
+        "name": "ParentOrganization",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "AdminComment",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      }
+    ]
+  }
+}

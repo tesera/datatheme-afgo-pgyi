@@ -1,0 +1,244 @@
+{
+  "path": "PlotMeasurement.csv",
+  "schema": {
+    "fields": [
+      {
+        "name": "CompanyPlotNumber",
+        "type": "string",
+        "constraints": {
+          "required": true
+        }
+      },
+      {
+        "name": "MeasurementNumber",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "MeasurementYear",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "MeasurementMonth",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "MeasurementDay",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "StandOrigin",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(C|L|F|P|R|N|S|A|B)$/"
+        }
+      },
+      {
+        "name": "PlotType",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(1|2|3|4)$/"
+        }
+      },
+      {
+        "name": "StandType",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(1|2|3)$/"
+        }
+      },
+      {
+        "name": "PlotStatus",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(1|2|3|4|5|6|7|8|9|10|12|13|14|15|16|17|18|19|20|21|11)$/"
+        }
+      },
+      {
+        "name": "TreePlotArea",
+        "type": "number",
+        "constraints": {
+          "min": 400,
+          "max": 2500
+        }
+      },
+      {
+        "name": "TreePlotShape",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(C|R|S)$/"
+        }
+      },
+      {
+        "name": "TreeTaggingLimit",
+        "type": "number",
+        "constraints": {
+          "min": 0.1,
+          "max": 9.1
+        }
+      },
+      {
+        "name": "SaplingPlotArea",
+        "type": "number",
+        "constraints": {
+          "min": 1,
+          "max": 2500
+        }
+      },
+      {
+        "name": "SaplingPlotShape",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(C|R|S)$/"
+        }
+      },
+      {
+        "name": "SaplingTaggingLimit_DBH",
+        "type": "number",
+        "constraints": {
+          "min": 0.1,
+          "max": 12.0
+        }
+      },
+      {
+        "name": "SaplingTaggingLimit_Height",
+        "type": "number",
+        "constraints": {
+          "min": 1.3,
+          "max": 20.0
+        }
+      },
+      {
+        "name": "RegenPlotArea",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "RegenPlotShape",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(C|R|S)$/"
+        }
+      },
+      {
+        "name": "RegenTaggingLimitConifer",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "RegenTaggingLimitDecid",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "NumberRegenPlots",
+        "type": "number",
+        "constraints": {
+          "min": 0,
+          "max": 10
+        }
+      },
+      {
+        "name": "Contractor",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "Cruiser1FirstName",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "Cruiser1LastName",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "Cruiser2FirstName",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "Cruiser2LastName",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "Ecomanual",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "ShrubCover",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "HerbForbCover",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "GrassCover",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "MossLichenCover",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "AVIFieldCall",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      },
+      {
+        "name": "PlotMeasurementComment",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      }
+    ]
+  }
+}

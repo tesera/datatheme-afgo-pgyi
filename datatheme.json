@@ -1,0 +1,18 @@
+{
+    "name": "afgo",
+    "version": "1.0",
+    "repository": "http://github.com/tesera/afgo-datatheme.git",
+    "author": "Yves Richard",
+    "description": "Datatheme for AFGO PGYI tree plot data.",
+    "schemas": [
+        "./schemas/Admin.json",
+        "./schemas/Plot.json",
+        "./schemas/PhotoAVI.json",
+        "./schemas/Treatment.json",
+        "./schemas/Disturbance.json",
+        "./schemas/Regeneration.json",
+        "./schemas/PlotMeasurement.json",
+        "./schemas/Trees.json",
+        "./schemas/TreesMeasurement.json"
+    ]
+}

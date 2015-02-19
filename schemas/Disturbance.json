@@ -1,0 +1,59 @@
+{
+  "path": "Disturbance.csv",
+  "schema": {
+    "fields": [
+      {
+        "name": "CompanyPlotNumber",
+        "type": "string",
+        "constraints": {
+          "required": true
+        }
+      },
+      {
+        "name": "DisturbanceNumber",
+        "type": "number",
+        "constraints": {
+          "min": 12
+        }
+      },
+      {
+        "name": "DisturbanceCode",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(BU|DF|MI|MU|NDD|NDW|DC|HL|MLU|NDC|NDI|FI|DA)$/"
+        }
+      },
+      {
+        "name": "DisturbanceYear",
+        "type": "number",
+        "constraints": {
+          "min": 1800,
+          "max": 2050
+        }
+      },
+      {
+        "name": "DisturbanceMonth",
+        "type": "number",
+        "constraints": {
+          "min": 1,
+          "max": 12
+        }
+      },
+      {
+        "name": "DisturbanceDay",
+        "type": "number",
+        "constraints": {
+          "min": 1,
+          "max": 31
+        }
+      },
+      {
+        "name": "DisturbanceComment",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      }
+    ]
+  }
+}

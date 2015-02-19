@@ -1,0 +1,57 @@
+{
+  "path": "Regeneration.csv",
+  "schema": {
+    "fields": [
+      {
+        "name": "CompanyPlotNumber",
+        "type": "string",
+        "constraints": {
+          "required": true
+        }
+      },
+      {
+        "name": "MeasurementNumber",
+        "type": "string",
+        "constraints": {
+          "required": true
+        }
+      },
+      {
+        "name": "RegenerationPlotNumber",
+        "type": "string",
+        "constraints": {
+          "required": true
+        }
+      },
+      {
+        "name": "RegenerationPlotName",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(R1|R2|R3|R4|R5|R6|R7|R8|R9|R10)$/"
+        }
+      },
+      {
+        "name": "Species",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(Aw|Pb|Bw|Ax|Dd|Dc|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
+        }
+      },
+      {
+        "name": "RegenerationCount",
+        "type": "number",
+        "constraints": {
+          "min": 0,
+          "max": 9999
+        }
+      },
+      {
+        "name": "RegenerationComment",
+        "type": "string",
+        "constraints": {
+          "none": true
+        }
+      }
+    ]
+  }
+}
