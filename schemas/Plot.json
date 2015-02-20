@@ -1,4 +1,5 @@
 {
+  "name": "Plot",
   "path": "Plot.csv",
   "schema": {
     "fields": [
@@ -20,10 +21,7 @@
       },
       {
         "name": "CompanyStandNumber",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "EstablishmentYear",
@@ -58,10 +56,7 @@
       },
       {
         "name": "FMA",
-        "type": "string",
-        "constraints": {
-          "type": true
-        }
+        "type": "string"
       },
       {
         "name": "Township",
@@ -98,17 +93,11 @@
       },
       {
         "name": "OpeningNumber",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "SamplingUnitNumber",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "TopographicPosition",
@@ -165,31 +154,19 @@
       },
       {
         "name": "Datum",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Latitude",
-        "type": "string",
-        "constraints": {
-          "type": true
-        }
+        "type": "string"
       },
       {
         "name": "Longitude",
-        "type": "string",
-        "constraints": {
-          "type": true
-        }
+        "type": "string"
       },
       {
         "name": "NaturalSubregion",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "ProvincialAreaCode",
@@ -214,11 +191,18 @@
       },
       {
         "name": "PlotComment",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       }
     ]
-  }
+  },
+  "primaryKey": ["CompanyPlotNumber", "Company"],
+  "foreignKeys": [
+    {
+      "fields": "Company",
+      "reference": {
+        "resource": "Admin",
+        "fields": "Company"
+      }
+    }
+  ],
 }

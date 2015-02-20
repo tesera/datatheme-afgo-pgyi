@@ -1,4 +1,5 @@
 {
+  "name": "PhotoAVI",
   "path": "PhotoAVI.csv",
   "schema": {
     "fields": [
@@ -6,44 +7,36 @@
         "name": "CompanyPlotNumber",
         "type": "number",
         "constraints": {
-          "min": 1,
-          "max": 9999999999
+          "required": true
+        }
+      },
+      {
+        "name": "Company",
+        "type": "string",
+        "constraints": {
+          "required": true,
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WEYR|WEYR|UNKN|HPFP)$/"
         }
       },
       {
         "name": "AVIVersion",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "PolygonNumber",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "YearPhotography",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "YearPhotoCall",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Moist_Reg",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Density",
@@ -62,347 +55,210 @@
       },
       {
         "name": "Sp1",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Sp1_Per",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Sp2",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Sp2_Per",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Sp3",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Sp3_Per",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Sp4",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Sp4_Per",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Sp5",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Sp5_Per",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Struc",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Struc_Val",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Origin",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Tpr",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "UMoist_Reg",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "UDensity",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "UHeight",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "USp1",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "USp1_Per",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "USp2",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "USp2_Per",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "USp3",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "USp3_Per",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "USp4",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "USp4_Per",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "USp5",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "USp5_Per",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "UStruc",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "UStruc_Val",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "UOrigin",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "UTpr",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "AMoist_Reg",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "ADensity",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "AHeight",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "ASp1",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "ASp1_Per",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "ASp2",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "ASp2_Per",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "ASp3",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "ASp3_Per",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "ASp4",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "ASp4_Per",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "ASp5",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "ASp5_Per",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "AStruc",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "AStruc_Val",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "AOrigin",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "ATpr",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "PhotoAVIComment",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       }
     ]
-  }
+  },
+  "primaryKey": ["CompanyPlotNumber", "Company"],
+  "foreignKeys": [
+    {
+      "fields": ["CompanyPlotNumber", "Company"],
+      "reference": {
+        "resource": "Plot",
+        "fields": ["CompanyPlotNumber", "Company"]
+      }
+    }
+  ]
 }

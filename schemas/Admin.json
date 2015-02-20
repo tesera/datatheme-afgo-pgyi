@@ -1,4 +1,5 @@
 {
+  "name": "Admin",
   "path": "Admin.csv",
   "schema": {
     "fields": [
@@ -12,25 +13,17 @@
       },
       {
         "name": "NumberPlotsSubmitted",
-        "type": "string",
-        "constraints": {
-          "type": true
-        }
+        "type": "number"
       },
       {
         "name": "ParentOrganization",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "AdminComment",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       }
     ]
-  }
+  },
+  "primaryKey": "Compnany"
 }

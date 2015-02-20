@@ -1,4 +1,5 @@
 {
+  "name": "Regeneration",
   "path": "Regeneration.csv",
   "schema": {
     "fields": [
@@ -7,6 +8,14 @@
         "type": "string",
         "constraints": {
           "required": true
+        }
+      },
+      {
+        "name": "Company",
+        "type": "string",
+        "constraints": {
+          "required": true,
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WEYR|WEYR|UNKN|HPFP)$/"
         }
       },
       {
@@ -47,11 +56,18 @@
       },
       {
         "name": "RegenerationComment",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       }
     ]
-  }
+  },
+  "primaryKey": ["CompanyPlotNumber", "Company"],
+  "foreignKeys": [
+    {
+      "fields": ["CompanyPlotNumber", "Company"],
+      "reference": {
+        "resource": "Plot",
+        "fields": ["CompanyPlotNumber", "Company"]
+      }
+    }
+  ]
 }

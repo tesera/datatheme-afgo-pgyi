@@ -1,4 +1,5 @@
 {
+  "name": "TreesMeasurement",
   "path": "TreesMeasurement.csv",
   "schema": {
     "fields": [
@@ -7,6 +8,14 @@
         "type": "string",
         "constraints": {
           "required": true
+        }
+      },
+      {
+        "name": "Company",
+        "type": "string",
+        "constraints": {
+          "required": true,
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WEYR|WEYR|UNKN|HPFP)$/"
         }
       },
       {
@@ -197,5 +206,15 @@
         }
       }
     ]
-  }
+  },
+  "primaryKey": ["CompanyPlotNumber", "Company"],
+  "foreignKeys": [
+    {
+      "fields": ["CompanyPlotNumber", "Company"],
+      "reference": {
+        "resource": "Plot",
+        "fields": ["CompanyPlotNumber", "Company"]
+      }
+    }
+  ]
 }

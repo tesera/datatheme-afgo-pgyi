@@ -1,4 +1,5 @@
 {
+  "name": "PlotMeasurement",
   "path": "PlotMeasurement.csv",
   "schema": {
     "fields": [
@@ -10,32 +11,28 @@
         }
       },
       {
-        "name": "MeasurementNumber",
+        "name": "Company",
         "type": "string",
         "constraints": {
-          "none": true
+          "required": true,
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WEYR|WEYR|UNKN|HPFP)$/"
         }
+      },
+      {
+        "name": "MeasurementNumber",
+        "type": "string"
       },
       {
         "name": "MeasurementYear",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "MeasurementMonth",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "MeasurementDay",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "StandOrigin",
@@ -121,10 +118,7 @@
       },
       {
         "name": "RegenPlotArea",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "RegenPlotShape",
@@ -135,17 +129,11 @@
       },
       {
         "name": "RegenTaggingLimitConifer",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "RegenTaggingLimitDecid",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "NumberRegenPlots",
@@ -157,88 +145,62 @@
       },
       {
         "name": "Contractor",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Cruiser1FirstName",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Cruiser1LastName",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Cruiser2FirstName",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Cruiser2LastName",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "Ecomanual",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "ShrubCover",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "HerbForbCover",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "GrassCover",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "MossLichenCover",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "AVIFieldCall",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       },
       {
         "name": "PlotMeasurementComment",
-        "type": "string",
-        "constraints": {
-          "none": true
-        }
+        "type": "string"
       }
     ]
-  }
+  },
+  "primaryKey": ["CompanyPlotNumber", "Company"],
+  "foreignKeys": [
+    {
+      "fields": ["CompanyPlotNumber", "Company"],
+      "reference": {
+        "resource": "Plot",
+        "fields": ["CompanyPlotNumber", "Company"]
+      }
+    }
+  ]
 }
