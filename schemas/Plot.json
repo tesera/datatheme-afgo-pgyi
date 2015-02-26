@@ -4,7 +4,7 @@
   "schema": {
     "fields": [
       {
-        "name": "CompanyPlotNumber",
+        "name": "company_plot_number",
         "type": "string",
         "constraints": {
           "required": true,
@@ -12,7 +12,7 @@
         }
       },
       {
-        "name": "Company",
+        "name": "company",
         "type": "string",
         "constraints": {
           "required": true,
