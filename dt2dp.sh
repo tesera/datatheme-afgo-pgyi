@@ -9,7 +9,7 @@ echo '"resources": ['
     for ((i=0; i < $len; i+=1));
     do
         (cat "${schemas[i]}")
-        if [ $i -lt $len ]; then
+        if [ $i -lt $(($len-1)) ]; then
             echo ','
         fi
     done
