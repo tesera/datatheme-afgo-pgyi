@@ -2,6 +2,8 @@
 
 > !WIP: this is work in progress.
 
+![Codeship Status](https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=master)
+
 A datatheme is a defined datapackage JSON table schema. The schema defines all the resources and fields for each resources. The dataheme can evolve. The intent is that each change will be versioned.
 
 A datatheme consists of a datatheme.json file which describes itself like its version and paths to each resource schema.
