@@ -1,16 +1,22 @@
-# datatheme-afgo
+# datatheme-pgyi
 
 > !WIP: this is work in progress.
 
 ![Codeship Status](https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=master)
 
-A datatheme is a defined datapackage JSON table schema. The schema defines all the resources and fields for each resources. The dataheme can evolve. The intent is that each change will be versioned.
+A Datatheme is a defined [Tabular Datapackage](http://dataprotocols.org/tabular-data-package/). Essentially a Class from which you can base your Tabular Datapackage from. The intent is to have one place to define and version the data model using the [JSON Table Schema](http://dataprotocols.org/json-table-schema/).
 
-A datatheme consists of a datatheme.json file which describes itself like its version and paths to each resource schema.
+
+You build the Datatheme into a base ``datapackage.json`` file which you can extend for your purpose.
+
+PGYI is an initiative from the Alberta Forest Growth Organization (AFGO) to collect and share growth and yield plots data within their community.
+
+A datatheme consists of a ``datatheme.json`` file which describes itself and paths to all schema resources referenced by this theme.
 
 ````
+$ cat datatheme.json
 {
-    "name": "afgo",
+    "name": "afgo.pgyi",
     "version": "1.0",
     "repository": "http://github.com/tesera/afgo-datatheme.git",
     "author": "Yves Richard",
