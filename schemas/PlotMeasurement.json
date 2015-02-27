@@ -1,17 +1,10 @@
 {
-  "name": "PlotMeasurement",
-  "path": "PlotMeasurement.csv",
+  "name": "plot_measurement",
+  "path": "plot_measurement.csv",
   "schema": {
     "fields": [
       {
-        "name": "CompanyPlotNumber",
-        "type": "string",
-        "constraints": {
-          "required": true
-        }
-      },
-      {
-        "name": "Company",
+        "name": "company",
         "type": "string",
         "constraints": {
           "required": true,
@@ -19,51 +12,64 @@
         }
       },
       {
-        "name": "MeasurementNumber",
-        "type": "string"
-      },
-      {
-        "name": "MeasurementYear",
-        "type": "string"
-      },
-      {
-        "name": "MeasurementMonth",
-        "type": "string"
-      },
-      {
-        "name": "MeasurementDay",
-        "type": "string"
-      },
-      {
-        "name": "StandOrigin",
+        "name": "company_plot_number",
         "type": "string",
+        "constraints": {
+          "required": true
+        }
+      },
+      {
+        "name": "measurement_number",
+        "required": true,
+        "type": "integer"
+      },
+      {
+        "name": "measurement_year",
+        "required": true,
+        "type": "integer"
+      },
+      {
+        "name": "measurement_month",
+        "type": "integer"
+      },
+      {
+        "name": "measurement_day",
+        "type": "integer"
+      },
+      {
+        "name": "stand_origin",
+        "type": "string",
+        "required": true,
         "constraints": {
           "pattern": "/^(C|L|F|P|R|N|S|A|B)$/"
         }
       },
       {
-        "name": "PlotType",
-        "type": "string",
+        "name": "plot_type",
+        "type": "integer",
+        "required": true,
         "constraints": {
           "pattern": "/^(1|2|3|4)$/"
         }
       },
       {
-        "name": "StandType",
-        "type": "string",
+        "name": "stand_type",
+        "type": "integer",
+        "required": true,
         "constraints": {
           "pattern": "/^(1|2|3)$/"
         }
       },
       {
-        "name": "PlotStatus",
-        "type": "string",
+        "name": "plot_status",
+        "type": "integer",
+        "required": true,
         "constraints": {
           "pattern": "/^(1|2|3|4|5|6|7|8|9|10|12|13|14|15|16|17|18|19|20|21|11)$/"
         }
       },
       {
-        "name": "TreePlotArea",
+        "name": "tree_plot_area",
         "type": "number",
         "constraints": {
           "min": 400,
@@ -71,14 +77,14 @@
         }
       },
       {
-        "name": "TreePlotShape",
+        "name": "tree_plot_shape",
         "type": "string",
         "constraints": {
           "pattern": "/^(C|R|S)$/"
         }
       },
       {
-        "name": "TreeTaggingLimit",
+        "name": "tree_tagging_limit",
         "type": "number",
         "constraints": {
           "min": 0.1,
@@ -86,7 +92,7 @@
         }
       },
       {
-        "name": "SaplingPlotArea",
+        "name": "sapling_plot_area",
         "type": "number",
         "constraints": {
           "min": 1,
@@ -94,14 +100,14 @@
         }
       },
       {
-        "name": "SaplingPlotShape",
+        "name": "sapling_plot_shape",
         "type": "string",
         "constraints": {
           "pattern": "/^(C|R|S)$/"
         }
       },
       {
-        "name": "SaplingTaggingLimit_DBH",
+        "name": "sapling_tagging_limit_dbh",
         "type": "number",
         "constraints": {
           "min": 0.1,
@@ -109,7 +115,7 @@
         }
       },
       {
-        "name": "SaplingTaggingLimit_Height",
+        "name": "sapling_tagging_limit_height",
         "type": "number",
         "constraints": {
           "min": 1.3,
@@ -117,26 +123,38 @@
         }
       },
       {
-        "name": "RegenPlotArea",
-        "type": "string"
+        "name": "regen_plot_area",
+        "type": "number",
+        "constraints": {
+          "min": 1,
+          "max": 2500
+        }
       },
       {
-        "name": "RegenPlotShape",
+        "name": "regen_plot_shape",
         "type": "string",
         "constraints": {
           "pattern": "/^(C|R|S)$/"
         }
       },
       {
-        "name": "RegenTaggingLimitConifer",
-        "type": "string"
+        "name": "regen_tagging_limit_conifer",
+        "type": "number",
+        "constraints": {
+          "min": 0.1,
+          "max": 1.3
+        }
       },
       {
-        "name": "RegenTaggingLimitDecid",
-        "type": "string"
+        "name": "regen_tagging_limit_decid",
+        "type": "number",
+        "constraints": {
+          "min": 0.1,
+          "max": 1.3
+        }
       },
       {
-        "name": "NumberRegenPlots",
+        "name": "number_regen_plots",
         "type": "number",
         "constraints": {
           "min": 0,
@@ -144,62 +162,77 @@
         }
       },
       {
-        "name": "Contractor",
+        "name": "contractor",
         "type": "string"
       },
       {
-        "name": "Cruiser1FirstName",
+        "name": "cruiser_1_first_name",
         "type": "string"
       },
       {
-        "name": "Cruiser1LastName",
+        "name": "cruiser_1_last_name",
         "type": "string"
       },
       {
-        "name": "Cruiser2FirstName",
+        "name": "cruiser_2_first_name",
         "type": "string"
       },
       {
-        "name": "Cruiser2LastName",
+        "name": "cruiser_2_last_name",
         "type": "string"
       },
       {
-        "name": "Ecomanual",
+        "name": "ecomanual",
+        "type": "string",
+        "constraints": {
+          "required": true
+        }
+      },
+      {
+        "name": "shrub_cover",
+        "type": "integer",
+        "constraints": {
+          "pattern": "/^(0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)$/"
+      }
+      },
+      {
+        "name": "herb_forb_cover",
+        "type": "integer",
+        "constraints": {
+          "pattern": "/^(0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)$/"
+      }
+      },
+      {
+        "name": "grass_cover",
+        "type": "integer",
+        "constraints": {
+          "pattern": "/^(0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)$/"
+      }
+      },
+      {
+        "name": "moss_lichen_cover",
+        "type": "integer",
+        "constraints": {
+          "pattern": "/^(0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)$/"
+      }
+      },
+      {
+        "name": "avi_field_call",
         "type": "string"
       },
       {
-        "name": "ShrubCover",
-        "type": "string"
-      },
-      {
-        "name": "HerbForbCover",
-        "type": "string"
-      },
-      {
-        "name": "GrassCover",
-        "type": "string"
-      },
-      {
-        "name": "MossLichenCover",
-        "type": "string"
-      },
-      {
-        "name": "AVIFieldCall",
-        "type": "string"
-      },
-      {
-        "name": "PlotMeasurementComment",
+        "name": "plot_measurement_comment",
         "type": "string"
       }
     ]
   },
-  "primaryKey": ["CompanyPlotNumber", "Company"],
+  "primaryKey": ["company", "company_plot_number"],
   "foreignKeys": [
     {
-      "fields": ["CompanyPlotNumber", "Company"],
+      "fields": ["company", "company_plot_number"],
       "reference": {
-        "resource": "Plot",
-        "fields": ["CompanyPlotNumber", "Company"]
+        "resource": "plot",
+        "fields": ["company", "company_plot_number"]
       }
     }
   ]

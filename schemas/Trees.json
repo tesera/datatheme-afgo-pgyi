@@ -1,17 +1,17 @@
 {
-  "name": "Trees",
-  "path": "Trees.csv",
+  "name": "trees",
+  "path": "trees.csv",
   "schema": {
     "fields": [
       {
-        "name": "CompanyPlotNumber",
+        "name": "company_plot_number",
         "type": "string",
         "constraints": {
           "required": true
         }
       },
       {
-        "name": "Company",
+        "name": "company",
         "type": "string",
         "constraints": {
           "required": true,
@@ -19,41 +19,47 @@
         }
       },
       {
-        "name": "TreeNumber",
+        "name": "tree_number",
         "type": "number",
         "constraints": {
+          "required": true,
           "min": 1,
           "max": 999999
         }
       },
       {
-        "name": "TreeOrigin",
-        "type": "string",
+        "name": "tree_origin",
+        "type": "inetger",
         "constraints": {
+          "required": true,
           "pattern": "/^(0|1|2|3|4|5|6|7|8|9|10)$/"
         }
       },
       {
-        "name": "Distance",
-        "type": "string"
+        "name": "distance",
+        "type": "number"
       },
       {
-        "name": "Azimuth",
-        "type": "string"
+        "name": "azimuth",
+        "type": "number"
       },
       {
-        "name": "TreeLocationID",
-        "type": "string"
-      },
-      {
-        "name": "SectorOrQuarter",
-        "type": "string",
+        "name": "tree_location_id",
+        "type": "integer",
         "constraints": {
-          "pattern": "/^(A|B|C|D|E|1|2|3|4)$/"
+          "required": true,
+          "pattern": "/^(0|1|2|3)$/"
         }
       },
       {
-        "name": "Species",
+        "name": "sector_or_quarter",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(A|B|C|D|E|1|2|3|4|5|6)$/"
+        }
+      },
+      {
+        "name": "species",
         "type": "string",
         "constraints": {
           "pattern": "/^(Aw|Pb|Bw|Ax|Dd|Dc|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
@@ -61,13 +67,13 @@
       }
     ]
   },
-  "primaryKey": ["CompanyPlotNumber", "Company"],
+  "primaryKey": ["company", "company_plot_number"],
   "foreignKeys": [
     {
-      "fields": ["CompanyPlotNumber", "Company"],
+      "fields": ["company", "company_plot_number"],
       "reference": {
-        "resource": "Plot",
-        "fields": ["CompanyPlotNumber", "Company"]
+        "resource": "plot",
+        "fields": ["company", "company_plot_number"]
       }
     }
   ]

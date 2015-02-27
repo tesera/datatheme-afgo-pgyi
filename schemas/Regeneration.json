@@ -1,17 +1,10 @@
 {
-  "name": "Regeneration",
-  "path": "Regeneration.csv",
+  "name": "regeneration",
+  "path": "regeneration.csv",
   "schema": {
     "fields": [
       {
-        "name": "CompanyPlotNumber",
-        "type": "string",
-        "constraints": {
-          "required": true
-        }
-      },
-      {
-        "name": "Company",
+        "name": "company",
         "type": "string",
         "constraints": {
           "required": true,
@@ -19,35 +12,42 @@
         }
       },
       {
-        "name": "MeasurementNumber",
+        "name": "company_plot_number",
         "type": "string",
         "constraints": {
           "required": true
         }
       },
       {
-        "name": "RegenerationPlotNumber",
-        "type": "string",
+        "name": "measurement_number",
+        "type": "integer",
         "constraints": {
           "required": true
         }
       },
       {
-        "name": "RegenerationPlotName",
+        "name": "regeneration_plot_number",
+        "type": "integer",
+        "constraints": {
+          "required": true
+        }
+      },
+      {
+        "name": "regeneration_plot_name",
         "type": "string",
         "constraints": {
           "pattern": "/^(R1|R2|R3|R4|R5|R6|R7|R8|R9|R10)$/"
         }
       },
       {
-        "name": "Species",
+        "name": "species",
         "type": "string",
         "constraints": {
           "pattern": "/^(Aw|Pb|Bw|Ax|Dd|Dc|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
         }
       },
       {
-        "name": "RegenerationCount",
+        "name": "regeneration_count",
         "type": "number",
         "constraints": {
           "min": 0,
@@ -55,18 +55,18 @@
         }
       },
       {
-        "name": "RegenerationComment",
+        "name": "regeneration_comment",
         "type": "string"
       }
     ]
   },
-  "primaryKey": ["CompanyPlotNumber", "Company"],
+  "primaryKey": ["comnpany", "company_plot_number"],
   "foreignKeys": [
     {
-      "fields": ["CompanyPlotNumber", "Company"],
+      "fields": ["company", "company_plot_number"],
       "reference": {
-        "resource": "Plot",
-        "fields": ["CompanyPlotNumber", "Company"]
+        "resource": "plot",
+        "fields": ["company", "company_plot_number"]
       }
     }
   ]

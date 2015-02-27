@@ -1,17 +1,10 @@
 {
-  "name": "Disturbance",
-  "path": "Disturbance.csv",
+  "name": "disturbance",
+  "path": "disturbance.csv",
   "schema": {
     "fields": [
       {
-        "name": "CompanyPlotNumber",
-        "type": "string",
-        "constraints": {
-          "required": true
-        }
-      },
-      {
-        "name": "Company",
+        "name": "company",
         "type": "string",
         "constraints": {
           "required": true,
@@ -19,21 +12,29 @@
         }
       },
       {
-        "name": "DisturbanceNumber",
-        "type": "number",
+        "name": "company_plot_number",
+        "type": "string",
         "constraints": {
-          "min": 12
+          "required": true
         }
       },
       {
-        "name": "DisturbanceCode",
+        "name": "disturbance_number",
+        "type": "number",
+        "constraints": {
+          "min": 0,
+          "max": 12
+        }
+      },
+      {
+        "name": "disturbance_code",
         "type": "string",
         "constraints": {
           "pattern": "/^(BU|DF|MI|MU|NDD|NDW|DC|HL|MLU|NDC|NDI|FI|DA)$/"
         }
       },
       {
-        "name": "DisturbanceYear",
+        "name": "disturbance_year",
         "type": "number",
         "constraints": {
           "min": 1800,
@@ -41,7 +42,7 @@
         }
       },
       {
-        "name": "DisturbanceMonth",
+        "name": "disturbance_month",
         "type": "number",
         "constraints": {
           "min": 1,
@@ -49,7 +50,7 @@
         }
       },
       {
-        "name": "DisturbanceDay",
+        "name": "disturbance_day",
         "type": "number",
         "constraints": {
           "min": 1,
@@ -57,18 +58,18 @@
         }
       },
       {
-        "name": "DisturbanceComment",
+        "name": "disturbance_comment",
         "type": "string"
       }
     ]
   },
-  "primaryKey": ["CompanyPlotNumber", "Company"],
+  "primaryKey": ["company", "company_plot_number"],
   "foreignKeys": [
     {
-      "fields": ["CompanyPlotNumber", "Company"],
+      "fields": ["company_plot_number", "company"],
       "reference": {
         "resource": "Plot",
-        "fields": ["CompanyPlotNumber", "Company"]
+        "fields": ["company_plot_number", "company"]
       }
     }
   ]
