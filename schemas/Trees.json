@@ -15,7 +15,7 @@
         "type": "string",
         "constraints": {
           "required": true,
-          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WEYR|WEYR|UNKN|HPFP)$/"
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
         }
       },
       {
@@ -28,20 +28,11 @@
         }
       },
       {
-        "name": "tree_origin",
-        "type": "inetger",
+        "name": "tree_label",
+        "type": "string",
         "constraints": {
-          "required": true,
-          "pattern": "/^(0|1|2|3|4|5|6|7|8|9|10)$/"
+          "required": true
         }
-      },
-      {
-        "name": "distance",
-        "type": "number"
-      },
-      {
-        "name": "azimuth",
-        "type": "number"
       },
       {
         "name": "tree_location_id",
@@ -52,11 +43,16 @@
         }
       },
       {
-        "name": "sector_or_quarter",
-        "type": "string",
+        "name": "tree_origin",
+        "type": "inetger",
         "constraints": {
-          "pattern": "/^(A|B|C|D|E|1|2|3|4|5|6)$/"
+          "required": true,
+          "pattern": "/^(0|1|2|3|4|5|6|7|8|9|10)$/"
         }
+      },
+      {
+        "name": "sector_or_quarter",
+        "type": "string"
       },
       {
         "name": "species",
@@ -64,10 +60,18 @@
         "constraints": {
           "pattern": "/^(Aw|Pb|Bw|Ax|Dd|Dc|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
         }
+      },  
+      {
+        "name": "distance",
+        "type": "number"
+      },
+      {
+        "name": "azimuth",
+        "type": "number"
       }
     ]
   },
-  "primaryKey": ["company", "company_plot_number"],
+  "primaryKey": ["company", "company_plot_number","tree_number"],
   "foreignKeys": [
     {
       "fields": ["company", "company_plot_number"],

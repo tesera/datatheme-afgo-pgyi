@@ -8,7 +8,7 @@
         "type": "string",
         "constraints": {
           "required": true,
-          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WEYR|WEYR|UNKN|HPFP)$/"
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
         }
       },
       {
@@ -20,9 +20,9 @@
       },
       {
         "name": "disturbance_number",
-        "type": "number",
+        "type": "integer",
         "constraints": {
-          "min": 0,
+          "min": 1,
           "max": 12
         }
       },
@@ -35,15 +35,15 @@
       },
       {
         "name": "disturbance_year",
-        "type": "number",
+        "type": "integer",
         "constraints": {
-          "min": 1800,
+          "min": 1900,
           "max": 2050
         }
       },
       {
         "name": "disturbance_month",
-        "type": "number",
+        "type": "integer",
         "constraints": {
           "min": 1,
           "max": 12
@@ -51,7 +51,7 @@
       },
       {
         "name": "disturbance_day",
-        "type": "number",
+        "type": "integer",
         "constraints": {
           "min": 1,
           "max": 31
@@ -63,7 +63,7 @@
       }
     ]
   },
-  "primaryKey": ["company", "company_plot_number"],
+  "primaryKey": ["company", "company_plot_number","disturbance_number"],
   "foreignKeys": [
     {
       "fields": ["company_plot_number", "company"],

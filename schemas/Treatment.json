@@ -8,7 +8,7 @@
         "type": "string",
         "constraints": {
           "required": true,
-          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WEYR|WEYR|UNKN|HPFP)$/"
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
         }
       },
       {
@@ -30,14 +30,14 @@
         "name": "treatment_code",
         "type": "string",
         "constraints": {
-          "pattern": "/^(NT|P|H|M|C|B|TH|TW|F|PC|CT|S|UP|UA|D|NK)$/"
+          "pattern": "/^(NT|P|H|M|C|B|TH|TW|F|FI|PC|CT|S|UP|UA|D|NK)$/"
         }
       },
       {
         "name": "treatment_year",
         "type": "integer",
         "constraints": {
-          "min": 1800,
+          "min": 1900,
           "max": 2050
         }
       },
@@ -63,7 +63,7 @@
       }
     ]
   },
-  "primaryKey": ["company_plot_number", "company"],
+  "primaryKey": ["company", "company_plot_number", "treatment_number"],
   "foreignKeys": [
     {
       "fields": ["company_plot_number", "company"],

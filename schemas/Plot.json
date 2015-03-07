@@ -8,7 +8,7 @@
         "type": "string",
         "constraints": {
           "required": true,
-          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WEYR|WEYR|UNKN|HPFP)$/"
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
         }
       },
       {
@@ -28,7 +28,7 @@
         "type": "integer",
         "constraints": {
           "required": true,
-          "min": 1800,
+          "min": 1900,
           "max": 2050
         }
       },
@@ -124,7 +124,7 @@
         "type": "number",
         "constraints": {
           "min": 0,
-          "max": 100
+          "max": 200
         }
       },
       {
@@ -183,7 +183,7 @@
         }
       },
       {
-        "name": "provincial_area_code",
+        "name": "ecosite_guide",
         "type": "string",
         "constraints": {
           "required": true,
