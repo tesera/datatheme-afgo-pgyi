@@ -67,6 +67,10 @@
       {
         "name": "azimuth",
         "type": "number"
+      },
+      {
+        "name": "trees_comment",
+        "type": "number"
       }
     ]
   },
