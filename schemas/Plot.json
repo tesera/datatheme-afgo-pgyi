@@ -168,11 +168,19 @@
       },
       {
         "name": "latitude",
-        "type": "number"
+        "type": "number",
+           "constraints": {
+          "min": 49.00000,
+          "max": 60.00000
+        }  
       },
       {
         "name": "longitude",
-        "type": "number"
+        "type": "number",
+           "constraints": {
+          "min": -110.00000,
+          "max": -120.00000
+        }  
       },
       {
         "name": "natural_subregion",

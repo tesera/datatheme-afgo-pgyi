@@ -31,7 +31,6 @@
         "name": "tree_label",
         "type": "string",
         "constraints": {
-          "required": true
         }
       },
       {
@@ -58,7 +57,7 @@
         "name": "species",
         "type": "string",
         "constraints": {
-          "pattern": "/^(Aw|Pb|Bw|Ax|Dd|Dc|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
+          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
         }
       },  
       {

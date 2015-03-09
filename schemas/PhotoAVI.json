@@ -68,7 +68,7 @@
         "name": "density",
         "type": "string",
         "constraints": {
-          "pattern": "/^(V|A|B|C|D)$/"
+          "pattern": "/^(A|B|C|D)$/"
         }
       },
       {
@@ -97,7 +97,7 @@
         "name": "sp2",
         "type": "string",
         "constraints": {
-          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
+          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
         }
       },
       {
@@ -111,7 +111,7 @@
         "name": "sp3",
         "type": "string",
         "constraints": {
-          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
+          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
         }
       },
       {
@@ -125,7 +125,7 @@
         "name": "sp4",
         "type": "string",
         "constraints": {
-          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
+          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
         }
       },
       {
@@ -139,7 +139,7 @@
         "name": "sp5",
         "type": "string",
         "constraints": {
-          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
+          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
         }
       },
       {
