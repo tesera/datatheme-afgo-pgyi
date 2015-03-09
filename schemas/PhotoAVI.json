@@ -190,7 +190,7 @@
       "fields": ["company", "company_plot_number"],
       "reference": {
         "resource": "plot",
-        "fields": ["company"," company_plot_number"]
+        "fields": ["company","company_plot_number"]
       }
     }
   ]
