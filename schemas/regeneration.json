@@ -47,7 +47,7 @@
         "name": "regeneration_count",
         "type": "number",
         "constraints": {
-          "minimum": ["species == 'No'", 0, 1],
+          "minimum": "(species == \"No\" ? 0 : 1)",
           "maximum": 9999
         }
       },
