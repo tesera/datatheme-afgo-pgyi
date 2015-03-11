@@ -4,18 +4,18 @@
   "schema": {
     "fields": [
       {
-        "name": "company_plot_number",
-        "type": "string",
-        "constraints": {
-          "required": true
-        }
-      },
-      {
         "name": "company",
         "type": "string",
         "constraints": {
           "required": true,
           "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
+        }
+      },
+      {
+        "name": "company_plot_number",
+        "type": "string",
+        "constraints": {
+          "required": true
         }
       },
       {
