@@ -15,7 +15,8 @@
         "name": "company_plot_number",
         "type": "string",
         "constraints": {
-          "required": true
+          "required": true,
+          "maxLength": 15
         }
       },
       {
@@ -29,24 +30,24 @@
         "name": "regeneration_plot_name",
         "type": "string",
         "constraints": {
-          "pattern": "/^(R1|R2|R3|R4|R5|R6|R7|R8|R9|R10)$/",
-          "required": true
+          "required": true,
+          "pattern": "/^(R1|R2|R3|R4|R5|R6|R7|R8|R9|R10)$/"
         }
       },
       {
         "name": "species",
         "type": "string",
         "constraints": {
-          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/",
-          "required": true
+          "required": true,
+          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
         }
       },
       {
         "name": "regeneration_count",
         "type": "number",
         "constraints": {
-          "min": 0,
-          "max": 9999
+          "minimum": ["species == 'No'", 0, 1],
+          "maximum": 9999
         }
       },
       {
@@ -55,13 +56,25 @@
       }
     ]
   },
-  "primaryKey": ["comnpany", "company_plot_number","measurement_number", "regeneration_plot_name", "species"],
+  "primaryKey": [
+    "comnpany",
+    "company_plot_number",
+    "measurement_number",
+    "regeneration_plot_name",
+    "species"
+  ],
   "foreignKeys": [
     {
-      "fields": ["company", "company_plot_number"],
+      "fields": [
+        "company",
+        "company_plot_number"
+      ],
       "reference": {
         "resource": "plot",
-        "fields": ["company", "company_plot_number"]
+        "fields": [
+          "company",
+          "company_plot_number"
+        ]
       }
     }
   ]

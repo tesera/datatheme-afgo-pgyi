@@ -15,7 +15,8 @@
         "name": "company_plot_number",
         "type": "string",
         "constraints": {
-          "required": true
+          "required": true,
+          "maxLength": 15
         }
       },
       {
@@ -29,8 +30,8 @@
         "name": "tree_number",
         "type": "integer",
         "constraints": {
-          "min": 1,
-          "max": 999999
+          "minimum": 1,
+          "maximum": 999999
         }
       },
       {
@@ -45,40 +46,44 @@
         "name": "dbh",
         "type": "number",
         "constraints": {
-          "min": 0.1,
-          "max": 120
+          "required": "rcd == ''",
+          "minimum": 0.1,
+          "maximum": 120
         }
       },
       {
         "name": "dbh_height",
         "type": "number",
         "constraints": {
-          "min": 1.1,
-          "max": 1.5
+          "required": "dbh != ''",
+          "minimum": 1.1,
+          "maximum": 1.5
         }
       },
       {
         "name": "rcd",
         "type": "number",
         "constraints": {
-          "min": 0.1,
-          "max": 15
+          "required": "dbh == ''",
+          "minimum": 0.1,
+          "maximum": 15
         }
       },
       {
         "name": "rcd_height",
         "type": "number",
         "constraints": {
-          "min": 0.0,
-          "max": 0.3
+          "required": "rcd != ''",
+          "minimum": 0.0,
+          "maximum": 0.3
         }
       },
       {
         "name": "height",
         "type": "number",
         "constraints": {
-          "min": 0.0,
-          "max": 45.0
+          "minimum": 0.0,
+          "maximum": 45.0
         }
       },
       {
@@ -100,48 +105,49 @@
         "name": "stump_age",
         "type": "integer",
         "constraints": {
-          "min": 1,
-          "max": 350
+          "minimum": 1,
+          "maximum": 350
         }
       },
       {
         "name": "stump_height",
         "type": "number",
         "constraints": {
-          "min": 0.0,
-          "max": 0.30
+          "required": "stump_age != ''",
+          "minimum": 0.0,
+          "maximum": 0.30
         }
       },
       {
         "name": "total_age",
         "type": "integer",
         "constraints": {
-          "min": 1,
-          "max": 350
+          "minimum": 1,
+          "maximum": 350
         }
       },
       {
         "name": "htlc",
         "type": "number",
         "constraints": {
-          "min": 0,
-          "max": 45
+          "minimum": 0,
+          "maximum": 45
         }
       },
       {
         "name": "crown_diameter_ns",
         "type": "number",
         "constraints": {
-          "min": 1,
-          "max": 20
+          "minimum": 1,
+          "maximum": 20
         }
       },
       {
         "name": "crown_diameter_ew",
         "type": "number",
         "constraints": {
-          "min": 1,
-          "max": 20
+          "minimum": 1,
+          "maximum": 20
         }
       },
       {
@@ -222,13 +228,41 @@
       }
     ]
   },
-  "primaryKey": ["company", "company_plot_number","measurement_number","tree_number"],
+  "primaryKey": [
+    "company",
+    "company_plot_number",
+    "measurement_number",
+    "tree_number"
+  ],
   "foreignKeys": [
     {
-      "fields": ["company", "company_plot_number"],
+      "fields": [
+        "company",
+        "company_plot_number",
+        "measurement_number"
+      ],
       "reference": {
-        "resource": "plot",
-        "fields": ["company", "company_plot_number"]
+        "resource": "plot_measurement",
+        "fields": [
+          "company",
+          "company_plot_number",
+          "measurement_number"
+        ]
+      }
+    },
+    {
+      "fields": [
+        "company",
+        "company_plot_number",
+        "tree_number"
+      ],
+      "reference": {
+        "resource": "trees",
+        "fields": [
+          "company",
+          "company_plot_number",
+          "tree_number"
+        ]
       }
     }
   ]
