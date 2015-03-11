@@ -31,7 +31,9 @@
       {
         "name": "tree_label",
         "type": "string",
-        "constraints": {}
+        "constraints": {
+        "maxLength": 15
+        }
       },
       {
         "name": "tree_location_id",
@@ -51,7 +53,10 @@
       },
       {
         "name": "sector_or_quarter",
-        "type": "string"
+        "type": "string",
+        "constraints": {
+        "maxLength": 15
+        }
       },
       {
         "name": "species",

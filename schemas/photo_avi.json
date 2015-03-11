@@ -30,7 +30,8 @@
         "name": "polygon_number",
         "type": "string",
         "constraints": {
-          "required": true
+          "required": true,
+          "maxLength": 15
         }
       },
       {

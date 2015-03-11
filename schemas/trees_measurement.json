@@ -23,7 +23,8 @@
         "name": "measurement_number",
         "type": "integer",
         "constraints": {
-          "required": true
+          "required": true,
+          "maxLength": 2
         }
       },
       {

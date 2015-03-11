@@ -22,7 +22,10 @@
       },
       {
         "name": "company_stand_number",
-        "type": "string"
+        "type": "string",
+        "constraints": {
+        "maxLength": 15
+        }
       },
       {
         "name": "establishment_year",
@@ -58,7 +61,11 @@
       },
       {
         "name": "fma",
-        "type": "string"
+        "type": "string",
+        "constraints": {
+        "maxLength": 30
+        }
+
       },
       {
         "name": "ats_township",
@@ -98,11 +105,17 @@
       },
       {
         "name": "opening_number",
-        "type": "string"
+        "type": "string",
+        "constraints": {
+        "maxLength": 11
+        }
       },
       {
         "name": "sampling_unit_number",
-        "type": "string"
+        "type": "string",
+        "constraints": {
+        "maxLength": 15
+        }
       },
       {
         "name": "topographic_position",
