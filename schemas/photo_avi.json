@@ -15,39 +15,41 @@
         "name": "company_plot_number",
         "type": "string",
         "constraints": {
-          "required": true
+          "required": true,
+          "maxLength": 15
         }
       },
       {
         "name": "avi_version",
         "type": "string",
         "constraints": {
-          "required":true
+          "required": true
         }
       },
       {
         "name": "polygon_number",
         "type": "string",
         "constraints": {
-          "required":true
+          "required": true,
+          "maxLength": 15
         }
       },
       {
         "name": "year_photography",
         "type": "integer",
         "constraints": {
-          "min":1900,
-          "max":2050,
-          "required": true
+          "required": true,
+          "minimum": 1900,
+          "maximum": 2050
         }
       },
       {
         "name": "year_photo_call",
         "type": "integer",
         "constraints": {
-          "min":1900,
-          "max":2050,
-          "required": true
+          "required": true,
+          "minimum": 1900,
+          "maximum": 2050
         }
       },
       {
@@ -75,8 +77,8 @@
         "name": "height",
         "type": "number",
         "constraints": {
-          "min": 0,
-          "max": 50
+          "minimum": 0,
+          "maximum": 50
         }
       },
       {
@@ -167,8 +169,8 @@
         "name": "origin",
         "type": "integer",
         "constraints": {
-          "min": 1400,
-          "max": 2050 
+          "minimum": 1400,
+          "maximum": 2050
         }
       },
       {
@@ -179,18 +181,32 @@
         }
       },
       {
-      "name": "photo_avi_layer_comment",
+        "name": "photo_avi_layer_comment",
         "type": "string"
       }
     ]
   },
-  "primaryKey": ["company", "company_plot_number", "avi_version", "polygon_number", "year_photography", "year_photo_call", "layer_type"],
+  "primaryKey": [
+    "company",
+    "company_plot_number",
+    "avi_version",
+    "polygon_number",
+    "year_photography",
+    "year_photo_call",
+    "layer_type"
+  ],
   "foreignKeys": [
     {
-      "fields": ["company", "company_plot_number"],
+      "fields": [
+        "company",
+        "company_plot_number"
+      ],
       "reference": {
         "resource": "plot",
-        "fields": ["company","company_plot_number"]
+        "fields": [
+          "company",
+          "company_plot_number"
+        ]
       }
     }
   ]

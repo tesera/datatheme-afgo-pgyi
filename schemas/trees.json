@@ -15,7 +15,8 @@
         "name": "company_plot_number",
         "type": "string",
         "constraints": {
-          "required": true
+          "required": true,
+          "maxLength": 15
         }
       },
       {
@@ -23,14 +24,15 @@
         "type": "number",
         "constraints": {
           "required": true,
-          "min": 1,
-          "max": 999999
+          "minimum": 1,
+          "maximum": 999999
         }
       },
       {
         "name": "tree_label",
         "type": "string",
         "constraints": {
+        "maxLength": 15
         }
       },
       {
@@ -51,7 +53,10 @@
       },
       {
         "name": "sector_or_quarter",
-        "type": "string"
+        "type": "string",
+        "constraints": {
+        "maxLength": 15
+        }
       },
       {
         "name": "species",
@@ -59,7 +64,7 @@
         "constraints": {
           "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
         }
-      },  
+      },
       {
         "name": "distance",
         "type": "number"
@@ -74,13 +79,23 @@
       }
     ]
   },
-  "primaryKey": ["company", "company_plot_number","tree_number"],
+  "primaryKey": [
+    "company",
+    "company_plot_number",
+    "tree_number"
+  ],
   "foreignKeys": [
     {
-      "fields": ["company", "company_plot_number"],
+      "fields": [
+        "company",
+        "company_plot_number"
+      ],
       "reference": {
         "resource": "plot",
-        "fields": ["company", "company_plot_number"]
+        "fields": [
+          "company",
+          "company_plot_number"
+        ]
       }
     }
   ]

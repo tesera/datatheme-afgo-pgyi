@@ -16,36 +16,40 @@
         "type": "string",
         "constraints": {
           "required": true,
-          "unique": true
+          "unique": true,
+          "maxLength": 15
         }
       },
       {
         "name": "company_stand_number",
-        "type": "string"
+        "type": "string",
+        "constraints": {
+        "maxLength": 15
+        }
       },
       {
         "name": "establishment_year",
         "type": "integer",
         "constraints": {
           "required": true,
-          "min": 1900,
-          "max": 2050
+          "minimum": 1900,
+          "maximum": 2050
         }
       },
       {
         "name": "establishment_month",
         "type": "integer",
         "constraints": {
-          "min": 1,
-          "max": 12
+          "minimum": 1,
+          "maximum": 12
         }
       },
       {
         "name": "establishment_day",
         "type": "integer",
         "constraints": {
-          "min": 1,
-          "max": 31
+          "minimum": 1,
+          "maximum": 31
         }
       },
       {
@@ -57,15 +61,19 @@
       },
       {
         "name": "fma",
-        "type": "string"
+        "type": "string",
+        "constraints": {
+        "maxLength": 30
+        }
+
       },
       {
         "name": "ats_township",
         "type": "integer",
         "constraints": {
           "required": true,
-          "min": 1,
-          "max": 126
+          "minimum": 1,
+          "maximum": 126
         }
       },
       {
@@ -73,9 +81,8 @@
         "type": "integer",
         "constraints": {
           "required": true,
-          "min": 1,
-          "max": 26,
-          "colmap": true
+          "minimum": 1,
+          "maximum": 26
         }
       },
       {
@@ -83,8 +90,8 @@
         "type": "integer",
         "constraints": {
           "required": true,
-          "min": 4,
-          "max": 6
+          "minimum": 4,
+          "maximum": 6
         }
       },
       {
@@ -92,17 +99,23 @@
         "type": "integer",
         "constraints": {
           "required": true,
-          "min": 1,
-          "max": 36
+          "minimum": 1,
+          "maximum": 36
         }
       },
       {
         "name": "opening_number",
-        "type": "string"
+        "type": "string",
+        "constraints": {
+        "maxLength": 11
+        }
       },
       {
         "name": "sampling_unit_number",
-        "type": "string"
+        "type": "string",
+        "constraints": {
+        "maxLength": 15
+        }
       },
       {
         "name": "topographic_position",
@@ -115,16 +128,16 @@
         "name": "elevation",
         "type": "number",
         "constraints": {
-          "min": 0,
-          "max": 3747
+          "minimum": 0,
+          "maximum": 3747
         }
       },
       {
         "name": "slope",
         "type": "number",
         "constraints": {
-          "min": 0,
-          "max": 200
+          "minimum": 0,
+          "maximum": 200
         }
       },
       {
@@ -138,16 +151,16 @@
         "name": "x_coord",
         "type": "number",
         "constraints": {
-          "min": -111700,
-          "max": -1030400
+          "minimum": -111700,
+          "maximum": -1030400
         }
       },
       {
         "name": "y_coord",
         "type": "number",
         "constraints": {
-          "min": 5643600,
-          "max": 6702500
+          "minimum": 5643600,
+          "maximum": 6702500
         }
       },
       {
@@ -169,23 +182,23 @@
       {
         "name": "latitude",
         "type": "number",
-           "constraints": {
-          "min": 49.00000,
-          "max": 60.00000
-        }  
+        "constraints": {
+          "minimum": 49.00000,
+          "maximum": 60.00000
+        }
       },
       {
         "name": "longitude",
         "type": "number",
-           "constraints": {
-          "min": -110.00000,
-          "max": -120.00000
-        }  
+        "constraints": {
+          "minimum": -110.00000,
+          "maximum": -120.00000
+        }
       },
       {
         "name": "natural_subregion",
         "type": "string",
-         "constraints": {
+        "constraints": {
           "required": true,
           "pattern": "/^(CM|DM|NM|BSA|PAD|LBH|UBH|AP|ALP|SA|MT|UF|LF|KU|FP|PRP|CP|DMG|FF|NF|MG)$/"
         }
@@ -220,14 +233,8 @@
       }
     ]
   },
-  "primaryKey": ["company","company_plot_number"],
-  "foreignKeys": [
-    {
-      "fields": "company",
-      "reference": {
-        "resource": "admin",
-        "fields": "company"
-      }
-    }
+  "primaryKey": [
+    "company",
+    "company_plot_number"
   ]
 }
