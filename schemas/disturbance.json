@@ -38,7 +38,7 @@
         "name": "disturbance_year",
         "type": "integer",
         "constraints": {
-          "required": "disturbance_code != ''",
+          "required": "disturbance_code != \"\"",
           "minimum": 1900,
           "maximum": 2050
         }
