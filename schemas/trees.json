@@ -74,7 +74,7 @@
         "type": "number"
       },
       {
-        "name": "trees_comment",
+        "name": "tree_comment",
         "type": "string"
       }
     ]
