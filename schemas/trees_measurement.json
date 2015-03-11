@@ -47,7 +47,7 @@
         "name": "dbh",
         "type": "number",
         "constraints": {
-          "required": "rcd == ''",
+          "required": "rcd == \"\"",
           "minimum": 0.1,
           "maximum": 120
         }
@@ -56,7 +56,7 @@
         "name": "dbh_height",
         "type": "number",
         "constraints": {
-          "required": "dbh != ''",
+          "required": "dbh != \"\"",
           "minimum": 1.1,
           "maximum": 1.5
         }
@@ -65,7 +65,7 @@
         "name": "rcd",
         "type": "number",
         "constraints": {
-          "required": "dbh == ''",
+          "required": "dbh == \"\"",
           "minimum": 0.1,
           "maximum": 15
         }
@@ -74,7 +74,7 @@
         "name": "rcd_height",
         "type": "number",
         "constraints": {
-          "required": "rcd != ''",
+          "required": "rcd != \"\"",
           "minimum": 0.0,
           "maximum": 0.3
         }
@@ -114,7 +114,7 @@
         "name": "stump_height",
         "type": "number",
         "constraints": {
-          "required": "stump_age != ''",
+          "required": "stump_age != \"\"",
           "minimum": 0.0,
           "maximum": 0.30
         }
