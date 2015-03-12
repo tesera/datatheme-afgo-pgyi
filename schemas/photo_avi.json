@@ -63,7 +63,7 @@
         "name": "moist_reg",
         "type": "string",
         "constraints": {
-          "pattern": "/^(a|b|c|d)$/"
+          "pattern": "/^(d|m|w|a)$/"
         }
       },
       {
