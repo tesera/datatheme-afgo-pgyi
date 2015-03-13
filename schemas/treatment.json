@@ -79,7 +79,7 @@
         "company_plot_number"
       ],
       "reference": {
-        "resource": "Plot",
+        "resource": "plot",
         "fields": [
           "company",
           "company_plot_number"
