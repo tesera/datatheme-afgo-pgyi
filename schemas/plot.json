@@ -151,8 +151,8 @@
         "name": "x_coord",
         "type": "number",
         "constraints": {
-          "minimum": -111700,
-          "maximum": -1030400
+          "minimum": -1030400,
+          "maximum": -111700
         }
       },
       {
@@ -191,8 +191,8 @@
         "name": "longitude",
         "type": "number",
         "constraints": {
-          "minimum": -110.00000,
-          "maximum": -120.00000
+          "minimum": -120.00000,
+          "maximum": -110.00000
         }
       },
       {

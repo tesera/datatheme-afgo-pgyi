@@ -106,7 +106,7 @@
         "name": "sp2_per",
         "type": "integer",
         "constraints": {
-          "pattern": "/^(1|2|3|4|5)$/"
+          "pattern": "/^(0|1|2|3|4|5)$/"
         }
       },
       {
@@ -120,7 +120,7 @@
         "name": "sp3_per",
         "type": "integer",
         "constraints": {
-          "pattern": "/^(1|2|3)$/"
+          "pattern": "/^(0|1|2|3)$/"
         }
       },
       {
@@ -134,7 +134,7 @@
         "name": "sp4_per",
         "type": "integer",
         "constraints": {
-          "pattern": "/^(1|2)$/"
+          "pattern": "/^(0|1|2)$/"
         }
       },
       {
@@ -148,7 +148,7 @@
         "name": "sp5_per",
         "type": "integer",
         "constraints": {
-          "pattern": "/^(1|2)$/"
+          "pattern": "/^(0|1|2)$/"
         }
       },
       {
