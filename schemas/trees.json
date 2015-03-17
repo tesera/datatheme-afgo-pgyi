@@ -55,7 +55,7 @@
         "name": "sector_or_quarter",
         "type": "string",
         "constraints": {
-        "maxLength": 15
+        "maxLength": 2
         }
       },
       {
