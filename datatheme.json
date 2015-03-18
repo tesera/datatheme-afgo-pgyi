@@ -6,12 +6,12 @@
     "description": "Datatheme for AFGO PGYI tree plot data.",
     "schemas": [
         "./schemas/plot.json",
+        "./schemas/trees.json",
+        "./schemas/plot_measurement.json",
+        "./schemas/trees_measurement.json",
         "./schemas/photo_avi.json",
         "./schemas/treatment.json",
         "./schemas/disturbance.json",
-        "./schemas/regeneration.json",
-        "./schemas/plot_measurement.json",
-        "./schemas/trees.json",
-        "./schemas/trees_measurement.json"
+        "./schemas/regeneration.json"
     ]
 }
