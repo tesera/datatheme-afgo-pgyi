@@ -6,6 +6,7 @@
       {
         "name": "company",
         "type": "string",
+        "raises": "error",
         "constraints": {
           "required": true,
           "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
@@ -14,6 +15,7 @@
       {
         "name": "company_plot_number",
         "type": "string",
+        "raises": "error",
         "constraints": {
           "required": true,
           "maxLength": 15
@@ -22,6 +24,7 @@
       {
         "name": "tree_number",
         "type": "number",
+        "raises": "error",
         "constraints": {
           "required": true,
           "minimum": 1,
@@ -38,6 +41,7 @@
       {
         "name": "tree_location_id",
         "type": "integer",
+        "raises": "error",
         "constraints": {
           "required": true,
           "pattern": "/^(0|1|2|3)$/"
@@ -46,6 +50,7 @@
       {
         "name": "tree_origin",
         "type": "inetger",
+        "raises": "error",
         "constraints": {
           "required": true,
           "pattern": "/^(0|1|2|3|4|5|6|7|8|9|10)$/"
@@ -54,6 +59,7 @@
       {
         "name": "sector_or_quarter",
         "type": "string",
+        "raises": "warning",
         "constraints": {
         "maxLength": 2
         }
@@ -61,17 +67,20 @@
       {
         "name": "species",
         "type": "string",
+        "raises": "error",
         "constraints": {
           "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
         }
       },
       {
         "name": "distance",
-        "type": "number"
+        "type": "number",
+        "raises": "warning"
       },
       {
         "name": "azimuth",
-        "type": "number"
+        "type": "number",
+        "raises": "warning"
       },
       {
         "name": "trees_comment",

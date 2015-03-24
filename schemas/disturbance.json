@@ -6,6 +6,7 @@
       {
         "name": "company",
         "type": "string",
+        "raises": "error",
         "constraints": {
           "required": true,
           "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
@@ -14,6 +15,7 @@
       {
         "name": "company_plot_number",
         "type": "string",
+        "raises": "error",
         "constraints": {
           "required": true,
           "maxLength": 15
@@ -22,6 +24,7 @@
       {
         "name": "disturbance_number",
         "type": "integer",
+        "raises": "error",
         "constraints": {
           "minimum": 1,
           "maximum": 12
@@ -30,6 +33,7 @@
       {
         "name": "disturbance_code",
         "type": "string",
+        "raises": "error",
         "constraints": {
           "pattern": "/^(BU|DF|MI|MU|NDD|NDW|DC|HL|MLU|NDC|NDI|FI|DA)$/"
         }
@@ -37,6 +41,7 @@
       {
         "name": "disturbance_year",
         "type": "integer",
+        "raises": "error",
         "constraints": {
           "required": "disturbance_code != \"\"",
           "minimum": 1900,
@@ -46,6 +51,7 @@
       {
         "name": "disturbance_month",
         "type": "integer",
+        "raises": "warning",
         "constraints": {
           "minimum": 1,
           "maximum": 12
@@ -54,6 +60,7 @@
       {
         "name": "disturbance_day",
         "type": "integer",
+        "raises": "warning",
         "constraints": {
           "minimum": 1,
           "maximum": 31
