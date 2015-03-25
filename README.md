@@ -2,7 +2,7 @@
 
 > !WIP: this is work in progress.
 
-![Codeship Status](https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=master)
+[ ![Codeship Status for tesera/datatheme-pgyi](https://codeship.com/projects/a4acc480-9ff1-0132-e468-3ee0debf623a/status?branch=master)](https://codeship.com/projects/65305)
 
 A Datatheme is a defined [Tabular Datapackage](http://dataprotocols.org/tabular-data-package/). Essentially a Class from which you can base your Tabular Datapackage from. The intent is to have one place to define and version the data model using the [JSON Table Schema](http://dataprotocols.org/json-table-schema/).
 
