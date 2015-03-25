@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-# deploys datatheme resources to host s3 bucket
+# build datatheme resources
 # usage: $ bash ./publi.sh
+
+# build & deploys datatheme resources to host s3 bucket
+# usage: $ bash ./publi.sh put
 
 # dependencies:
 # aws cli : http://aws.amazon.com/cli/
@@ -23,10 +26,13 @@ node ../node_modules/bawlk/bin/bawlk.js rules -d ./www/datapackage.json -o ./www
 echo "compiling bawlk scripts from datapackage.json"
 node ../node_modules/bawlk/bin/bawlk.js scripts -d ./www/datapackage.json -o ./www/awk
 
-echo "publishing datatheme resources to s3"
-aws s3 cp ./www/index.html $datatheme_path/index.html --content-type text/html $flags
-aws s3 cp ./www/datapackage.json $datatheme_path/datapackage.json --content-type application/json $flags
-aws s3 cp ./www/awk/ $datatheme_path/awk --recursive --content-type text/plain $flags
-aws s3 cp ./www/rules/ $datatheme_path/rules --recursive --content-type text/csv $flags
+if [ "$1" == "put" ]; then
+    echo "publishing datatheme resources to s3"
+    aws s3 cp ./www/index.html $datatheme_path/index.html --content-type text/html $flags
+    aws s3 cp ./www/datapackage.json $datatheme_path/datapackage.json --content-type application/json $flags
+    aws s3 cp ./www/awk/ $datatheme_path/awk --recursive --content-type text/plain $flags
+    aws s3 cp ./www/rules/ $datatheme_path/rules --recursive --content-type text/csv $flags
+    echo "publishing complete"
+fi
 
-echo "publishing complete"
+echo "done"
