@@ -13,7 +13,6 @@
 
 datatheme_path=s3://tesera.datathemes/afgo.pgyi
 flags="--acl public-read \
---content-encoding utf8 \
 --cache-control no-cahe"
 
 echo "building datapackage.json"
@@ -31,7 +30,7 @@ if [ "$1" == "put" ]; then
     aws s3 cp ./www/index.html $datatheme_path/index.html --content-type text/html $flags
     aws s3 cp ./www/datapackage.json $datatheme_path/datapackage.json --content-type application/json $flags
     aws s3 cp ./www/awk/ $datatheme_path/awk --recursive --content-type text/plain $flags
-    aws s3 cp ./www/rules/ $datatheme_path/rules --recursive --content-type text/csv $flags
+    aws s3 cp ./www/rules/ $datatheme_path/rules --recursive --content-type text/plain $flags
     echo "publishing complete"
 fi
 

@@ -16,13 +16,20 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">bawlk rules<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a ng-href="rules/{{resource.name}}.rules.csv" ng-repeat="resource in datapackage.resources" ng-href="#">{{resource.name + '.rule.csv'}}</a></li>
+                                <li>
+                                    <a ng-href="rules/{{resource.name}}.rules.csv" ng-repeat="resource in datapackage.resources" target="_blank">{{resource.name + '.rule.csv'}}
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">bawlk awk scripts<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a ng-href="awk/{{resource.name}}.awk" ng-repeat="resource in datapackage.resources" ng-href="#">{{resource.name + '.awk'}}</a></li>
+                                <li>
+                                    <a ng-href="awk/{{resource.name}}.awk" ng-repeat="resource in datapackage.resources" target="_blank">
+                                        {{resource.name + '.awk'}}
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li class="dropdown">
