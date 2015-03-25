@@ -11,7 +11,7 @@
 # nodejs : https://nodejs.org/
 # bawlk : https://github.com/tesera/bawlk
 
-datatheme_www_path=s3://tesera.datathemes/afgo.pgyi/www
+datatheme_path=s3://tesera.datathemes/afgo.pgyi
 flags="--acl public-read \
 --content-encoding utf8 \
 --cache-control no-cahe"
@@ -28,10 +28,10 @@ bawlk scripts -d ./www/datapackage.json -o ./www/awk
 
 if [ "$1" == "put" ]; then
     echo "publishing datatheme resources to s3"
-    aws s3 cp ./www/index.html $datatheme_www_path/index.html --content-type text/html $flags
-    aws s3 cp ./www/datapackage.json $datatheme_www_path/datapackage.json --content-type application/json $flags
-    aws s3 cp ./www/awk/ $datatheme_www_path/awk --recursive --content-type text/plain $flags
-    aws s3 cp ./www/rules/ $datatheme_www_path/rules --recursive --content-type text/csv $flags
+    aws s3 cp ./www/index.html $datatheme_path/index.html --content-type text/html $flags
+    aws s3 cp ./www/datapackage.json $datatheme_path/datapackage.json --content-type application/json $flags
+    aws s3 cp ./www/awk/ $datatheme_path/awk --recursive --content-type text/plain $flags
+    aws s3 cp ./www/rules/ $datatheme_path/rules --recursive --content-type text/csv $flags
     echo "publishing complete"
 fi
 
