@@ -21,10 +21,10 @@ bash ./dt2dp.sh > ./www/datapackage.json &&
 
 mkdir ./www/awk ./www/rules
 echo "compiling bawlk rules from datapackage.json"
-node ../node_modules/bawlk/bin/bawlk.js rules -d ./www/datapackage.json -o ./www/rules
+bawlk rules -d ./www/datapackage.json -o ./www/rules
 
 echo "compiling bawlk scripts from datapackage.json"
-node ../node_modules/bawlk/bin/bawlk.js scripts -d ./www/datapackage.json -o ./www/awk
+bawlk scripts -d ./www/datapackage.json -o ./www/awk
 
 if [ "$1" == "put" ]; then
     echo "publishing datatheme resources to s3"
