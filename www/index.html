@@ -110,7 +110,7 @@
                                         <span class="label" ng-class="{'label-danger': field.raises == 'error', 'label-warning': field.raises == 'warning'}">       {{field.raises}}
                                         </span>
                                     </td>
-                                    <td>{{field.constraints.required ? 'yes' : 'no'}}</td>
+                                    <td style="width: 100px;">{{field.constraints.required}}</td>
                                     <td>{{field.constraints.unique ? 'yes' : 'no'}}</td>
                                     <td>{{field.constraints.minimum}}</td>
                                     <td>{{field.constraints.maximum}}</td>
