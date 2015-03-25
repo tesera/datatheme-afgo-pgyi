@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html ng-app="docs">
+    <head>
+        <title>PGYI DataTheme</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"/>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.css"/>
+    </head>
+    <body ng-controller="main">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">AFGO PGYI Datatheme</a>
+                    <ul class="nav navbar-nav">
+                        <li><a href="/datapackage.json" target="_blank">datapackage.json</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">bawlk rules<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a ng-href="rules/{{resource.name}}.rules.csv" ng-repeat="resource in datapackage.resources" ng-href="#">{{resource.name + '.rule.csv'}}</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">bawlk awk scripts<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a ng-href="awk/{{resource.name}}.awk" ng-repeat="resource in datapackage.resources" ng-href="#">{{resource.name + '.awk'}}</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Github<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="https://github.com/tesera/datatheme-pgyi">afgo.pgyi datatheme</a></li>
+                                <li><a href="https://github.com/tesera/bawlk">bawlk</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div ng-repeat="resource in datapackage.resources" class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <i class="fa fa-file-text"></i>
+                            &nbsp; {{resource.path}}
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-condensed table-bordered">
+                                <tr>
+                                    <td><strong>Primary Keys</strong></td>
+                                    <td>{{resource.primaryKey.join(', ')}}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Foreign Keys</strong></td>
+                                    <td>
+                                        <span ng-repeat="fkey in resource.foreignKeys">
+                                            {{formatFKey(fkey)}}
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <table class="table table-condensed table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Field
+                                    </th>
+                                    <th>
+                                        Type
+                                    </th>
+                                    <th>
+                                        Raises
+                                    </th>
+                                    <th>
+                                        Required
+                                    </th>
+                                    <th>
+                                        Unique
+                                    </th>
+                                    <th>
+                                        Min
+                                    </th>
+                                    <th>
+                                        Max
+                                    </th>
+                                    <th>
+                                        Min Length
+                                    </th>
+                                    <th>
+                                        Max Length
+                                    </th>
+                                    <th>
+                                        Pattern
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="field in resource.schema.fields">
+                                    <td>{{field.name}}</td>
+                                    <td>{{field.type}}</td>
+                                    <td>
+                                        <span class="label" ng-class="{'label-danger': field.raises == 'error', 'label-warning': field.raises == 'warning'}">       {{field.raises}}
+                                        </span>
+                                    </td>
+                                    <td>{{field.constraints.required ? 'yes' : 'no'}}</td>
+                                    <td>{{field.constraints.unique ? 'yes' : 'no'}}</td>
+                                    <td>{{field.constraints.minimum}}</td>
+                                    <td>{{field.constraints.maximum}}</td>
+                                    <td>{{field.constraints.minLength}}</td>
+                                    <td>{{field.constraints.maxLength}}</td>
+                                    <td>{{field.constraints.pattern}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js"></script>
+        <script>
+            angular.module('docs', []).controller('main', function($scope, $http){
+                $http.get('https://s3.amazonaws.com/tesera.datathemes/afgo.pgyi/datapackage.json').then(function (res) {
+                    $scope.datapackage = res.data;
+                });
+
+                $scope.formatFKey = function (fkey) {
+                    var resource = fkey.reference.resource;
+                    var fields = fkey.reference.fields.join(', ');
+                    return resource + '(' + fields + ')';
+                };
+            });
+        </script>
+    </body>
+</html>

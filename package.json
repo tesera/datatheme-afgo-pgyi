@@ -1,0 +1,27 @@
+{
+  "name": "datatheme-pgyi",
+  "version": "2.0.0",
+  "description": "Datapackage theme for AFGO PGYI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tesera/datatheme-afgo.git"
+  },
+  "keywords": [
+    "datapackage",
+    "opendata"
+  ],
+  "author": "Yves Richard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tesera/datatheme-afgo/issues"
+  },
+  "devDependencies": {
+    "JSONStream": "~0.10.0",
+    "lodash": "~3.5.0",
+    "event-stream": "~3.3.0"
+  }
+}
