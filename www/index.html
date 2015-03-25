@@ -107,7 +107,7 @@
                                     <td>{{field.name}}</td>
                                     <td>{{field.type}}</td>
                                     <td>
-                                        <span class="label" ng-class="{'label-danger': field.raises == 'error', 'label-warning': field.raises == 'warning'}">       {{field.raises}}
+                                        <span class="label" ng-class="{'label-danger': field.raises == 'error', 'label-warning': field.raises == 'warning'}">{{field.raises}}
                                         </span>
                                     </td>
                                     <td style="width: 100px;">{{field.constraints.required}}</td>
@@ -116,7 +116,9 @@
                                     <td>{{field.constraints.maximum}}</td>
                                     <td>{{field.constraints.minLength}}</td>
                                     <td>{{field.constraints.maxLength}}</td>
-                                    <td>{{field.constraints.pattern}}</td>
+                                    <td style="word-break:break-all;">
+                                        {{ field.constraints.pattern }}
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -137,6 +139,11 @@
                     var resource = fkey.reference.resource;
                     var fields = fkey.reference.fields.join(', ');
                     return resource + '(' + fields + ')';
+                };
+
+                $scope.formatPattern = function (pattern) {
+                    pattern = pattern || '';
+                    return pattern.length > 30 ? pattern.substring(0, 30) + ' ... (hover to see all)' : pattern;
                 };
             });
         </script>
