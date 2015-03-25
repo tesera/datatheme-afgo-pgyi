@@ -1,1 +1,4 @@
-datapackage.json
+node_modules
+www/datapackage.json
+www/rules/
+www/awk/
