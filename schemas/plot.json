@@ -9,7 +9,7 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
         }
       },
       {
@@ -25,7 +25,6 @@
       {
         "name": "company_stand_number",
         "type": "string",
-        "raises": "error",
         "constraints": {
           "maxLength": 15
         }
@@ -43,7 +42,7 @@
       {
         "name": "establishment_month",
         "type": "integer",
-        "raises": "error",
+        "raises": "warning",
         "constraints": {
           "minimum": 1,
           "maximum": 12
@@ -52,7 +51,7 @@
       {
         "name": "establishment_day",
         "type": "integer",
-        "raises": "error",
+        "raises": "warning",
         "constraints": {
           "minimum": 1,
           "maximum": 31
@@ -61,15 +60,15 @@
       {
         "name": "fmu",
         "type": "string",
-        "raises": "error",
+        "raises": "warning",
         "constraints": {
-          "pattern": "/^(A10|A11|A12|A13|A14|A4|A5|A6|A7|A8|A9|B10|B11|B9|BO1|BO2|C4|C5|CO1|CO2|E1|E10|E11|E2|E3|E4|E5|E6|E7|E8|E9|EO1|F1|F10|F11|F14|F20|F21|F23|F24|F25|FO1|G1|G10|G11|G12|G13|G14|G16|G2|G3|G4|G5|G6|G7|G8|G9|GO1|GO2|GO3|GO4|H1|L1|L11|L2|L3|L8|L9|LO1|M1|M10|M3|M4|M7|M9|NA|P1|P10|P11|P13|P3|P4|P5|P6|P7|P8|P9|PO1|PO2|PO3|R1|R10|R11|R13|R2|R2U|R3|R4|R4Y|RO1|S10|S11|S14|S15|S16|S17|S18|S19|S20|S21|S22|S7|S9|SO1|SO2|W1|W10|W11|W13|W14|W15|W2|W3|W4|W5|W6|W8|WO1|WO2|WO3|E14)$/"
+          "pattern": "/^(A10|A11|A12|A13|A14|A15|A4|A5|A6|A7|A8|A9|B10|B11|B9|BO1|BO2|C4|C5|CO1|CO2|E1|E10|E11|E13|E14|E15|E2|E3|E4|E5|E6|E7|E8|E9|EO1|F1|F10|F11|F14|F20|F21|F23|F24|F25|FO1|G1|G10|G11|G12|G13|G14|G15|G16|G2|G3|G4|G5|G6|G7|G8|G9|GO1|GO2|GO3|GO4|H1|L1|L11|L2|L3|L8|L9|LO1|M1|M10|M3|M4|M7|M9|NA|P1|P10|P11|P13|P14|P19|P20|P21|P3|P4|P5|P6|P7|P8|P9|PO1|PO2|PO3|R1|R10|R11|R12|R13|R14|R2|R2U|R3|R4|R4Y|RO1|S10|S11|S14|S15|S16|S17|S18|S19|S20|S21|S22|S23|S24|S25|S7|S9|SO1|SO2|W1|W10|W11|W13|W14|W15|W2|W3|W4|W5|W6|W8|WO1|WO2|WO3|E14)$/"
         }
       },
       {
         "name": "fma",
         "type": "string",
-        "raises": "error",
+        "raises": "warning",
         "constraints": {
           "maxLength": 30
         }
@@ -125,7 +124,7 @@
         "name": "sampling_unit_number",
         "type": "string",
         "constraints": {
-          "maxLength": 15
+          "maxLength": 3
         }
       },
       {
@@ -138,7 +137,7 @@
       },
       {
         "name": "elevation",
-        "type": "number",
+        "type": "integer",
         "raises": "warning",
         "constraints": {
           "minimum": 0,
@@ -147,7 +146,7 @@
       },
       {
         "name": "slope",
-        "type": "number",
+        "type": "integer",
         "raises": "warning",
         "constraints": {
           "minimum": 0,
@@ -183,7 +182,7 @@
       {
         "name": "utm_zone",
         "type": "string",
-        "raises": "error",
+        "raises": "warning",
         "constraints": {
           "required": true,
           "pattern": "/^(UTM11|UTM12)$/"
@@ -192,7 +191,7 @@
       {
         "name": "datum",
         "type": "string",
-        "raises": "error",
+        "raises": "warning",
         "constraints": {
           "required": true,
           "pattern": "/^(NAD27|NAD83)$/"
@@ -226,6 +225,7 @@
       {
         "name": "ecosite_guide",
         "type": "string",
+        "raises": "warning",
         "constraints": {
           "required": true,
           "pattern": "/^(N|WC|SW)$/"
@@ -234,9 +234,10 @@
       {
         "name": "ecosite",
         "type": "string",
+        "raises": "warning",        
         "constraints": {
           "required": true,
-          "pattern": "/^(a|b|c|d|e|f|g|h|I|j|k|l|m|n)$/"
+          "pattern": "/^(a|b|c|d|e|f|g|h|i|j|k|l|m|n)$/"
         }
       },
       {
@@ -245,12 +246,15 @@
         "raises": "warning",
         "constraints": {
           "required": true,
-          "pattern": "/^(1|b1|b2|b3|b4|c1|d1|d2|d3|e1|e2|e3|f1|f2|f3|g1|h1|i1|i2|j1|j2|k1|k2|k3|l1|h2|j3|a2|a3|g2|h3|b5|c2|c3|c4|c5|d4|e4|f4|f5|f6|g3|i3|l2|l3|m1|m2|m3|n1)$/"
+          "pattern": "/^(a1|b1|b2|b3|b4|c1|d1|d2|d3|e1|e2|e3|f1|f2|f3|g1|h1|i1|i2|j1|j2|k1|k2|k3|l1|h2|j3|a2|a3|g2|h3|b5|c2|c3|c4|c5|d4|e4|f4|f5|f6|g3|i3|l2|l3|m1|m2|m3|n1)$/"
         }
       },
       {
         "name": "plot_comment",
-        "type": "string"
+        "type": "string",
+        "constraints": {
+          "maxLength": 250
+        }
       }
     ]
   },

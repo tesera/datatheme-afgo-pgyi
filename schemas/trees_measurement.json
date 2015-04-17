@@ -9,7 +9,7 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
         }
       },
       {
@@ -45,25 +45,21 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(T|S|PS|PO|B|R1|R2|R3|R4|R5|R6|R7|R8|R9|R10)$/"
+          "pattern": "/^(T|S|ES|ET|B|R1|R2|R3|R4|R5|R6|R7|R8|R9|R10)$/"
         }
       },
       {
         "name": "dbh",
         "type": "number",
-        "raises": "warning",
         "constraints": {
-          "required": "rcd == ''",
           "minimum": 0.1,
-          "maximum": 120
+          "maximum": 120.0
         }
       },
       {
         "name": "dbh_height",
         "type": "number",
-        "raises": "warning",
         "constraints": {
-          "required": "dbh != ''",
           "minimum": 1.1,
           "maximum": 1.5
         }
@@ -71,19 +67,15 @@
       {
         "name": "rcd",
         "type": "number",
-        "raises": "warning",
         "constraints": {
-          "required": "dbh == ''",
           "minimum": 0.1,
-          "maximum": 15
+          "maximum": 15.0
         }
       },
       {
         "name": "rcd_height",
         "type": "number",
-        "raises": "warning",
         "constraints": {
-          "required": "rcd != ''",
           "minimum": 0.0,
           "maximum": 0.3
         }
@@ -91,9 +83,8 @@
       {
         "name": "height",
         "type": "number",
-        "raises": "warning",
         "constraints": {
-          "minimum": 0.0,
+          "minimum": 0.01,
           "maximum": 45.0
         }
       },
@@ -108,7 +99,6 @@
       {
         "name": "dbh_age",
         "type": "integer",
-        "raises": "warning",
         "constraints": {
           "minimum": 1,
           "maximum": 350
@@ -117,7 +107,6 @@
       {
         "name": "stump_age",
         "type": "integer",
-        "raises": "warning",
         "constraints": {
           "minimum": 1,
           "maximum": 350
@@ -126,9 +115,7 @@
       {
         "name": "stump_height",
         "type": "number",
-        "raises": "warning",
         "constraints": {
-          "required": "stump_age != ''",
           "minimum": 0.0,
           "maximum": 0.30
         }
@@ -136,7 +123,6 @@
       {
         "name": "total_age",
         "type": "integer",
-        "raises": "error",
         "constraints": {
           "minimum": 1,
           "maximum": 350
@@ -145,7 +131,6 @@
       {
         "name": "htlc",
         "type": "number",
-        "raises": "warning",
         "constraints": {
           "minimum": 0,
           "maximum": 45
@@ -154,7 +139,6 @@
       {
         "name": "crown_diameter_ns",
         "type": "number",
-        "raises": "warning",
         "constraints": {
           "minimum": 1,
           "maximum": 20
@@ -163,7 +147,6 @@
       {
         "name": "crown_diameter_ew",
         "type": "number",
-        "raises": "warning",
         "constraints": {
           "minimum": 1,
           "maximum": 20
@@ -181,7 +164,7 @@
       {
         "name": "cause1",
         "type": "integer",
-        "raises": "warning",
+        "raises": "error",
         "constraints": {
           "pattern": "/^(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|99)$/"
         }
@@ -189,7 +172,7 @@
       {
         "name": "severity1",
         "type": "integer",
-        "raises": "warning",
+        "raises": "error",
         "constraints": {
           "pattern": "/^(1|2|3|9)$/"
         }
@@ -197,15 +180,13 @@
       {
         "name": "condition_code2",
         "type": "integer",
-        "raises": "warning",
         "constraints": {
-          "pattern": "/^(0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16)$/"
+          "pattern": "/^(3|4|5|6|7|8|9|10|11|12|16)$/"
         }
       },
       {
         "name": "cause2",
         "type": "integer",
-        "raises": "warning",
         "constraints": {
           "pattern": "/^(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|99)$/"
         }
@@ -213,7 +194,6 @@
       {
         "name": "severity2",
         "type": "integer",
-        "raises": "warning",
         "constraints": {
           "pattern": "/^(1|2|3|9)$/"
         }
@@ -221,15 +201,13 @@
       {
         "name": "condition_code3",
         "type": "integer",
-        "raises": "warning",
         "constraints": {
-          "pattern": "/^(0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16)$/"
+          "pattern": "/^(3|4|5|6|7|8|9|10|11|12|16)$/"
         }
       },
       {
         "name": "cause3",
         "type": "integer",
-        "raises": "warning",
         "constraints": {
           "pattern": "/^(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|99)$/"
         }
@@ -237,14 +215,16 @@
       {
         "name": "severity3",
         "type": "integer",
-        "raises": "warning",
         "constraints": {
           "pattern": "/^(1|2|3|9)$/"
         }
       },
       {
         "name": "trees_measurement_comment",
-        "type": "string"
+        "type": "string",
+        "constraints":{
+          "maxLength": 250
+        }
       }
     ]
   },
