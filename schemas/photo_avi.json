@@ -183,7 +183,7 @@
         "name": "origin",
         "type": "integer",
         "constraints": {
-          "minimum": 1400,
+          "minimum": 0,
           "maximum": 2050
         }
       },
