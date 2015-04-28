@@ -27,6 +27,7 @@ bawlk scripts -d ./www/datapackage.json -o ./www/awk
 
 if [ "$1" == "put" ]; then
     echo "publishing datatheme resources to s3"
+    aws s3 cp ./www/partials/ $datatheme_path/partials --recursive --content-type text/html $flags
     aws s3 cp ./www/index.html $datatheme_path/index.html --content-type text/html $flags
     aws s3 cp ./www/datapackage.json $datatheme_path/datapackage.json --content-type application/json $flags
     aws s3 cp ./www/awk/ $datatheme_path/awk --recursive --content-type text/plain $flags

@@ -1,0 +1,81 @@
+<div ng-repeat="resource in datapackage.resources" class="row" ng-cloak>
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <i class="fa fa-file-text"></i>
+                &nbsp; {{resource.path}}
+            </div>
+            <div class="panel-body">
+                <table class="table table-condensed table-bordered">
+                    <tr>
+                        <td><strong>Primary Keys</strong></td>
+                        <td>{{resource.primaryKey.join(', ')}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Foreign Keys</strong></td>
+                        <td>
+                            <span ng-repeat="fkey in resource.foreignKeys">
+                                {{formatFKey(fkey)}}
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <table class="table table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            Field
+                        </th>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            Raises
+                        </th>
+                        <th>
+                            Required
+                        </th>
+                        <th>
+                            Unique
+                        </th>
+                        <th>
+                            Min
+                        </th>
+                        <th>
+                            Max
+                        </th>
+                        <th>
+                            Min Length
+                        </th>
+                        <th>
+                            Max Length
+                        </th>
+                        <th>
+                            Pattern
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="field in resource.schema.fields">
+                        <td>{{field.name}}</td>
+                        <td>{{field.type}}</td>
+                        <td>
+                            <span class="label" ng-class="{'label-danger': field.raises == 'error', 'label-warning': field.raises == 'warning'}">{{field.raises}}
+                            </span>
+                        </td>
+                        <td style="width: 100px;">{{field.constraints.required}}</td>
+                        <td>{{field.constraints.unique ? 'yes' : 'no'}}</td>
+                        <td>{{field.constraints.minimum}}</td>
+                        <td>{{field.constraints.maximum}}</td>
+                        <td>{{field.constraints.minLength}}</td>
+                        <td>{{field.constraints.maxLength}}</td>
+                        <td style="word-break:break-all;">
+                            {{ field.constraints.pattern }}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

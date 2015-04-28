@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo '{"name": "afgo-dataset",'
-echo '"datatheme": { "name": "afgo.pgyi", "version": "2.0.0", "repository": "https://github.com/tesera/datatheme-afgo.git"},'
+echo '"datatheme": { "name": "afgo.pgyi", "version": "2.0.1", "repository": "https://github.com/tesera/datatheme-afgo.git"},'
 echo '"resources": ['
     cat ./schemas/plot.json
     echo ,

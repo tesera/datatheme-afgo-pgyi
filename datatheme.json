@@ -1,6 +1,6 @@
 {
-    "name": "afgo",
-    "version": "2.0.0",
+    "name": "afgo.pgyi",
+    "version": "2.0.1",
     "repository": "http://github.com/tesera/afgo-datatheme.git",
     "author": "Yves Richard",
     "description": "Datatheme for AFGO PGYI tree plot data.",
