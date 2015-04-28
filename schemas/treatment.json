@@ -9,7 +9,7 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
         }
       },
       {
@@ -35,15 +35,13 @@
         "type": "string",
         "raises": "error",
         "constraints": {
-          "pattern": "/^(NT|P|H|M|C|B|TH|TW|F|FI|PC|CT|S|UP|UA|D|NK)$/"
+          "pattern": "/^(NT|P|H|M|C|B|TH|TW|F|FI|PC|CT|S|UP|UA|D|SA|SM|NK)$/"
         }
       },
       {
         "name": "treatment_year",
         "type": "integer",
-        "raises": "error",
         "constraints": {
-          "required": "treatment_code ~ /^(NT|NK)$/",
           "minimum": 1900,
           "maximum": 2050
         }
@@ -51,18 +49,14 @@
       {
         "name": "treatment_month",
         "type": "integer",
-        "raises": "warning",
         "constraints": {
-          "required": "treatment_code ~ /^(NT|NK)$/",
           "minimum": 1,
           "maximum": 12
         }
       },
       {
         "name": "treatment_day",
-        "required": "treatment_code ~ /^(NT|NK)$/",
         "type": "integer",
-        "raises": "warning",
         "constraints": {
           "minimum": 1,
           "maximum": 31
@@ -70,7 +64,10 @@
       },
       {
         "name": "treatment_comment",
-        "type": "string"
+        "type": "string",
+        "constraints":{
+          "maxLength": 250
+        }
       }
     ]
   },

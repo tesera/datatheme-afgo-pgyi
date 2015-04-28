@@ -9,7 +9,7 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
         }
       },
       {
@@ -45,26 +45,28 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
+          "pattern": "/^(A|Aw|Pb|Bw|Ax|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Ms|No)$/"
         }
       },
       {
         "name": "regeneration_count",
-        "type": "number",
-        "raises": "warning",
+        "type": "integer",
         "constraints": {
-          "minimum": "(species == \"No\" ? 0 : 1)",
+          "minimum": 0,
           "maximum": 9999
         }
       },
       {
         "name": "regeneration_comment",
-        "type": "string"
+        "type": "string",
+        "constraints":{
+          "maxLength": 250
+        }
       }
     ]
   },
   "primaryKey": [
-    "comnpany",
+    "company",
     "company_plot_number",
     "measurement_number",
     "regeneration_plot_name",

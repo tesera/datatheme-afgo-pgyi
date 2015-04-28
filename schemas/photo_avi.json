@@ -9,7 +9,7 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|BUCH|CFPL|CFS|DAIS|FOFP|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
         }
       },
       {
@@ -26,16 +26,17 @@
         "type": "string",
         "raises": "error",
         "constraints": {
-          "required": true
+          "pattern": "/^(AVI10|AVI21|AVI211|AVI22)$/"
         }
       },
       {
         "name": "polygon_number",
-        "type": "string",
+        "type": "integer",
         "raises": "error",
         "constraints": {
           "required": true,
-          "maxLength": 15
+          "minimum": 1,
+          "maximum": 9999999999
         }
       },
       {
@@ -51,9 +52,7 @@
       {
         "name": "year_photo_call",
         "type": "integer",
-        "raises": "error",
         "constraints": {
-          "required": true,
           "minimum": 1900,
           "maximum": 2050
         }
@@ -77,14 +76,13 @@
       {
         "name": "density",
         "type": "string",
-        "raises": "warning",
         "constraints": {
           "pattern": "/^(A|B|C|D)$/"
         }
       },
       {
         "name": "height",
-        "type": "number",
+        "type": "integer",
         "raises": "warning",
         "constraints": {
           "minimum": 0,
@@ -96,13 +94,13 @@
         "type": "string",
         "raises": "error",
         "constraints": {
-          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
+          "pattern": "/^(A|Aw|Pb|Bw|Ax|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|No)$/"
         }
       },
       {
         "name": "sp1_per",
         "type": "integer",
-        "raises": "warning",
+        "raises": "error",
         "constraints": {
           "pattern": "/^(0|2|3|4|5|6|7|8|9|10)$/"
         }
@@ -110,7 +108,6 @@
       {
         "name": "sp2",
         "type": "string",
-        "raises": "error",
         "constraints": {
           "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
         }
@@ -118,7 +115,7 @@
       {
         "name": "sp2_per",
         "type": "integer",
-        "raises": "warning",
+        "raises": "error",
         "constraints": {
           "pattern": "/^(0|1|2|3|4|5)$/"
         }
@@ -126,7 +123,6 @@
       {
         "name": "sp3",
         "type": "string",
-        "raises": "error",
         "constraints": {
           "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
         }
@@ -134,7 +130,7 @@
       {
         "name": "sp3_per",
         "type": "integer",
-        "raises": "warning",
+        "raises": "error",
         "constraints": {
           "pattern": "/^(0|1|2|3)$/"
         }
@@ -142,7 +138,6 @@
       {
         "name": "sp4",
         "type": "string",
-        "raises": "error",
         "constraints": {
           "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
         }
@@ -150,7 +145,7 @@
       {
         "name": "sp4_per",
         "type": "integer",
-        "raises": "warning",
+        "raises": "error",
         "constraints": {
           "pattern": "/^(0|1|2)$/"
         }
@@ -158,7 +153,6 @@
       {
         "name": "sp5",
         "type": "string",
-        "raises": "error",
         "constraints": {
           "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
         }
@@ -166,7 +160,7 @@
       {
         "name": "sp5_per",
         "type": "integer",
-        "raises": "warning",
+        "raises": "error",
         "constraints": {
           "pattern": "/^(0|1|2)$/"
         }
@@ -174,7 +168,6 @@
       {
         "name": "struc",
         "type": "string",
-        "raises": "warning",
         "constraints": {
           "pattern": "/^(S|M|C|H)$/"
         }
@@ -182,7 +175,6 @@
       {
         "name": "struc_val",
         "type": "integer",
-        "raises": "warning",
         "constraints": {
           "pattern": "/^(0|1|2|3|4|5|6|7|8|9)$/"
         }
@@ -190,33 +182,32 @@
       {
         "name": "origin",
         "type": "integer",
-        "raises": "warning",
         "constraints": {
-          "minimum": 1400,
+          "minimum": 0,
           "maximum": 2050
         }
       },
       {
         "name": "tpr",
         "type": "string",
-        "raises": "warning",
         "constraints": {
           "pattern": "/^(U|F|M|G)$/"
         }
       },
       {
         "name": "photo_avi_layer_comment",
-        "type": "string"
+        "type": "string",
+        "constraints":{
+          "maxLength": 250
+        }
       }
     ]
   },
   "primaryKey": [
     "company",
     "company_plot_number",
-    "avi_version",
     "polygon_number",
     "year_photography",
-    "year_photo_call",
     "layer_type"
   ],
   "foreignKeys": [

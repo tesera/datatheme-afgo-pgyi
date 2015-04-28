@@ -9,7 +9,7 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
         }
       },
       {
@@ -35,15 +35,14 @@
         "type": "string",
         "raises": "error",
         "constraints": {
-          "pattern": "/^(BU|DF|MI|MU|NDD|NDW|DC|HL|MLU|NDC|NDI|FI|DA)$/"
+          "pattern": "/^(BU|DF|MI|MU|NDD|NDW|DC|HL|MLU|NDC|NDI|DA)$/"
         }
       },
       {
         "name": "disturbance_year",
         "type": "integer",
-        "raises": "error",
+        "raises": "warning",
         "constraints": {
-          "required": "disturbance_code != \"\"",
           "minimum": 1900,
           "maximum": 2050
         }
@@ -68,7 +67,10 @@
       },
       {
         "name": "disturbance_comment",
-        "type": "string"
+        "type": "string",
+        "constraints":{
+          "maxLength": 250
+        }
       }
     ]
   },

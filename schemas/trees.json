@@ -9,7 +9,7 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|BUCH|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
+          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
         }
       },
       {
@@ -23,12 +23,12 @@
       },
       {
         "name": "tree_number",
-        "type": "number",
+        "type": "integer",
         "raises": "error",
         "constraints": {
           "required": true,
           "minimum": 1,
-          "maximum": 999999
+          "maximum": 9999999
         }
       },
       {
@@ -49,7 +49,7 @@
       },
       {
         "name": "tree_origin",
-        "type": "inetger",
+        "type": "integer",
         "raises": "error",
         "constraints": {
           "required": true,
@@ -59,7 +59,6 @@
       {
         "name": "sector_or_quarter",
         "type": "string",
-        "raises": "warning",
         "constraints": {
         "maxLength": 2
         }
@@ -75,16 +74,25 @@
       {
         "name": "distance",
         "type": "number",
-        "raises": "warning"
+        "constraints": {
+          "minimum": 0.01,
+          "maximum": 100
+        }
       },
       {
         "name": "azimuth",
         "type": "number",
-        "raises": "warning"
+        "constraints": {
+          "minimum": 0,
+          "maximum": 360
+        }
       },
       {
         "name": "trees_comment",
-        "type": "string"
+        "type": "string",
+        "constraints":{
+          "maxLength": 250
+        }
       }
     ]
   },
