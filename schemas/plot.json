@@ -44,6 +44,7 @@
         "type": "integer",
         "raises": "warning",
         "constraints": {
+          "required": true,
           "minimum": 1,
           "maximum": 12
         }
@@ -53,6 +54,7 @@
         "type": "integer",
         "raises": "warning",
         "constraints": {
+          "required": true,
           "minimum": 1,
           "maximum": 31
         }
