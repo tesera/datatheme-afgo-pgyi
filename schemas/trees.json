@@ -68,6 +68,7 @@
         "type": "string",
         "raises": "error",
         "constraints": {
+          "required": true,
           "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
         }
       },

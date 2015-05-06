@@ -26,7 +26,7 @@
         "type": "string",
         "raises": "error",
         "constraints": {
-          "pattern": "/^(AVI10|AVI21|AVI211|AVI22)$/"
+          "pattern": "/^(AVI1\\.0|AVI2\\.1|AVI2\\.1\\.1|AVI2\\.2)$/"
         }
       },
       {
@@ -68,7 +68,7 @@
       {
         "name": "moist_reg",
         "type": "string",
-        "raises": "warning",        
+        "raises": "warning",
         "constraints": {
           "pattern": "/^(d|m|w|a)$/"
         }
