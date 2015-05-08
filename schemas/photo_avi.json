@@ -26,6 +26,7 @@
         "type": "string",
         "raises": "error",
         "constraints": {
+          "required": true,
           "pattern": "/^(AVI1\\.0|AVI2\\.1|AVI2\\.1\\.1|AVI2\\.2)$/"
         }
       },
@@ -62,6 +63,7 @@
         "type": "integer",
         "raises": "error",
         "constraints": {
+          "required": true, 
           "pattern": "/^(1|2|3|4|5)$/"
         }
       },
@@ -70,6 +72,7 @@
         "type": "string",
         "raises": "warning",
         "constraints": {
+          "required": true,
           "pattern": "/^(d|m|w|a)$/"
         }
       },
@@ -85,6 +88,7 @@
         "type": "integer",
         "raises": "error",
         "constraints": {
+          "required": true,
           "minimum": 0,
           "maximum": 50
         }
@@ -94,6 +98,7 @@
         "type": "string",
         "raises": "error",
         "constraints": {
+          "required": true,
           "pattern": "/^(A|Aw|Pb|Bw|Ax|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|No)$/"
         }
       },
@@ -102,6 +107,7 @@
         "type": "integer",
         "raises": "error",
         "constraints": {
+          "required": true,
           "pattern": "/^(0|2|3|4|5|6|7|8|9|10)$/"
         }
       },
@@ -117,6 +123,7 @@
         "type": "integer",
         "raises": "error",
         "constraints": {
+          "required": true,
           "pattern": "/^(0|1|2|3|4|5)$/"
         }
       },
@@ -132,6 +139,7 @@
         "type": "integer",
         "raises": "error",
         "constraints": {
+          "required": true,
           "pattern": "/^(0|1|2|3)$/"
         }
       },
@@ -147,6 +155,7 @@
         "type": "integer",
         "raises": "error",
         "constraints": {
+          "required": true,
           "pattern": "/^(0|1|2)$/"
         }
       },
@@ -162,6 +171,7 @@
         "type": "integer",
         "raises": "error",
         "constraints": {
+          "required": true,
           "pattern": "/^(0|1|2)$/"
         }
       },
