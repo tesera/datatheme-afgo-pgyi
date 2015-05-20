@@ -26,6 +26,7 @@
         "type": "integer",
         "raises": "error",
         "constraints": {
+          "required": true,
           "minimum": 1,
           "maximum": 12
         }
@@ -35,6 +36,7 @@
         "type": "string",
         "raises": "error",
         "constraints": {
+          "required": true,
           "pattern": "/^(BU|DF|MI|MU|NDD|NDW|DC|HL|MLU|NDC|NDI|DA)$/"
         }
       },
@@ -43,6 +45,7 @@
         "type": "integer",
         "raises": "warning",
         "constraints": {
+          "required": true,
           "minimum": 1900,
           "maximum": 2050
         }
@@ -52,6 +55,7 @@
         "type": "integer",
         "raises": "warning",
         "constraints": {
+          "required": true,
           "minimum": 1,
           "maximum": 12
         }
@@ -61,6 +65,7 @@
         "type": "integer",
         "raises": "warning",
         "constraints": {
+          "required": true,
           "minimum": 1,
           "maximum": 31
         }
