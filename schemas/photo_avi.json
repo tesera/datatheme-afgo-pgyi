@@ -290,7 +290,7 @@
           "maximum": 2050        
         }
       },
-      },
+      {
         "name": "data",
         "type": "string",
         "constraints": {
