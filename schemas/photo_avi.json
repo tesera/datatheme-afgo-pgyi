@@ -205,6 +205,107 @@
         }
       },
       {
+        "name": "initials",
+        "type": "string",
+        "constraints": {
+          "maxLength": 2
+        }
+      },
+      {
+        "name": "nfl",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(SC|SO|HG|HF|BR)$/"
+        }
+      },
+      {
+        "name": "nfl_per",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(0|1|2|3|4|5|6|7|8|9|10)$/"
+        }
+      },
+      {
+        "name": "nat_non",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(NWI|NWL|NWR|NWF|NMB|NMC|NMR|NMS)$/"
+        }
+      },
+      {
+        "name": "anth_veg",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(CA|CP|CPR|CIP|CIW)$/"
+        }
+      },
+      {
+        "name": "anth_non",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(ASC|ASR|AIH|AIE|AIG|AIF|AIM|AII)$/"
+        }
+      },
+      {
+        "name": "mod1",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(CC|BU|WF|CL|DI|IK|UK|WE|DT|BT|SN|ST|SI|SC|PL|TH|GR|IR)$/"
+        }
+      },
+      {
+        "name": "mod1_ext",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(0|1|2|3|4|5)$/"
+        }
+      },
+      {
+        "name": "mod1_yr",
+        "type": "string",
+        "constraints": {
+          "minimum": 1900,
+          "maximum": 2050
+        }
+      },
+      {
+        "name": "mod2",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(CC|BU|WF|CL|DI|IK|UK|WE|DT|BT|SN|ST|SI|SC|PL|TH|GR|IR)$/"
+        }
+      },
+      {
+        "name": "mod2_ext",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(0|1|2|3|4|5)$/"
+        }
+      },
+      {
+        "name": "mod2_yr",
+        "type": "string",
+        "constraints": {
+          "minimum": 1900,
+          "maximum": 2050        
+        }
+      },
+      },
+        "name": "data",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(F|A|I|S|P|C|V|L)$/"
+        }
+      },
+      {
+        "name": "data_yr",
+        "type": "string",
+        "constraints": {
+          "minimum": 1900,
+          "maximum": 2050
+        }
+      },
+      {
         "name": "photo_avi_layer_comment",
         "type": "string",
         "constraints":{
