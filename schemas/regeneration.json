@@ -76,13 +76,15 @@
     {
       "fields": [
         "company",
-        "company_plot_number"
+        "company_plot_number",
+        "measurement_number"
       ],
       "reference": {
-        "resource": "plot",
+        "resource": "plot_measurement",
         "fields": [
           "company",
-          "company_plot_number"
+          "company_plot_number",
+          "measurement_number"
         ]
       }
     }
