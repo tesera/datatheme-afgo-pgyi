@@ -209,7 +209,7 @@
       },
       {
         "name": "regen_tagging_limit_decid",
-        "title": "Regen Tagging Limit Decid",
+        "title": "Regen Tagging Limit Deciduous",
         "type": "number",
         "constraints": {
           "minimum": 0.1,
@@ -218,7 +218,7 @@
       },
       {
         "name": "number_regen_plots",
-        "title": "Number Regen Plots",
+        "title": "Number of Regen Plots",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -263,7 +263,7 @@
       },
       {
         "name": "herb_forb_cover",
-        "title": "Herb Forb Cover",
+        "title": "Herb/Forb Cover",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -283,7 +283,7 @@
       },
       {
         "name": "moss_lichen_cover",
-        "title": "Moss Lichen Cover",
+        "title": "Moss/Lichen Cover",
         "type": "integer",
         "raises": "warning",
         "constraints": {
