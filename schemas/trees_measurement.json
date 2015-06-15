@@ -39,14 +39,14 @@
         "type": "integer",
         "raises": "error",
         "constraints": {
-          "required": true,        
+          "required": true,
           "minimum": 0,
           "maximum": 9999999
         }
       },
       {
         "name": "tree_type",
-        "title": "Tree Number",
+        "title": "Tree Type",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -56,7 +56,7 @@
       },
       {
         "name": "dbh",
-        "title": "Company",
+        "title": "Diameter at Breast Height",
         "type": "number",
         "constraints": {
           "minimum": 0.1,
@@ -65,7 +65,7 @@
       },
       {
         "name": "dbh_height",
-        "title": "Company",
+        "title": "Height at DBH Measurement",
         "type": "number",
         "constraints": {
           "minimum": 1.1,
@@ -74,7 +74,7 @@
       },
       {
         "name": "rcd",
-        "title": "Company",
+        "title": "Root Collar Diameter",
         "type": "number",
         "constraints": {
           "minimum": 0.1,
@@ -83,7 +83,7 @@
       },
       {
         "name": "rcd_height",
-        "title": "Company",
+        "title": "Root Collar Diameter Height",
         "type": "number",
         "constraints": {
           "minimum": 0.0,
@@ -92,7 +92,7 @@
       },
       {
         "name": "height",
-        "title": "Company",
+        "title": "Height",
         "type": "number",
         "constraints": {
           "minimum": 0.01,
@@ -101,7 +101,7 @@
       },
       {
         "name": "crown_class",
-        "title": "Company",
+        "title": "Crown Class",
         "type": "string",
         "raises": "warning",
         "constraints": {
@@ -111,7 +111,7 @@
       },
       {
         "name": "dbh_age",
-        "title": "Company",
+        "title": "DBH Age",
         "type": "integer",
         "constraints": {
           "minimum": 1,
@@ -120,7 +120,7 @@
       },
       {
         "name": "stump_age",
-        "title": "Company",
+        "title": "Stump Age",
         "type": "integer",
         "constraints": {
           "minimum": 1,
@@ -129,7 +129,7 @@
       },
       {
         "name": "stump_height",
-        "title": "Company",
+        "title": "Stump Height",
         "type": "number",
         "constraints": {
           "minimum": 0.0,
@@ -138,7 +138,7 @@
       },
       {
         "name": "total_age",
-        "title": "Company",
+        "title": "Total Age",
         "type": "integer",
         "constraints": {
           "minimum": 1,
@@ -147,7 +147,7 @@
       },
       {
         "name": "htlc",
-        "title": "Company",
+        "title": "Tree Height to Live Crown",
         "type": "number",
         "constraints": {
           "minimum": 0,
@@ -156,7 +156,7 @@
       },
       {
         "name": "crown_diameter_ns",
-        "title": "Company",
+        "title": "Crown Diameter North/South",
         "type": "number",
         "constraints": {
           "minimum": 1,
@@ -165,7 +165,7 @@
       },
       {
         "name": "crown_diameter_ew",
-        "title": "Company",
+        "title": "Crown Diameter East/West",
         "type": "number",
         "constraints": {
           "minimum": 1,
@@ -174,7 +174,7 @@
       },
       {
         "name": "condition_code1",
-        "title": "Company",
+        "title": "Condition Code 1",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -184,7 +184,7 @@
       },
       {
         "name": "cause1",
-        "title": "Company",
+        "title": "Cause 1",
         "type": "integer",
         "constraints": {
           "pattern": "/^(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|99)$/"
@@ -192,7 +192,7 @@
       },
       {
         "name": "severity1",
-        "title": "Company",
+        "title": "Severity 1",
         "type": "integer",
         "constraints": {
           "pattern": "/^(1|2|3|9)$/"
@@ -200,7 +200,7 @@
       },
       {
         "name": "condition_code2",
-        "title": "Company",
+        "title": "Condition Code 2",
         "type": "integer",
         "constraints": {
           "pattern": "/^(3|4|5|6|7|8|9|10|11|12|16)$/"
@@ -208,7 +208,7 @@
       },
       {
         "name": "cause2",
-        "title": "Company",
+        "title": "Cause 2",
         "type": "integer",
         "constraints": {
           "pattern": "/^(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|99)$/"
@@ -216,7 +216,7 @@
       },
       {
         "name": "severity2",
-        "title": "Company",
+        "title": "Severity 2",
         "type": "integer",
         "constraints": {
           "pattern": "/^(1|2|3|9)$/"
@@ -224,7 +224,7 @@
       },
       {
         "name": "condition_code3",
-        "title": "Company",
+        "title": "Condition Code 3",
         "type": "integer",
         "constraints": {
           "pattern": "/^(3|4|5|6|7|8|9|10|11|12|16)$/"
@@ -232,7 +232,7 @@
       },
       {
         "name": "cause3",
-        "title": "Company",
+        "title": "Cause 3",
         "type": "integer",
         "constraints": {
           "pattern": "/^(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|99)$/"
