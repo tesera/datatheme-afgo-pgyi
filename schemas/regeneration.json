@@ -5,6 +5,7 @@
     "fields": [
       {
         "name": "company",
+        "title": "Company",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -14,6 +15,7 @@
       },
       {
         "name": "company_plot_number",
+        "title": "Company Plot Number",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -23,6 +25,7 @@
       },
       {
         "name": "measurement_number",
+        "title": "Measurement Number",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -32,6 +35,7 @@
       },
       {
         "name": "regeneration_plot_name",
+        "title": "Regeneration Plot Name",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -41,6 +45,7 @@
       },
       {
         "name": "species",
+        "title": "Species",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -50,6 +55,7 @@
       },
       {
         "name": "regeneration_count",
+        "title": "Regeneration Count",
         "type": "integer",
         "constraints": {
           "minimum": 0,
@@ -58,6 +64,7 @@
       },
       {
         "name": "regeneration_comment",
+        "title": "Regeneration Comment",
         "type": "string",
         "constraints":{
           "maxLength": 250

@@ -5,6 +5,7 @@
     "fields": [
       {
         "name": "company",
+        "title": "Company",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -14,6 +15,7 @@
       },
       {
         "name": "company_plot_number",
+        "title": "Company Plot Number",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -23,6 +25,7 @@
       },
       {
         "name": "treatment_number",
+        "title": "Treatment Number",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -33,6 +36,7 @@
       },
       {
         "name": "treatment_code",
+        "title": "Treatment Code",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -42,6 +46,7 @@
       },
       {
         "name": "treatment_year",
+        "title": "Treatment Year",
         "type": "integer",
         "constraints": {
           "minimum": 1900,
@@ -50,6 +55,7 @@
       },
       {
         "name": "treatment_month",
+        "title": "Treatment Month",
         "type": "integer",
         "constraints": {
           "minimum": 1,
@@ -58,6 +64,7 @@
       },
       {
         "name": "treatment_day",
+        "title": "Treatment Day",
         "type": "integer",
         "constraints": {
           "minimum": 1,
@@ -66,6 +73,7 @@
       },
       {
         "name": "treatment_comment",
+        "title": "Treatment Comment",
         "type": "string",
         "constraints":{
           "maxLength": 250

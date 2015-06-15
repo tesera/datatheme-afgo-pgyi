@@ -5,6 +5,7 @@
     "fields": [
       {
         "name": "company",
+        "title": "Company",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -14,6 +15,7 @@
       },
       {
         "name": "company_plot_number",
+        "title": "Company Plot Number",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -23,6 +25,7 @@
       },
       {
         "name": "tree_number",
+        "title": "Tree Number",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -33,6 +36,7 @@
       },
       {
         "name": "tree_label",
+        "title": "Tree Label",
         "type": "string",
         "constraints": {
         "maxLength": 15
@@ -40,6 +44,7 @@
       },
       {
         "name": "tree_location_id",
+        "title": "Tree Location Id",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -49,6 +54,7 @@
       },
       {
         "name": "tree_origin",
+        "title": "Tree Origin",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -58,6 +64,7 @@
       },
       {
         "name": "sector_or_quarter",
+        "title": "Sector Or Quarter",
         "type": "string",
         "constraints": {
         "maxLength": 2
@@ -65,6 +72,7 @@
       },
       {
         "name": "species",
+        "title": "Species",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -74,6 +82,7 @@
       },
       {
         "name": "distance",
+        "title": "Distance",
         "type": "number",
         "constraints": {
           "minimum": 0.01,
@@ -82,6 +91,7 @@
       },
       {
         "name": "azimuth",
+        "title": "Azimuth",
         "type": "number",
         "constraints": {
           "minimum": 0,
@@ -90,6 +100,7 @@
       },
       {
         "name": "trees_comment",
+        "title": "Trees Comment",
         "type": "string",
         "constraints":{
           "maxLength": 250

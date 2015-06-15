@@ -5,6 +5,7 @@
     "fields": [
       {
         "name": "company",
+        "title": "Company",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -14,6 +15,7 @@
       },
       {
         "name": "company_plot_number",
+        "title": "Company Plot Number",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -23,6 +25,7 @@
       },
       {
         "name": "measurement_number",
+        "title": "Measurement Number",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -32,6 +35,7 @@
       },
       {
         "name": "measurement_year",
+        "title": "Measurement Year",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -42,6 +46,7 @@
       },
       {
         "name": "measurement_month",
+        "title": "Measurement Month",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -52,6 +57,7 @@
       },
       {
         "name": "measurement_day",
+        "title": "Measurement Day",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -62,6 +68,7 @@
       },
       {
         "name": "stand_origin",
+        "title": "Stand Origin",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -71,6 +78,7 @@
       },
       {
         "name": "plot_type",
+        "title": "Plot Type",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -80,6 +88,7 @@
       },
       {
         "name": "stand_type",
+        "title": "Stand Type",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -89,6 +98,7 @@
       },
       {
         "name": "plot_status",
+        "title": "Plot Status",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -98,6 +108,7 @@
       },
       {
         "name": "tree_plot_area",
+        "title": "Tree Plot Area",
         "type": "number",
         "raises": "error",
         "constraints": {
@@ -108,6 +119,7 @@
       },
       {
         "name": "tree_plot_shape",
+        "title": "Tree Plot Shape",
         "type": "string",
         "raises": "warning",
         "constraints": {
@@ -117,6 +129,7 @@
       },
       {
         "name": "tree_tagging_limit",
+        "title": "Tree Tagging Limit",
         "type": "number",
         "raises": "error",
         "constraints": {
@@ -127,6 +140,7 @@
       },
       {
         "name": "sapling_plot_area",
+        "title": "Sapling Plot Area",
         "type": "number",
         "raises": "error",
         "constraints": {
@@ -137,6 +151,7 @@
       },
       {
         "name": "sapling_plot_shape",
+        "title": "Sapling Plot Shape",
         "type": "string",
         "raises": "warning",
         "constraints": {
@@ -146,6 +161,7 @@
       },
       {
         "name": "sapling_tagging_limit_dbh",
+        "title": "Sapling Tagging Limit DBH",
         "type": "number",
         "constraints": {
           "minimum": 0.1,
@@ -154,6 +170,7 @@
       },
       {
         "name": "sapling_tagging_limit_height",
+        "title": "Sapling Tagging Limit Height",
         "type": "number",
         "constraints": {
           "minimum": 1.3,
@@ -162,6 +179,7 @@
       },
       {
         "name": "regen_plot_area",
+        "title": "Regen Plot Area",
         "type": "number",
         "raises": "error",
         "constraints": {
@@ -172,6 +190,7 @@
       },
       {
         "name": "regen_plot_shape",
+        "title": "Regen Plot Shape",
         "type": "string",
         "raises": "warning",
         "constraints": {
@@ -181,6 +200,7 @@
       },
       {
         "name": "regen_tagging_limit_conifer",
+        "title": "Regen Tagging Limit Conifer",
         "type": "number",
         "constraints": {
           "minimum": 0.1,
@@ -189,6 +209,7 @@
       },
       {
         "name": "regen_tagging_limit_decid",
+        "title": "Regen Tagging Limit Decid",
         "type": "number",
         "constraints": {
           "minimum": 0.1,
@@ -197,6 +218,7 @@
       },
       {
         "name": "number_regen_plots",
+        "title": "Number Regen Plots",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -207,6 +229,7 @@
       },
       {
         "name": "contractor",
+        "title": "Contractor",
         "type": "string",
         "constraints": {
         "maxLength": 50
@@ -214,6 +237,7 @@
       },
       {
         "name": "cruiser_1_name",
+        "title": "Cruiser 1 Name",
         "type": "string",
         "constraints": {
         "maxLength": 25
@@ -221,6 +245,7 @@
       },
       {
         "name": "cruiser_2_name",
+        "title": "Cruiser 2 Name",
         "type": "string",
         "constraints": {
         "maxLength": 25
@@ -228,6 +253,7 @@
       },
       {
         "name": "shrub_cover",
+        "title": "Shrub Cover",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -237,6 +263,7 @@
       },
       {
         "name": "herb_forb_cover",
+        "title": "Herb Forb Cover",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -246,6 +273,7 @@
       },
       {
         "name": "grass_cover",
+        "title": "Grass Cover",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -255,6 +283,7 @@
       },
       {
         "name": "moss_lichen_cover",
+        "title": "Moss Lichen Cover",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -264,6 +293,7 @@
       },
       {
         "name": "avi_field_call",
+        "title": "AVI Field Call",
         "type": "string",
         "raises": "warning",        
         "constraints": {
@@ -273,6 +303,7 @@
       },
       {
         "name": "plot_measurement_comment",
+        "title": "Plot Measurement Comment",
         "type": "string",
         "constraints":{
           "maxLength": 250

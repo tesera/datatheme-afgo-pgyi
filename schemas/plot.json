@@ -5,6 +5,7 @@
     "fields": [
       {
         "name": "company",
+        "title": "Company",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -14,6 +15,7 @@
       },
       {
         "name": "company_plot_number",
+        "title": "Company Plot Number",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -24,6 +26,7 @@
       },
       {
         "name": "company_stand_number",
+        "title": "Company Stand Number",
         "type": "string",
         "constraints": {
           "maxLength": 15
@@ -31,6 +34,7 @@
       },
       {
         "name": "establishment_year",
+        "title": "Establishment Year",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -41,6 +45,7 @@
       },
       {
         "name": "establishment_month",
+        "title": "Establishment Month",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -51,6 +56,7 @@
       },
       {
         "name": "establishment_day",
+        "title": "Establishment Day",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -61,6 +67,7 @@
       },
       {
         "name": "fmu",
+        "title": "Forest Management Unit",
         "type": "string",
         "raises": "warning",
         "constraints": {
@@ -70,6 +77,7 @@
       },
       {
         "name": "fma",
+        "title": "Forest Management Agreement Number",
         "type": "string",
         "raises": "warning",
         "constraints": {
@@ -79,6 +87,7 @@
       },
       {
         "name": "ats_township",
+        "title": "ATS Township",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -89,6 +98,7 @@
       },
       {
         "name": "ats_range",
+        "title": "ATS Range",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -99,6 +109,7 @@
       },
       {
         "name": "ats_meridian",
+        "title": "ATS Meridian",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -109,6 +120,7 @@
       },
       {
         "name": "ats_section",
+        "title": "ATS Section",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -119,6 +131,7 @@
       },
       {
         "name": "opening_number",
+        "title": "Opening Number",
         "type": "string",
         "constraints": {
           "maxLength": 11
@@ -126,6 +139,7 @@
       },
       {
         "name": "sampling_unit_number",
+        "title": "Sampling Unit Number",
         "type": "string",
         "constraints": {
           "maxLength": 3
@@ -133,6 +147,7 @@
       },
       {
         "name": "topographic_position",
+        "title": "Topographic Position",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -142,6 +157,7 @@
       },
       {
         "name": "elevation",
+        "title": "Elevation",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -152,6 +168,7 @@
       },
       {
         "name": "slope",
+        "title": "Slope",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -162,6 +179,7 @@
       },
       {
         "name": "aspect",
+        "title": "Aspect",
         "type": "string",
         "raises": "warning",
         "constraints": {
@@ -171,6 +189,7 @@
       },
       {
         "name": "x_coord",
+        "title": "Easting or x-coordinate",
         "type": "number",
         "raises": "warning",
         "constraints": {
@@ -181,6 +200,7 @@
       },
       {
         "name": "y_coord",
+        "title": "Northing or y-coordinate",
         "type": "number",
         "raises": "warning",
         "constraints": {
@@ -191,6 +211,7 @@
       },
       {
         "name": "utm_zone",
+        "title": "UTM Zone",
         "type": "string",
         "raises": "warning",
         "constraints": {
@@ -200,6 +221,7 @@
       },
       {
         "name": "datum",
+        "title": "Datum",
         "type": "string",
         "raises": "warning",
         "constraints": {
@@ -209,6 +231,7 @@
       },
       {
         "name": "latitude",
+        "title": "Latitude",
         "type": "number",
         "constraints": {
           "minimum": 49.00000,
@@ -217,6 +240,7 @@
       },
       {
         "name": "longitude",
+        "title": "Longitude",
         "type": "number",
         "constraints": {
           "minimum": -120.00000,
@@ -225,6 +249,7 @@
       },
       {
         "name": "natural_subregion",
+        "title": "Natural Subregion",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -234,6 +259,7 @@
       },
       {
         "name": "ecosite_guide",
+        "title": "Ecosite Guide",
         "type": "string",
         "raises": "warning",
         "constraints": {
@@ -243,6 +269,7 @@
       },
       {
         "name": "ecosite",
+        "title": "Ecosite",
         "type": "string",
         "raises": "warning",        
         "constraints": {
@@ -252,6 +279,7 @@
       },
       {
         "name": "ecosite_phase",
+        "title": "Ecosite Phase",
         "type": "string",
         "raises": "warning",
         "constraints": {
@@ -261,6 +289,7 @@
       },
       {
         "name": "plot_comment",
+        "title": "Plot Comment",
         "type": "string",
         "constraints": {
           "maxLength": 250
