@@ -278,7 +278,7 @@
       },
       {
         "name": "mod1",
-        "title": "Stand Modifier 1 Condition/treatment",
+        "title": "Stand Modifier 1 Condition/Treatment",
         "type": "string",
         "constraints": {
           "pattern": "/^(CC|BU|WF|CL|DI|IK|UK|WE|DT|BT|SN|ST|SI|SC|PL|TH|GR|IR)$/"
@@ -303,7 +303,7 @@
       },
       {
         "name": "mod2",
-        "title": "Stand Modifier 2 Condition/treatment",
+        "title": "Stand Modifier 2 Condition/Treatment",
         "type": "string",
         "constraints": {
           "pattern": "/^(CC|BU|WF|CL|DI|IK|UK|WE|DT|BT|SN|ST|SI|SC|PL|TH|GR|IR)$/"
