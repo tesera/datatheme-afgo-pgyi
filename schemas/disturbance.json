@@ -15,6 +15,7 @@
       },
       {
         "name": "company_plot_number",
+        "title": "Company Plot Number",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -24,6 +25,7 @@
       },
       {
         "name": "disturbance_number",
+        "title": "Disturbance Number",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -34,6 +36,7 @@
       },
       {
         "name": "disturbance_code",
+        "title": "Disturbance Code",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -43,6 +46,7 @@
       },
       {
         "name": "disturbance_year",
+        "title": "Disturbance Year",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -53,6 +57,7 @@
       },
       {
         "name": "disturbance_month",
+        "title": "Disturbance Month",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -63,6 +68,7 @@
       },
       {
         "name": "disturbance_day",
+        "title": "Disturbance Day",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -73,6 +79,7 @@
       },
       {
         "name": "disturbance_comment",
+        "title": "Disturbance Comment",
         "type": "string",
         "constraints":{
           "maxLength": 250
