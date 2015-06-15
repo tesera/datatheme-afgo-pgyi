@@ -189,7 +189,7 @@
       },
       {
         "name": "x_coord",
-        "title": "Easting or x-coordinate",
+        "title": "Easting or X-coordinate",
         "type": "number",
         "raises": "warning",
         "constraints": {
@@ -200,7 +200,7 @@
       },
       {
         "name": "y_coord",
-        "title": "Northing or y-coordinate",
+        "title": "Northing or Y-coordinate",
         "type": "number",
         "raises": "warning",
         "constraints": {
