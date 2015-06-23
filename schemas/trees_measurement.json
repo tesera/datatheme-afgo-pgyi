@@ -159,7 +159,7 @@
         "title": "Crown Diameter North/South",
         "type": "number",
         "constraints": {
-          "minimum": 1,
+          "minimum": 0.01,
           "maximum": 20
         }
       },
@@ -168,7 +168,7 @@
         "title": "Crown Diameter East/West",
         "type": "number",
         "constraints": {
-          "minimum": 1,
+          "minimum": 0.01,
           "maximum": 20
         }
       },
