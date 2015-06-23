@@ -49,8 +49,8 @@
         "type": "string",
         "raises": "error",
         "constraints": {
-          "required": true,
-          "pattern": "/^(A|Aw|Pb|Bw|Ax|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Ms|No)$/"
+        "required": true,
+        "pattern": "/^(A|Aw|Ax|Bw|Fb|Fa|Fd|Lt|Lw|La|Ls|Ms|Pb|P|Pl|Pw|Pa|Pf|Pj|Px|Sb|Se|Sw|Sx|No)$/"
         }
       },
       {
