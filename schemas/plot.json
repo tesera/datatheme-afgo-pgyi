@@ -195,8 +195,8 @@
         "raises": "warning",
         "constraints": {
           "required": true,
-          "minimum": -1030400,
-          "maximum": -111700
+          "minimum": 240000,
+          "maximum": 850000
         }
       },
       {
@@ -206,8 +206,8 @@
         "raises": "warning",
         "constraints": {
           "required": true,
-          "minimum": 5643600,
-          "maximum": 6702500
+          "minimum": 5400000,
+          "maximum": 6650000
         }
       },
       {
