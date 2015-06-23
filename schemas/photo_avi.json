@@ -297,7 +297,7 @@
         "title": "Stand Modifier Year",
         "type": "integer",
         "constraints": {
-          "minimum": 1900,
+          "minimum": 0,
           "maximum": 2050
         }
       },
@@ -322,7 +322,7 @@
         "title": "Stand Modifier 2 Year",
         "type": "integer",
         "constraints": {
-          "minimum": 1900,
+          "minimum": 0,
           "maximum": 2050        
         }
       },
@@ -339,7 +339,7 @@
         "title": "Data Year",
         "type": "integer",
         "constraints": {
-          "minimum": 1900,
+          "minimum": 0,
           "maximum": 2050
         }
       },
