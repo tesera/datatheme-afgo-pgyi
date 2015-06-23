@@ -10,7 +10,7 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
+        "pattern": "/^(AINS|ALPC|ANC|APLY|BLUE|CFPL|CFS|DAIS|FOFP|GOA|HPFP|HLFP|MDFP|MWWC|SFPI|SLPC|SPRA|SUND|TOLK|TOSL|UNKN|UOA|VAND|WFML|WYGP|WYPM)$/"
         }
       },
       {
@@ -51,7 +51,7 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(T|S|ES|ET|B|R1|R2|R3|R4|R5|R6|R7|R8|R9|R10)$/"
+          "pattern": "/^(B|ES|ET|R1|R2|R3|R4|R5|R6|R7|R8|R9|R10|S|T)$/"
         }
       },
       {
@@ -106,7 +106,7 @@
         "raises": "warning",
         "constraints": {
         "required": true,  
-        "pattern": "/^(D|C|I|S|N)$/"
+        "pattern": "/^(C|D|I|N|S)$/"
         }
       },
       {
