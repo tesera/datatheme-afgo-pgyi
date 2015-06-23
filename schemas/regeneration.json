@@ -50,7 +50,7 @@
         "raises": "error",
         "constraints": {
         "required": true,
-        "pattern": "/^(A|Aw|Ax|Bw|Fb|Fa|Fd|Lt|Lw|La|Ls|Ms|Pb|P|Pl|Pw|Pa|Pf|Pj|Px|Sb|Se|Sw|Sx|No)$/"
+        "pattern": "/^(A|Aw|Ax|Bw|Fa|Fb|Fd|La|Ls|Lt|Lw|Ms|P|Pa|Pb|Pf|Pj|Pl|Pw|Px|Sb|Se|Sw|Sx|No)$/"        
         }
       },
       {
