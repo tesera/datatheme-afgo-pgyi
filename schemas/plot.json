@@ -197,7 +197,7 @@
           "required": true,
           "minimum": 240000,
           "maximum": 850000,
-          "pattern": "/\.\d{5}/"
+          "pattern": "/\.\d{5}$/"
         }
       },
       {
