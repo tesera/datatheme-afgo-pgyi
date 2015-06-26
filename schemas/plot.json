@@ -239,7 +239,7 @@
         "constraints": {
           "minimum": 49.00000,
           "maximum": 60.00000,
-        "pattern": "/\.\d{10}/"
+        "pattern": "/\\.\d{10}/"
         }
       },
       {
