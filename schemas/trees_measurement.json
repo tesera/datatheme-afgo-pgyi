@@ -60,7 +60,8 @@
         "type": "number",
         "constraints": {
           "minimum": 0.1,
-          "maximum": 120.0
+          "maximum": 120.0,
+          "pattern": "/\\.\\d{1}/"          
         }
       },
       {
@@ -68,8 +69,9 @@
         "title": "Height at DBH Measurement",
         "type": "number",
         "constraints": {
-          "minimum": 1.1,
-          "maximum": 1.5
+          "minimum": 1.10,
+          "maximum": 1.50,
+          "pattern": "/\\.\\d{2}/"          
         }
       },
       {
@@ -78,7 +80,8 @@
         "type": "number",
         "constraints": {
           "minimum": 0.1,
-          "maximum": 15.0
+          "maximum": 15.0,
+          "pattern": "/\\.\\d{1}/"          
         }
       },
       {
@@ -86,8 +89,9 @@
         "title": "Root Collar Diameter Height",
         "type": "number",
         "constraints": {
-          "minimum": 0.0,
-          "maximum": 0.3
+          "minimum": 0.00,
+          "maximum": 0.30,
+          "pattern": "/\\.\\d{2}/"          
         }
       },
       {
@@ -96,7 +100,8 @@
         "type": "number",
         "constraints": {
           "minimum": 0.01,
-          "maximum": 45.0
+          "maximum": 45.00,
+          "pattern": "/\\.\\d{2}/"          
         }
       },
       {
@@ -132,8 +137,9 @@
         "title": "Stump Height",
         "type": "number",
         "constraints": {
-          "minimum": 0.0,
+          "minimum": 0.00,
           "maximum": 0.30
+          "pattern": "/\\.\\d{2}/"          
         }
       },
       {
@@ -150,8 +156,9 @@
         "title": "Tree Height to Live Crown",
         "type": "number",
         "constraints": {
-          "minimum": 0,
-          "maximum": 45
+          "minimum": 0.00,
+          "maximum": 45.00,
+          "pattern": "/\\.\\d{2}/"          
         }
       },
       {
@@ -160,7 +167,8 @@
         "type": "number",
         "constraints": {
           "minimum": 0.01,
-          "maximum": 20
+          "maximum": 20.00,
+          "pattern": "/\\.\\d{2}/"          
         }
       },
       {
@@ -169,7 +177,8 @@
         "type": "number",
         "constraints": {
           "minimum": 0.01,
-          "maximum": 20
+          "maximum": 20.00,
+          "pattern": "/\\.\\d{2}/"          
         }
       },
       {
