@@ -197,7 +197,7 @@
           "required": true,
           "minimum": 240000,
           "maximum": 850000,
-          "pattern": "/\.\d{5}/"
+          "pattern": "/\\.\\d{5}/"
         }
       },
       {
@@ -237,9 +237,9 @@
         "title": "Latitude",
         "type": "number",
         "constraints": {
-          "minimum": 49.00000,
-          "maximum": 60.00000,
-        "pattern": "/\\.\d{10}/"
+          "minimum": 49,
+          "maximum": 60,
+        "pattern": "/\\.\\d{10}/"
         }
       },
       {
@@ -247,9 +247,9 @@
         "title": "Longitude",
         "type": "number",
         "constraints": {
-          "minimum": -120.00000,
-          "maximum": -110.00000,
-          "pattern": "/\.\d{10}/"        
+          "minimum": -120,
+          "maximum": -110,
+          "pattern": "/\\.\\d{10}/"        
         }
       },
       {
