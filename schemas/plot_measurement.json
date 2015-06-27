@@ -113,8 +113,8 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "minimum": 400,
-          "maximum": 2500,
+          "minimum": 400.0,
+          "maximum": 2500.0,
           "pattern": "/\\.\\d{1}/"
         }
       },
@@ -147,8 +147,8 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "minimum": 0,          
-          "maximum": 2500,
+          "minimum": 0.0,          
+          "maximum": 2500.0,
           "pattern": "/\\.\\d{1}/"          
         }
       },
@@ -177,8 +177,8 @@
         "title": "Sapling Tagging Limit Height",
         "type": "number",
         "constraints": {
-          "minimum": 1.3,
-          "maximum": 1.5,
+          "minimum": 1.30,
+          "maximum": 1.50,
           "pattern": "/\\.\\d{2}/"          
         }
       },
@@ -189,8 +189,8 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "minimum": 0,
-          "maximum": 2500,
+          "minimum": 0.0,
+          "maximum": 2500.0,
           "pattern": "/\\.\\d{1}/"          
         }
       },
