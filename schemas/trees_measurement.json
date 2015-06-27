@@ -138,7 +138,7 @@
         "type": "number",
         "constraints": {
           "minimum": 0.00,
-          "maximum": 0.30
+          "maximum": 0.30,
           "pattern": "/\\.\\d{2}/"          
         }
       },
