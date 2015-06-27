@@ -195,8 +195,8 @@
         "raises": "warning",
         "constraints": {
           "required": true,
-          "minimum": 240000,
-          "maximum": 850000,
+          "minimum": 240000.00000,
+          "maximum": 850000.00000,
           "pattern": "/\\.\\d{5}/"
         }
       },
@@ -207,8 +207,8 @@
         "raises": "warning",
         "constraints": {
           "required": true,
-          "minimum": 5400000,
-          "maximum": 6650000,
+          "minimum": 5400000.00000,
+          "maximum": 6650000.00000,
           "pattern": "/\\.\\d{5}/"
         }
       },
@@ -237,9 +237,9 @@
         "title": "Latitude",
         "type": "number",
         "constraints": {
-          "minimum": 49,
-          "maximum": 60,
-        "pattern": "/\\.\\d{10}/"
+          "minimum": 49.0000000000,
+          "maximum": 60.0000000000,
+          "pattern": "/\\.\\d{10}/"
         }
       },
       {
@@ -247,8 +247,8 @@
         "title": "Longitude",
         "type": "number",
         "constraints": {
-          "minimum": -120,
-          "maximum": -110,
+          "minimum": -120.0000000000,
+          "maximum": -110.0000000000,
           "pattern": "/\\.\\d{10}/"        
         }
       },
