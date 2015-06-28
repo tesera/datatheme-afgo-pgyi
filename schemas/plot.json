@@ -197,7 +197,7 @@
           "required": true,
           "minimum": 240000.00000,
           "maximum": 850000.00000,
-          "pattern": "/\.\d{5}/"
+          "pattern": "/\\.\\d{5}/"
         }
       },
       {
@@ -209,7 +209,7 @@
           "required": true,
           "minimum": 5400000.00000,
           "maximum": 6650000.00000,
-          "pattern": "/\.\d{5}/"
+          "pattern": "/\\.\\d{5}/"
         }
       },
       {
@@ -239,7 +239,7 @@
         "constraints": {
           "minimum": 49.0000000000,
           "maximum": 60.0000000000,
-          "pattern": "/\.\d{10}/"
+          "pattern": "/\\.\\d{10}/"
         }
       },
       {
@@ -249,7 +249,7 @@
         "constraints": {
           "minimum": -120.0000000000,
           "maximum": -110.0000000000,
-          "pattern": "/\.\d{10}/"        
+          "pattern": "/\\.\\d{10}/"        
         }
       },
       {
