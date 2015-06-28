@@ -61,7 +61,7 @@
         "constraints": {
           "minimum": 0.1,
           "maximum": 120.0,
-          "pattern": "/\\.\\d{1}/"          
+          "regex": "/\\.\\d{1}/"          
         }
       },
       {
@@ -71,7 +71,7 @@
         "constraints": {
           "minimum": 1.10,
           "maximum": 1.50,
-          "pattern": "/\\.\\d{2}/"          
+          "regex": "/\\.\\d{2}/"          
         }
       },
       {
@@ -81,7 +81,7 @@
         "constraints": {
           "minimum": 0.1,
           "maximum": 15.0,
-          "pattern": "/\\.\\d{1}/"          
+          "regex": "/\\.\\d{1}/"          
         }
       },
       {
@@ -91,7 +91,7 @@
         "constraints": {
           "minimum": 0.00,
           "maximum": 0.30,
-          "pattern": "/\\.\\d{2}/"          
+          "regex": "/\\.\\d{2}/"          
         }
       },
       {
@@ -101,7 +101,7 @@
         "constraints": {
           "minimum": 0.01,
           "maximum": 45.00,
-          "pattern": "/\\.\\d{2}/"          
+          "regex": "/\\.\\d{2}/"          
         }
       },
       {
@@ -158,7 +158,7 @@
         "constraints": {
           "minimum": 0.00,
           "maximum": 45.00,
-          "pattern": "/\\.\\d{2}/"          
+          "regex": "/\\.\\d{2}/"          
         }
       },
       {
@@ -168,7 +168,7 @@
         "constraints": {
           "minimum": 0.01,
           "maximum": 20.00,
-          "pattern": "/\\.\\d{2}/"          
+          "regex": "/\\.\\d{2}/"          
         }
       },
       {
@@ -178,7 +178,7 @@
         "constraints": {
           "minimum": 0.01,
           "maximum": 20.00,
-          "pattern": "/\\.\\d{2}/"          
+          "regex": "/\\.\\d{2}/"          
         }
       },
       {
