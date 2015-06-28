@@ -139,7 +139,7 @@
         "constraints": {
           "minimum": 0.00,
           "maximum": 0.30,
-          "pattern": "/\\.\\d{2}/"          
+          "regex": "/\\.\\d{2}/"          
         }
       },
       {
