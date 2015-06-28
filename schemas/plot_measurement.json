@@ -220,7 +220,7 @@
         "type": "number",
         "constraints": {
           "minimum": 0.10,
-          "maximum": 1.30
+          "maximum": 1.30,
           "pattern": "/\\.\\d{2}/"          
         }
       },
