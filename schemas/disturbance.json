@@ -81,7 +81,7 @@
         "name": "disturbance_comment",
         "title": "Disturbance Comment",
         "type": "string",
-        "constraints":{
+        "constraints": {
           "maxLength": 250
         }
       }

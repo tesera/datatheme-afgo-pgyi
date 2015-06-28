@@ -73,7 +73,7 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(A|B|C|F|L|N|P|R|S)$/"          
+          "pattern": "/^(A|B|C|F|L|N|P|R|S)$/"
         }
       },
       {
@@ -115,7 +115,7 @@
           "required": true,
           "minimum": 400.0,
           "maximum": 2500.0,
-          "regex": "/\\.\\d{1}/"
+          "pattern": "/[0-9]*.[0-9]/"
         }
       },
       {
@@ -137,7 +137,7 @@
           "required": true,
           "minimum": 0.1,
           "maximum": 9.1,
-          "regex": "/\\.\\d{1}/"          
+          "pattern": "/[0-9].[0-9]/"
         }
       },
       {
@@ -147,9 +147,9 @@
         "raises": "error",
         "constraints": {
           "required": true,
-          "minimum": 0.0,          
+          "minimum": 0.0,
           "maximum": 2500.0,
-          "regex": "/\\.\\d{1}/"          
+          "pattern": "/[0-9]*.[0-9]/"
         }
       },
       {
@@ -169,7 +169,7 @@
         "constraints": {
           "minimum": 0.1,
           "maximum": 9.1,
-          "regex": "/\\.\\d{1}/"          
+          "pattern": "/[0-9].[0-9]/"
         }
       },
       {
@@ -179,7 +179,7 @@
         "constraints": {
           "minimum": 1.30,
           "maximum": 1.50,
-          "regex": "/\\.\\d{2}/"          
+          "pattern": "/[0-9].[0-9]{2}/"
         }
       },
       {
@@ -191,7 +191,7 @@
           "required": true,
           "minimum": 0.0,
           "maximum": 2500.0,
-          "regex": "/\\.\\d{1}/"          
+          "pattern": "/[0-9]*.[0-9]/"
         }
       },
       {
@@ -211,7 +211,7 @@
         "constraints": {
           "minimum": 0.10,
           "maximum": 1.30,
-          "regex": "/\\.\\d{2}/"          
+          "pattern": "/[0-9].[0-9]{2}/"
         }
       },
       {
@@ -221,7 +221,7 @@
         "constraints": {
           "minimum": 0.10,
           "maximum": 1.30,
-          "regex": "/\\.\\d{2}/"          
+          "pattern": "/[0-9].[0-9]{2}/"
         }
       },
       {
@@ -240,7 +240,7 @@
         "title": "Contractor",
         "type": "string",
         "constraints": {
-        "maxLength": 50
+          "maxLength": 50
         }
       },
       {
@@ -248,7 +248,7 @@
         "title": "Cruiser 1 Name",
         "type": "string",
         "constraints": {
-        "maxLength": 25
+          "maxLength": 25
         }
       },
       {
@@ -256,7 +256,7 @@
         "title": "Cruiser 2 Name",
         "type": "string",
         "constraints": {
-        "maxLength": 25
+          "maxLength": 25
         }
       },
       {
@@ -303,17 +303,17 @@
         "name": "avi_field_call",
         "title": "AVI Field Call",
         "type": "string",
-        "raises": "warning",        
+        "raises": "warning",
         "constraints": {
-         "required": true, 
-        "maxLength": 80
+          "required": true,
+          "maxLength": 80
         }
       },
       {
         "name": "plot_measurement_comment",
         "title": "Plot Measurement Comment",
         "type": "string",
-        "constraints":{
+        "constraints": {
           "maxLength": 250
         }
       }

@@ -49,8 +49,8 @@
         "type": "string",
         "raises": "error",
         "constraints": {
-        "required": true,
-        "pattern": "/^(A|Aw|Ax|Bw|Fa|Fb|Fd|La|Ls|Lt|Lw|Ms|P|Pa|Pb|Pf|Pj|Pl|Pw|Px|Sb|Se|Sw|Sx|No)$/"        
+          "required": true,
+          "pattern": "/^(A|Aw|Ax|Bw|Fa|Fb|Fd|La|Ls|Lt|Lw|Ms|P|Pa|Pb|Pf|Pj|Pl|Pw|Px|Sb|Se|Sw|Sx|No)$/"
         }
       },
       {
@@ -66,7 +66,7 @@
         "name": "regeneration_comment",
         "title": "Regeneration Comment",
         "type": "string",
-        "constraints":{
+        "constraints": {
           "maxLength": 250
         }
       }
