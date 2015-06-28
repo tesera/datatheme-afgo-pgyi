@@ -87,7 +87,7 @@
         "constraints": {
           "minimum": 0.01,
           "maximum": 100.00,
-          "pattern": "/\\.\\d{2}/"          
+          "regex": "/\\.\\d{2}/"          
         }
       },
       {
@@ -97,7 +97,7 @@
         "constraints": {
           "minimum": 0.0,
           "maximum": 360.0,
-          "pattern": "/\\.\\d{1}/"
+          "regex": "/\\.\\d{1}/"
         }
       },
       {
