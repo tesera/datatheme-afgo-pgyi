@@ -61,7 +61,7 @@
         "constraints": {
           "minimum": 0.1,
           "maximum": 120.0,
-          "pattern": "/[0-9]*\\.[0-9]/"
+          "pattern": "/[0-9]*\\.[0-9]{1}/"
         }
       },
       {
@@ -81,7 +81,7 @@
         "constraints": {
           "minimum": 0.1,
           "maximum": 15.0,
-          "pattern": "/[0-9]*\\.[0-9]/"
+          "pattern": "/[0-9]*\\.[0-9]{1}/"
         }
       },
       {
