@@ -5,15 +5,17 @@
     "fields": [
       {
         "name": "company",
+        "title": "Company",
         "type": "string",
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
+          "pattern": "/^(AINS|ALPC|ANC|APLY|BLUE|CFPL|CFS|DAIS|FOFP|GOA|HPFP|HLFP|MDFP|MWWC|SFPI|SLPC|SPRA|SUND|TOLK|TOSL|UNKN|UOA|VAND|WFML|WYGP|WYPM)$/"
         }
       },
       {
         "name": "company_plot_number",
+        "title": "Company Plot Number",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -23,6 +25,7 @@
       },
       {
         "name": "disturbance_number",
+        "title": "Disturbance Number",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -33,15 +36,17 @@
       },
       {
         "name": "disturbance_code",
+        "title": "Disturbance Code",
         "type": "string",
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(BU|DF|MI|MU|NDD|NDW|DC|HL|MLU|NDC|NDI|DA)$/"
+          "pattern": "/^(BU|DA|DC|DF|HL|MI|MLU|MU|NDD|NDW|NDC|NDI)$/"
         }
       },
       {
         "name": "disturbance_year",
+        "title": "Disturbance Year",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -52,6 +57,7 @@
       },
       {
         "name": "disturbance_month",
+        "title": "Disturbance Month",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -62,6 +68,7 @@
       },
       {
         "name": "disturbance_day",
+        "title": "Disturbance Day",
         "type": "integer",
         "raises": "warning",
         "constraints": {
@@ -72,8 +79,9 @@
       },
       {
         "name": "disturbance_comment",
+        "title": "Disturbance Comment",
         "type": "string",
-        "constraints":{
+        "constraints": {
           "maxLength": 250
         }
       }
