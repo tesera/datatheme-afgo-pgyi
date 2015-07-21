@@ -1,6 +1,7 @@
 {
   "name": "trees",
   "path": "trees.csv",
+  "validator": "http://s3.amazonaws.com/tesera.datathemes/afgo.pgyi/awk/trees.awk",
   "schema": {
     "fields": [
       {

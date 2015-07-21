@@ -1,6 +1,7 @@
 {
   "name": "plot_measurement",
   "path": "plot_measurement.csv",
+  "validator": "http://s3.amazonaws.com/tesera.datathemes/afgo.pgyi/awk/plot_measurement.awk",
   "schema": {
     "fields": [
       {

@@ -1,6 +1,7 @@
 {
   "name": "treatment",
   "path": "treatment.csv",
+  "validator": "http://s3.amazonaws.com/tesera.datathemes/afgo.pgyi/awk/treatment.awk",
   "schema": {
     "fields": [
       {

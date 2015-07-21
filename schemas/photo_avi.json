@@ -1,6 +1,7 @@
 {
   "name": "photo_avi_layer",
   "path": "photo_avi.csv",
+  "validator": "http://s3.amazonaws.com/tesera.datathemes/afgo.pgyi/awk/photo_avi.awk",
   "schema": {
     "fields": [
       {
