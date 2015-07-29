@@ -1,5 +1,6 @@
 {
   "name": "trees",
+  "title": "Trees",
   "path": "trees.csv",
   "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/trees.awk",
   "schema": {
