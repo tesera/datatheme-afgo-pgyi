@@ -1,7 +1,7 @@
 {
   "name": "disturbance",
   "path": "disturbance.csv",
-  "validator": "http://s3.amazonaws.com/tesera.datathemes/afgo.pgyi/awk/disturbance.awk",
+  "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/disturbance.awk",
   "schema": {
     "fields": [
       {

@@ -1,7 +1,7 @@
 {
   "name": "regeneration",
   "path": "regeneration.csv",
-  "validator": "http://s3.amazonaws.com/tesera.datathemes/afgo.pgyi/awk/regeneration.awk",
+  "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/regeneration.awk",
   "schema": {
     "fields": [
       {

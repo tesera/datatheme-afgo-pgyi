@@ -1,7 +1,7 @@
 {
   "name": "plot",
   "path": "plot.csv",
-  "validator": "http://s3.amazonaws.com/tesera.datathemes/afgo.pgyi/awk/plot.awk",
+  "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/plot.awk",
   "schema": {
     "fields": [
       {
