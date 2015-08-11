@@ -11,7 +11,7 @@
 # nodejs : https://nodejs.org/
 # bawlk : https://github.com/tesera/bawlk
 
-datatheme_root=s3://tesera.datathemes
+datatheme_root=s3://tesera.dataprofiles
 datatheme_path="$datatheme_root/$2"
 
 flags="--acl public-read \

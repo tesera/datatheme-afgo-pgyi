@@ -1,6 +1,8 @@
 {
   "name": "trees_measurement",
+  "title": "Tree Measurements",
   "path": "trees_measurement.csv",
+  "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/trees_measurement.awk",
   "schema": {
     "fields": [
       {

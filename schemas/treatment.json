@@ -1,6 +1,8 @@
 {
   "name": "treatment",
+  "title": "Treatment",
   "path": "treatment.csv",
+  "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/treatment.awk",
   "schema": {
     "fields": [
       {
