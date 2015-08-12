@@ -5,9 +5,9 @@ echo '"datatheme": { "name": "afgo.pgyi", "version": "2.0.1", "repository": "htt
 echo '"resources": ['
     cat ./schemas/plot.json
     echo ,
-    cat ./schemas/trees.json
-    echo ,
     cat ./schemas/plot_measurement.json
+    echo ,
+    cat ./schemas/trees.json
     echo ,
     cat ./schemas/trees_measurement.json
     echo ,

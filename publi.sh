@@ -4,14 +4,16 @@
 # usage: $ bash ./publi.sh
 
 # build & deploys datatheme resources to host s3 bucket
-# usage: $ bash ./publi.sh put
+# usage: $ bash ./publi.sh put dev.afgo.pgyi
 
 # dependencies:
 # aws cli : http://aws.amazon.com/cli/
 # nodejs : https://nodejs.org/
 # bawlk : https://github.com/tesera/bawlk
 
-datatheme_path=s3://tesera.datathemes/afgo.pgyi
+datatheme_root=s3://tesera.dataprofiles
+datatheme_path="$datatheme_root/$2"
+
 flags="--acl public-read \
 --cache-control no-cahe"
 

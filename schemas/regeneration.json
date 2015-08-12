@@ -1,19 +1,23 @@
 {
   "name": "regeneration",
+  "title": "Regeneration",
   "path": "regeneration.csv",
+  "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/regeneration.awk",
   "schema": {
     "fields": [
       {
         "name": "company",
+        "title": "Company",
         "type": "string",
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
+          "pattern": "/^(AINS|ALPC|ANC|APLY|BLUE|CFPL|CFS|DAIS|FOFP|GOA|HPFP|HLFP|MDFP|MWWC|SFPI|SLPC|SPRA|SUND|TOLK|TOSL|UNKN|UOA|VAND|WFML|WYGP|WYPM)$/"
         }
       },
       {
         "name": "company_plot_number",
+        "title": "Company Plot Number",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -23,6 +27,7 @@
       },
       {
         "name": "measurement_number",
+        "title": "Measurement Number",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -32,6 +37,7 @@
       },
       {
         "name": "regeneration_plot_name",
+        "title": "Regeneration Plot Name",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -41,15 +47,17 @@
       },
       {
         "name": "species",
+        "title": "Species",
         "type": "string",
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(A|Aw|Pb|Bw|Ax|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Ms|No)$/"
+          "pattern": "/^(A|Aw|Ax|Bw|Fa|Fb|Fd|La|Ls|Lt|Lw|Ms|P|Pa|Pb|Pf|Pj|Pl|Pw|Px|Sb|Se|Sw|Sx|No)$/"
         }
       },
       {
         "name": "regeneration_count",
+        "title": "Regeneration Count",
         "type": "integer",
         "constraints": {
           "minimum": 0,
@@ -58,8 +66,9 @@
       },
       {
         "name": "regeneration_comment",
+        "title": "Regeneration Comment",
         "type": "string",
-        "constraints":{
+        "constraints": {
           "maxLength": 250
         }
       }
@@ -76,13 +85,15 @@
     {
       "fields": [
         "company",
-        "company_plot_number"
+        "company_plot_number",
+        "measurement_number"
       ],
       "reference": {
-        "resource": "plot",
+        "resource": "plot_measurement",
         "fields": [
           "company",
-          "company_plot_number"
+          "company_plot_number",
+          "measurement_number"
         ]
       }
     }

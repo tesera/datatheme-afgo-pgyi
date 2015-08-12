@@ -1,19 +1,23 @@
 {
-  "name": "photo_avi_layer",
+  "name": "photo_avi",
+  "title": "Photo AVI",
   "path": "photo_avi.csv",
+  "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/photo_avi.awk",
   "schema": {
     "fields": [
       {
         "name": "company",
+        "title": "Company",
         "type": "string",
         "raises": "error",
         "constraints": {
           "required": true,
-          "pattern": "/^(AINS|GOA|APLY|ALPC|ANC|BLUE|CFPL|CFS|DAIS|FOFP|MDFP|MWWC|SLPC|SPRA|SUND|SFPI|HLFP|TOLK|TOSL|UOA|VAND|WFML|WYGP|WYPM|UNKN|HPFP)$/"
+          "pattern": "/^(AINS|ALPC|ANC|APLY|BLUE|CFPL|CFS|DAIS|FOFP|GOA|HPFP|HLFP|MDFP|MWWC|SFPI|SLPC|SPRA|SUND|TOLK|TOSL|UNKN|UOA|VAND|WFML|WYGP|WYPM)$/"
         }
       },
       {
         "name": "company_plot_number",
+        "title": "Company Plot Number",
         "type": "string",
         "raises": "error",
         "constraints": {
@@ -23,14 +27,17 @@
       },
       {
         "name": "avi_version",
+        "title": "Alberta Vegetation Inventory Version",
         "type": "string",
         "raises": "error",
         "constraints": {
+          "required": true,
           "pattern": "/^(AVI1\\.0|AVI2\\.1|AVI2\\.1\\.1|AVI2\\.2)$/"
         }
       },
       {
         "name": "polygon_number",
+        "title": "Polygon Number",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -41,6 +48,7 @@
       },
       {
         "name": "year_photography",
+        "title": "Year Photography",
         "type": "integer",
         "raises": "error",
         "constraints": {
@@ -51,6 +59,7 @@
       },
       {
         "name": "year_photo_call",
+        "title": "Year Photo Call",
         "type": "integer",
         "constraints": {
           "minimum": 1900,
@@ -59,22 +68,27 @@
       },
       {
         "name": "layer_type",
+        "title": "Layer Type",
         "type": "integer",
         "raises": "error",
         "constraints": {
+          "required": true, 
           "pattern": "/^(1|2|3|4|5)$/"
         }
       },
       {
         "name": "moist_reg",
+        "title": "Moisture Regime",
         "type": "string",
         "raises": "warning",
         "constraints": {
+          "required": true,
           "pattern": "/^(d|m|w|a)$/"
         }
       },
       {
         "name": "density",
+        "title": "Density",
         "type": "string",
         "constraints": {
           "pattern": "/^(A|B|C|D)$/"
@@ -82,98 +96,118 @@
       },
       {
         "name": "height",
+        "title": "Height",
         "type": "integer",
-        "raises": "warning",
+        "raises": "error",
         "constraints": {
+          "required": true,
           "minimum": 0,
           "maximum": 50
         }
       },
       {
         "name": "sp1",
+        "title": "Species 1",
         "type": "string",
         "raises": "error",
         "constraints": {
-          "pattern": "/^(A|Aw|Pb|Bw|Ax|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|No)$/"
+          "required": true,
+        "pattern": "/^(A|Aw|Ax|Bw|Fa|Fb|Fd|La|Ls|Lt|Lw|P|Pa|Pb|Pf|Pj|Pl|Pw|Px|Sb|Se|Sw|Sx|No)$/"
         }
       },
       {
         "name": "sp1_per",
+        "title": "Species 1 Percentage",
         "type": "integer",
         "raises": "error",
         "constraints": {
+          "required": true,
           "pattern": "/^(0|2|3|4|5|6|7|8|9|10)$/"
         }
       },
       {
         "name": "sp2",
+        "title": "Species 2",
         "type": "string",
         "constraints": {
-          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
+        "pattern": "/^(A|Aw|Ax|Bw|Fa|Fb|Fd|La|Ls|Lt|Lw|P|Pa|Pb|Pf|Pj|Pl|Pw|Px|Sb|Se|Sw|Sx|No)$/"
         }
       },
       {
         "name": "sp2_per",
+        "title": "Species 2 Percentage",
         "type": "integer",
         "raises": "error",
         "constraints": {
+          "required": true,
           "pattern": "/^(0|1|2|3|4|5)$/"
         }
       },
       {
         "name": "sp3",
+        "title": "Species 3",
         "type": "string",
         "constraints": {
-          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
+        "pattern": "/^(A|Aw|Ax|Bw|Fa|Fb|Fd|La|Ls|Lt|Lw|P|Pa|Pb|Pf|Pj|Pl|Pw|Px|Sb|Se|Sw|Sx|No)$/"
         }
       },
       {
         "name": "sp3_per",
+        "title": "Species 3 Percentage",
         "type": "integer",
         "raises": "error",
         "constraints": {
+          "required": true,
           "pattern": "/^(0|1|2|3)$/"
         }
       },
       {
         "name": "sp4",
+        "title": "Species 4",
         "type": "string",
         "constraints": {
-          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
+        "pattern": "/^(A|Aw|Ax|Bw|Fa|Fb|Fd|La|Ls|Lt|Lw|P|Pa|Pb|Pf|Pj|Pl|Pw|Px|Sb|Se|Sw|Sx|No)$/"
         }
       },
       {
         "name": "sp4_per",
+        "title": "Species 4 Percentage",
         "type": "integer",
         "raises": "error",
         "constraints": {
+          "required": true,
           "pattern": "/^(0|1|2)$/"
         }
       },
       {
         "name": "sp5",
+        "title": "Species 5",
         "type": "string",
         "constraints": {
-          "pattern": "/^(A|Aw|Pb|Bw|Ax|Dd|Dc|P|Pl|Pw|Pa|Pf|Pj|Px|Sw|Se|Sb|Sx|Fb|Fa|Fd|Lt|Lw|La|Ls|Du|Ms|No)$/"
+        "pattern": "/^(A|Aw|Ax|Bw|Fa|Fb|Fd|La|Ls|Lt|Lw|P|Pa|Pb|Pf|Pj|Pl|Pw|Px|Sb|Se|Sw|Sx|No)$/"
         }
       },
       {
         "name": "sp5_per",
+        "title": "Species 5 Percentage",
         "type": "integer",
         "raises": "error",
         "constraints": {
+          "required": true,
           "pattern": "/^(0|1|2)$/"
         }
       },
       {
         "name": "struc",
+        "title": "Structure",
         "type": "string",
         "constraints": {
-          "pattern": "/^(S|M|C|H)$/"
+          "pattern": "/^(C|H|M|S)$/"
         }
       },
       {
         "name": "struc_val",
+        "title": "Structure Value",
         "type": "integer",
         "constraints": {
           "pattern": "/^(0|1|2|3|4|5|6|7|8|9)$/"
@@ -181,6 +215,7 @@
       },
       {
         "name": "origin",
+        "title": "Origin Class",
         "type": "integer",
         "constraints": {
           "minimum": 0,
@@ -189,13 +224,130 @@
       },
       {
         "name": "tpr",
+        "title": "Timber Productivity Rating Class",
         "type": "string",
         "constraints": {
-          "pattern": "/^(U|F|M|G)$/"
+          "pattern": "/^(F|G|M|U)$/"
+        }
+      },
+      {
+        "name": "initials",
+        "title": "Initials",
+        "type": "string",
+        "constraints": {
+          "maxLength": 2
+        }
+      },
+      {
+        "name": "nfl",
+        "title": "Non-Forest Vegetated Land",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(BR|HF|HG|SC|SO)$/"
+        }
+      },
+      {
+        "name": "nfl_per",
+        "title": "Non-Forest Vegetated Land Percantage",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(0|1|2|3|4|5|6|7|8|9|10)$/"
+        }
+      },
+      {
+        "name": "nat_non",
+        "title": "Naturally Non-Vegetated Lands",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(NMB|NMC|NMR|NMS|NWF|NWI|NWL|NWR)$/"
+        }
+      },
+      {
+        "name": "anth_veg",
+        "title": "Anthropogenic Vegetated Land",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(CA|CP|CPR|CIP|CIW)$/"
+        }
+      },
+      {
+        "name": "anth_non",
+        "title": "Anthropogenic Non-Vegetated Land",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(ASC|ASR|AIH|AIE|AIG|AIF|AIM|AII)$/"
+        }
+      },
+      {
+        "name": "mod1",
+        "title": "Stand Modifier 1 Condition/Treatment",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(BT|BU|CC|CL|DI|DT|GR|IK|IR|PL|SC|SI|SN|ST|TH|WE|WF|UK)$/"
+        }
+      },
+      {
+        "name": "mod1_ext",
+        "title": "Stand Modifier Extent",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(0|1|2|3|4|5)$/"
+        }
+      },
+      {
+        "name": "mod1_yr",
+        "title": "Stand Modifier Year",
+        "type": "integer",
+        "constraints": {
+          "minimum": 0,
+          "maximum": 2050
+        }
+      },
+      {
+        "name": "mod2",
+        "title": "Stand Modifier 2 Condition/Treatment",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(BT|BU|CC|CL|DI|DT|GR|IK|IR|PL|SC|SI|SN|ST|TH|WE|WF|UK)$/"          
+        }
+      },
+      {
+        "name": "mod2_ext",
+        "title": "Stand Modifier 2 Extent",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(0|1|2|3|4|5)$/"
+        }
+      },
+      {
+        "name": "mod2_yr",
+        "title": "Stand Modifier 2 Year",
+        "type": "integer",
+        "constraints": {
+          "minimum": 0,
+          "maximum": 2050        
+        }
+      },
+      {
+        "name": "data",
+        "title": "Data",
+        "type": "string",
+        "constraints": {
+          "pattern": "/^(A|C|F|I|L|P|S|V)$/"          
+        }
+      },
+      {
+        "name": "data_yr",
+        "title": "Data Year",
+        "type": "integer",
+        "constraints": {
+          "minimum": 0,
+          "maximum": 2050
         }
       },
       {
         "name": "photo_avi_layer_comment",
+        "title": "Photo Avi Layer Comment",
         "type": "string",
         "constraints":{
           "maxLength": 250
