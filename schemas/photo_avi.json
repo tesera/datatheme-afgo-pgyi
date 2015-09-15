@@ -112,7 +112,7 @@
         "raises": "error",
         "constraints": {
           "required": true,
-        "pattern": "/^(A|Aw|Ax|Bw|Fa|Fb|Fd|La|Ls|Lt|Lw|P|Pa|Pb|Pf|Pj|Pl|Pw|Px|Sb|Se|Sw|Sx|No)$/"
+          "pattern": "/^(A|Aw|Ax|Bw|Fa|Fb|Fd|La|Ls|Lt|Lw|P|Pa|Pb|Pf|Pj|Pl|Pw|Px|Sb|Se|Sw|Sx|No)$/"
         }
       },
       {
