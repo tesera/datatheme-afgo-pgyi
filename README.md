@@ -1,15 +1,16 @@
-# datatheme-pgyi
+# datatheme-afgo-pgyi
 
 > !WIP: this is work in progress.
 
 [ ![Codeship Status for tesera/datatheme-pgyi](https://codeship.com/projects/a4acc480-9ff1-0132-e468-3ee0debf623a/status?branch=master)](https://codeship.com/projects/65305)
 
-A Datatheme is a defined [Tabular Datapackage](http://dataprotocols.org/tabular-data-package/). Essentially a Class from which you can base your Tabular Datapackage from. The intent is to have one place to define and version the data model using the [JSON Table Schema](http://dataprotocols.org/json-table-schema/).
-
-
-You build the Datatheme into a base ``datapackage.json`` file which you can extend for your purpose.
-
+### What is PGYI?
 PGYI is an initiative from the Alberta Forest Growth Organization (AFGO) to collect and share growth and yield plots data within their community.
+
+### What is a Data Theme?
+A data theme is a collection of [JSON Table Schema](http://dataprotocols.org/json-table-schema/) which collectively describe a [Tabular Data Package](http://dataprotocols.org/tabular-data-package/) dataset.
+
+You build the data theme into a template ``datapackage.json`` file which you can extend for your purpose.
 
 A datatheme consists of a ``datatheme.json`` file which describes itself and paths to all schema resources referenced by this theme.
 
@@ -17,25 +18,23 @@ A datatheme consists of a ``datatheme.json`` file which describes itself and pat
 $ cat datatheme.json
 {
     "name": "afgo.pgyi",
-    "version": "1.0",
-    "repository": "http://github.com/tesera/afgo-datatheme.git",
-    "author": "Yves Richard",
-    "description": "Datatheme for AFGO PGYI tree plot data.",
+    "version": "2.0.1",
+    "repository": "http://github.com/tesera/afgo-pgyi-datatheme.git",
+    "description": "Data theme for AFGO PGYI forestry permanent sample plots.",
     "schemas": [
-        "./schemas/Admin.json",
-        "./schemas/Plot.json",
-        "./schemas/PhotoAVI.json",
-        "./schemas/Treatment.json",
-        "./schemas/Disturbance.json",
-        "./schemas/Regeneration.json",
-        "./schemas/PlotMeasurement.json",
-        "./schemas/Trees.json",
-        "./schemas/TreesMeasurement.json"
+        "./schemas/plot.json",
+        "./schemas/photo_avi.json",
+        "./schemas/treatment.json",
+        "./schemas/disturbance.json",
+        "./schemas/regeneration.json",
+        "./schemas/plot_measurement.json",
+        "./schemas/trees.json",
+        "./schemas/trees_measurement.json"
     ]
 }
 ````
 
-####Building into a datapackage.json file (datatheme to datapackage)
+####Building your theme into a package template file.
 ````
-$ sh ./dt2dp.sh > datapackage.json
+$ node ./build.js > datapackage.json
 ````
