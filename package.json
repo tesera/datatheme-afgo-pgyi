@@ -21,7 +21,6 @@
   },
   "devDependencies": {
     "JSONStream": "~0.10.0",
-    "lodash": "~3.5.0",
     "event-stream": "~3.3.0"
   }
 }

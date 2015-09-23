@@ -1,308 +1,302 @@
 {
-  "name": "plot",
-  "title": "Plot",
-  "path": "plot.csv",
-  "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/plot.awk",
-  "schema": {
-    "fields": [
-      {
-        "name": "company",
-        "title": "Company",
-        "type": "string",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(AINS|ALPC|ANC|APLY|BLUE|CFPL|CFS|DAIS|FOFP|GOA|HPFP|HLFP|MDFP|MWWC|SFPI|SLPC|SPRA|SUND|TOLK|TOSL|UNKN|UOA|VAND|WFML|WYGP|WYPM)$/"
-        }
-      },
-      {
-        "name": "company_plot_number",
-        "title": "Company Plot Number",
-        "type": "string",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "unique": true,
-          "maxLength": 15
-        }
-      },
-      {
-        "name": "company_stand_number",
-        "title": "Company Stand Number",
-        "type": "string",
-        "constraints": {
-          "maxLength": 15
-        }
-      },
-      {
-        "name": "establishment_year",
-        "title": "Establishment Year",
-        "type": "integer",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "minimum": 1900,
-          "maximum": 2050
-        }
-      },
-      {
-        "name": "establishment_month",
-        "title": "Establishment Month",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "minimum": 1,
-          "maximum": 12
-        }
-      },
-      {
-        "name": "establishment_day",
-        "title": "Establishment Day",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "minimum": 1,
-          "maximum": 31
-        }
-      },
-      {
-        "name": "fmu",
-        "title": "Forest Management Unit",
-        "type": "string",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(A10|A11|A12|A13|A14|A15|A4|A5|A6|A7|A8|A9|B10|B11|B9|BO1|BO2|C4|C5|CO1|CO2|E1|E10|E11|E13|E14|E15|E2|E3|E4|E5|E6|E7|E8|E9|EO1|F1|F10|F11|F14|F20|F21|F23|F24|F25|F26|FO1|G1|G10|G11|G12|G13|G14|G15|G16|G2|G3|G4|G5|G6|G7|G8|G9|GO1|GO2|GO3|GO4|H1|L1|L11|L2|L3|L8|L9|LO1|M1|M10|M3|M4|M7|M9|NA|P1|P10|P11|P13|P14|P19|P20|P21|P3|P4|P5|P6|P7|P8|P9|PO1|PO2|PO3|R1|R10|R11|R12|R13|R14|R2|R2U|R3|R4|R4Y|RO1|S10|S11|S14|S15|S16|S17|S18|S19|S20|S21|S22|S23|S24|S25|S7|S9|SO1|SO2|W1|W10|W11|W13|W14|W15|W2|W3|W4|W5|W6|W8|WO1|WO2|WO3|E14)$/"
-        }
-      },
-      {
-        "name": "fma",
-        "title": "Forest Management Agreement Number",
-        "type": "string",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "maxLength": 30
-        }
-      },
-      {
-        "name": "ats_township",
-        "title": "ATS Township",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "minimum": 1,
-          "maximum": 126
-        }
-      },
-      {
-        "name": "ats_range",
-        "title": "ATS Range",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "minimum": 1,
-          "maximum": 26
-        }
-      },
-      {
-        "name": "ats_meridian",
-        "title": "ATS Meridian",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "minimum": 4,
-          "maximum": 6
-        }
-      },
-      {
-        "name": "ats_section",
-        "title": "ATS Section",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "minimum": 1,
-          "maximum": 36
-        }
-      },
-      {
-        "name": "opening_number",
-        "title": "Opening Number",
-        "type": "string",
-        "constraints": {
-          "maxLength": 11
-        }
-      },
-      {
-        "name": "sampling_unit_number",
-        "title": "Sampling Unit Number",
-        "type": "string",
-        "constraints": {
-          "maxLength": 3
-        }
-      },
-      {
-        "name": "topographic_position",
-        "title": "Topographic Position",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(1|2|3|4|5|6|7)$/"
-        }
-      },
-      {
-        "name": "elevation",
-        "title": "Elevation",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "minimum": 0,
-          "maximum": 3747
-        }
-      },
-      {
-        "name": "slope",
-        "title": "Slope",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "minimum": 0,
-          "maximum": 200
-        }
-      },
-      {
-        "name": "aspect",
-        "title": "Aspect",
-        "type": "string",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(E|N|NE|NW|S|SE|SW|W|NA)$/"
-        }
-      },
-      {
-        "name": "x_coord",
-        "title": "Easting or X-coordinate",
-        "type": "number",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "minimum": 240000.00000,
-          "maximum": 850000.00000,
-          "pattern": "/^[0-9]*.[0-9]{5}$/"
-        }
-      },
-      {
-        "name": "y_coord",
-        "title": "Northing or Y-coordinate",
-        "type": "number",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "minimum": 5400000.00000,
-          "maximum": 6650000.00000,
-          "pattern": "/^[0-9]*.[0-9]{5}$/"
-        }
-      },
-      {
-        "name": "utm_zone",
-        "title": "UTM Zone",
-        "type": "string",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(UTM11|UTM12)$/"
-        }
-      },
-      {
-        "name": "datum",
-        "title": "Datum",
-        "type": "string",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(NAD27|NAD83)$/"
-        }
-      },
-      {
-        "name": "latitude",
-        "title": "Latitude",
-        "type": "number",
-        "constraints": {
-          "minimum": 49.0000000000,
-          "maximum": 60.0000000000,
-          "pattern": "/^[0-9]*.[0-9]{10}$/"
-        }
-      },
-      {
-        "name": "longitude",
-        "title": "Longitude",
-        "type": "number",
-        "constraints": {
-          "minimum": -120.0000000000,
-          "maximum": -110.0000000000,
-          "pattern": "/^-[0-9]*.[0-9]{10}$/"
-        }
-      },
-      {
-        "name": "natural_subregion",
-        "title": "Natural Subregion",
-        "type": "string",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(ALP|AP|BSA|CM|CP|DM|DMG|FF|FP|KU|LBH|LF|MG|MT|NF|NM|PAD|PRP|SA|UBH|UF)$/"
-        }
-      },
-      {
-        "name": "ecosite_guide",
-        "title": "Ecosite Guide",
-        "type": "string",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(N|SW|WC)$/"
-        }
-      },
-      {
-        "name": "ecosite",
-        "title": "Ecosite",
-        "type": "string",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(a|b|c|d|e|f|g|h|i|j|k|l|m|n)$/"
-        }
-      },
-      {
-        "name": "ecosite_phase",
-        "title": "Ecosite Phase",
-        "type": "string",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(a1|a2|a3|b1|b2|b3|b4|b5|c1|c2|c3|c4|c5|d1|d2|d3|d4|e1|e2|e3|e4|f1|f2|f3|f4|f5|f6|g1|g2|g3|h1|h2|h3|i1|i2|i3|j1|j2|j3|k1|k2|k3|l1|l2|l3|m1|m2|m3|n1)$/"
-        }
-      },
-      {
-        "name": "plot_comment",
-        "title": "Plot Comment",
-        "type": "string",
-        "constraints": {
-          "maxLength": 250
-        }
+  "fields": [
+    {
+      "name": "company",
+      "title": "Company",
+      "type": "string",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(AINS|ALPC|ANC|APLY|BLUE|CFPL|CFS|DAIS|FOFP|GOA|HPFP|HLFP|MDFP|MWWC|SFPI|SLPC|SPRA|SUND|TOLK|TOSL|UNKN|UOA|VAND|WFML|WYGP|WYPM)$/"
       }
-    ]
-  },
+    },
+    {
+      "name": "company_plot_number",
+      "title": "Company Plot Number",
+      "type": "string",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "unique": true,
+        "maxLength": 15
+      }
+    },
+    {
+      "name": "company_stand_number",
+      "title": "Company Stand Number",
+      "type": "string",
+      "constraints": {
+        "maxLength": 15
+      }
+    },
+    {
+      "name": "establishment_year",
+      "title": "Establishment Year",
+      "type": "integer",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "minimum": 1900,
+        "maximum": 2050
+      }
+    },
+    {
+      "name": "establishment_month",
+      "title": "Establishment Month",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "minimum": 1,
+        "maximum": 12
+      }
+    },
+    {
+      "name": "establishment_day",
+      "title": "Establishment Day",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "minimum": 1,
+        "maximum": 31
+      }
+    },
+    {
+      "name": "fmu",
+      "title": "Forest Management Unit",
+      "type": "string",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(A10|A11|A12|A13|A14|A15|A4|A5|A6|A7|A8|A9|B10|B11|B9|BO1|BO2|C4|C5|CO1|CO2|E1|E10|E11|E13|E14|E15|E2|E3|E4|E5|E6|E7|E8|E9|EO1|F1|F10|F11|F14|F20|F21|F23|F24|F25|F26|FO1|G1|G10|G11|G12|G13|G14|G15|G16|G2|G3|G4|G5|G6|G7|G8|G9|GO1|GO2|GO3|GO4|H1|L1|L11|L2|L3|L8|L9|LO1|M1|M10|M3|M4|M7|M9|NA|P1|P10|P11|P13|P14|P19|P20|P21|P3|P4|P5|P6|P7|P8|P9|PO1|PO2|PO3|R1|R10|R11|R12|R13|R14|R2|R2U|R3|R4|R4Y|RO1|S10|S11|S14|S15|S16|S17|S18|S19|S20|S21|S22|S23|S24|S25|S7|S9|SO1|SO2|W1|W10|W11|W13|W14|W15|W2|W3|W4|W5|W6|W8|WO1|WO2|WO3|E14)$/"
+      }
+    },
+    {
+      "name": "fma",
+      "title": "Forest Management Agreement Number",
+      "type": "string",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "maxLength": 30
+      }
+    },
+    {
+      "name": "ats_township",
+      "title": "ATS Township",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "minimum": 1,
+        "maximum": 126
+      }
+    },
+    {
+      "name": "ats_range",
+      "title": "ATS Range",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "minimum": 1,
+        "maximum": 26
+      }
+    },
+    {
+      "name": "ats_meridian",
+      "title": "ATS Meridian",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "minimum": 4,
+        "maximum": 6
+      }
+    },
+    {
+      "name": "ats_section",
+      "title": "ATS Section",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "minimum": 1,
+        "maximum": 36
+      }
+    },
+    {
+      "name": "opening_number",
+      "title": "Opening Number",
+      "type": "string",
+      "constraints": {
+        "maxLength": 11
+      }
+    },
+    {
+      "name": "sampling_unit_number",
+      "title": "Sampling Unit Number",
+      "type": "string",
+      "constraints": {
+        "maxLength": 3
+      }
+    },
+    {
+      "name": "topographic_position",
+      "title": "Topographic Position",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(1|2|3|4|5|6|7)$/"
+      }
+    },
+    {
+      "name": "elevation",
+      "title": "Elevation",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "minimum": 0,
+        "maximum": 3747
+      }
+    },
+    {
+      "name": "slope",
+      "title": "Slope",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "minimum": 0,
+        "maximum": 200
+      }
+    },
+    {
+      "name": "aspect",
+      "title": "Aspect",
+      "type": "string",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(E|N|NE|NW|S|SE|SW|W|NA)$/"
+      }
+    },
+    {
+      "name": "x_coord",
+      "title": "Easting or X-coordinate",
+      "type": "number",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "minimum": 240000.00000,
+        "maximum": 850000.00000,
+        "pattern": "/^[0-9]*.[0-9]{5}$/"
+      }
+    },
+    {
+      "name": "y_coord",
+      "title": "Northing or Y-coordinate",
+      "type": "number",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "minimum": 5400000.00000,
+        "maximum": 6650000.00000,
+        "pattern": "/^[0-9]*.[0-9]{5}$/"
+      }
+    },
+    {
+      "name": "utm_zone",
+      "title": "UTM Zone",
+      "type": "string",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(UTM11|UTM12)$/"
+      }
+    },
+    {
+      "name": "datum",
+      "title": "Datum",
+      "type": "string",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(NAD27|NAD83)$/"
+      }
+    },
+    {
+      "name": "latitude",
+      "title": "Latitude",
+      "type": "number",
+      "constraints": {
+        "minimum": 49.0000000000,
+        "maximum": 60.0000000000,
+        "pattern": "/^[0-9]*.[0-9]{10}$/"
+      }
+    },
+    {
+      "name": "longitude",
+      "title": "Longitude",
+      "type": "number",
+      "constraints": {
+        "minimum": -120.0000000000,
+        "maximum": -110.0000000000,
+        "pattern": "/^-[0-9]*.[0-9]{10}$/"
+      }
+    },
+    {
+      "name": "natural_subregion",
+      "title": "Natural Subregion",
+      "type": "string",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(ALP|AP|BSA|CM|CP|DM|DMG|FF|FP|KU|LBH|LF|MG|MT|NF|NM|PAD|PRP|SA|UBH|UF)$/"
+      }
+    },
+    {
+      "name": "ecosite_guide",
+      "title": "Ecosite Guide",
+      "type": "string",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(N|SW|WC)$/"
+      }
+    },
+    {
+      "name": "ecosite",
+      "title": "Ecosite",
+      "type": "string",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(a|b|c|d|e|f|g|h|i|j|k|l|m|n)$/"
+      }
+    },
+    {
+      "name": "ecosite_phase",
+      "title": "Ecosite Phase",
+      "type": "string",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(a1|a2|a3|b1|b2|b3|b4|b5|c1|c2|c3|c4|c5|d1|d2|d3|d4|e1|e2|e3|e4|f1|f2|f3|f4|f5|f6|g1|g2|g3|h1|h2|h3|i1|i2|i3|j1|j2|j3|k1|k2|k3|l1|l2|l3|m1|m2|m3|n1)$/"
+      }
+    },
+    {
+      "name": "plot_comment",
+      "title": "Plot Comment",
+      "type": "string",
+      "constraints": {
+        "maxLength": 250
+      }
+    }
+  ],
   "primaryKey": [
     "company",
     "company_plot_number"

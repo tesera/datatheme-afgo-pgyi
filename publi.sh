@@ -11,13 +11,13 @@
 # nodejs : https://nodejs.org/
 # bawlk : https://github.com/tesera/bawlk
 
-datatheme_root=s3://tesera.data.dataprofiles
+datatheme_root=s3://tesera.data.themes
 datatheme_path="$datatheme_root/$2"
 
 cp_flags="--acl public-read --cache-control no-cahe"
 
 echo "building datapackage.json"
-bash ./dt2dp.sh > ./www/datapackage.json &&
+node ./build.js > ./www/datapackage.json &&
 
 mkdir ./www/awk ./www/rules
 echo "compiling bawlk rules from datapackage.json"
