@@ -8,56 +8,56 @@
       "name": "plot",
       "title": "Plot",
       "path": "plot.csv",
-      "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/plot.awk",
+      "validator": "http://s3.amazonaws.com/tesera.data.themes/afgo.pgyi/awk/plot.awk",
       "schema": "./schemas/plot.json"
     },
     {
       "name": "plot_measurement",
       "title": "Plot Measurements",
       "path": "plot_measurement.csv",
-      "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/plot_measurement.awk",
+      "validator": "http://s3.amazonaws.com/tesera.data.themes/afgo.pgyi/awk/plot_measurement.awk",
       "schema": "./schemas/plot_measurement.json"
     },
     {
       "name": "trees",
       "title": "Trees",
       "path": "trees.csv",
-      "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/trees.awk",
+      "validator": "http://s3.amazonaws.com/tesera.data.themes/afgo.pgyi/awk/trees.awk",
       "schema": "./schemas/trees.json"
     },
     {
       "name": "trees_measurement",
       "title": "Tree Measurements",
       "path": "trees_measurement.csv",
-      "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/trees_measurement.awk",
+      "validator": "http://s3.amazonaws.com/tesera.data.themes/afgo.pgyi/awk/trees_measurement.awk",
       "schema": "./schemas/trees_measurement.json"
     },
     {
       "name": "photo_avi",
       "title": "Photo AVI",
       "path": "photo_avi.csv",
-      "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/photo_avi.awk",
+      "validator": "http://s3.amazonaws.com/tesera.data.themes/afgo.pgyi/awk/photo_avi.awk",
       "schema": "./schemas/photo_avi.json"
     },
     {
       "name": "treatment",
       "title": "Treatment",
       "path": "treatment.csv",
-      "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/treatment.awk",
+      "validator": "http://s3.amazonaws.com/tesera.data.themes/afgo.pgyi/awk/treatment.awk",
       "schema": "./schemas/treatment.json"
     },
     {
       "name": "disturbance",
       "title": "Disturbance",
       "path": "disturbance.csv",
-      "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/disturbance.awk",
+      "validator": "http://s3.amazonaws.com/tesera.data.themes/afgo.pgyi/awk/disturbance.awk",
       "schema": "./schemas/disturbance.json"
     },
     {
       "name": "regeneration",
       "title": "Regeneration",
       "path": "regeneration.csv",
-      "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/regeneration.awk",
+      "validator": "http://s3.amazonaws.com/tesera.data.themes/afgo.pgyi/awk/regeneration.awk",
       "schema": "./schemas/regeneration.json"
     }
   ]
