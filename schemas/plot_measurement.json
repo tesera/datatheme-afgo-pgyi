@@ -1,326 +1,320 @@
 {
-  "name": "plot_measurement",
-  "title": "Plot Measurements",
-  "path": "plot_measurement.csv",
-  "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/plot_measurement.awk",
-  "schema": {
-    "fields": [
-      {
-        "name": "company",
-        "title": "Company",
-        "type": "string",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(AINS|ALPC|ANC|APLY|BLUE|CFPL|CFS|DAIS|FOFP|GOA|HPFP|HLFP|MDFP|MWWC|SFPI|SLPC|SPRA|SUND|TOLK|TOSL|UNKN|UOA|VAND|WFML|WYGP|WYPM)$/"
-        }
-      },
-      {
-        "name": "company_plot_number",
-        "title": "Company Plot Number",
-        "type": "string",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "maxLength": 15
-        }
-      },
-      {
-        "name": "measurement_number",
-        "title": "Measurement Number",
-        "type": "integer",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "maxLength": 2
-        }
-      },
-      {
-        "name": "measurement_year",
-        "title": "Measurement Year",
-        "type": "integer",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "minimum": 1900,
-          "maximum": 2050
-        }
-      },
-      {
-        "name": "measurement_month",
-        "title": "Measurement Month",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "minimum": 1,
-          "maximum": 12
-        }
-      },
-      {
-        "name": "measurement_day",
-        "title": "Measurement Day",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "minimum": 1,
-          "maximum": 31
-        }
-      },
-      {
-        "name": "stand_origin",
-        "title": "Stand Origin",
-        "type": "string",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(A|B|C|F|L|N|P|R|S)$/"
-        }
-      },
-      {
-        "name": "plot_type",
-        "title": "Plot Type",
-        "type": "integer",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(1|2|3|4)$/"
-        }
-      },
-      {
-        "name": "stand_type",
-        "title": "Stand Type",
-        "type": "integer",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(1|2|3)$/"
-        }
-      },
-      {
-        "name": "plot_status",
-        "title": "Plot Status",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21)$/"
-        }
-      },
-      {
-        "name": "tree_plot_area",
-        "title": "Tree Plot Area",
-        "type": "number",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "minimum": 400.0,
-          "maximum": 2500.0,
-          "pattern": "/[0-9]*.[0-9]{1}/"
-        }
-      },
-      {
-        "name": "tree_plot_shape",
-        "title": "Tree Plot Shape",
-        "type": "string",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(C|R|S)$/"
-        }
-      },
-      {
-        "name": "tree_tagging_limit",
-        "title": "Tree Tagging Limit",
-        "type": "number",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "minimum": 0.1,
-          "maximum": 9.1,
-          "pattern": "/[0-9].[0-9]{1}/"
-        }
-      },
-      {
-        "name": "sapling_plot_area",
-        "title": "Sapling Plot Area",
-        "type": "number",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "minimum": 0.0,
-          "maximum": 2500.0,
-          "pattern": "/[0-9]*.[0-9]{1}/"
-        }
-      },
-      {
-        "name": "sapling_plot_shape",
-        "title": "Sapling Plot Shape",
-        "type": "string",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(C|R|S)$/"
-        }
-      },
-      {
-        "name": "sapling_tagging_limit_dbh",
-        "title": "Sapling Tagging Limit DBH",
-        "type": "number",
-        "constraints": {
-          "minimum": 0.1,
-          "maximum": 9.1,
-          "pattern": "/[0-9].[0-9]{1}/"
-        }
-      },
-      {
-        "name": "sapling_tagging_limit_height",
-        "title": "Sapling Tagging Limit Height",
-        "type": "number",
-        "constraints": {
-          "minimum": 1.30,
-          "maximum": 1.50,
-          "pattern": "/[0-9].[0-9]{2}/"
-        }
-      },
-      {
-        "name": "regen_plot_area",
-        "title": "Regen Plot Area",
-        "type": "number",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "minimum": 0.0,
-          "maximum": 2500.0,
-          "pattern": "/[0-9]*.[0-9]{1}/"
-        }
-      },
-      {
-        "name": "regen_plot_shape",
-        "title": "Regen Plot Shape",
-        "type": "string",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(C|R|S)$/"
-        }
-      },
-      {
-        "name": "regen_tagging_limit_conifer",
-        "title": "Regen Tagging Limit Conifer",
-        "type": "number",
-        "constraints": {
-          "minimum": 0.10,
-          "maximum": 1.30,
-          "pattern": "/[0-9].[0-9]{2}/"
-        }
-      },
-      {
-        "name": "regen_tagging_limit_decid",
-        "title": "Regen Tagging Limit Deciduous",
-        "type": "number",
-        "constraints": {
-          "minimum": 0.10,
-          "maximum": 1.30,
-          "pattern": "/[0-9].[0-9]{2}/"
-        }
-      },
-      {
-        "name": "number_regen_plots",
-        "title": "Number of Regen Plots",
-        "type": "integer",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "minimum": 0,
-          "maximum": 10
-        }
-      },
-      {
-        "name": "contractor",
-        "title": "Contractor",
-        "type": "string",
-        "constraints": {
-          "maxLength": 50
-        }
-      },
-      {
-        "name": "cruiser_1_name",
-        "title": "Cruiser 1 Name",
-        "type": "string",
-        "constraints": {
-          "maxLength": 25
-        }
-      },
-      {
-        "name": "cruiser_2_name",
-        "title": "Cruiser 2 Name",
-        "type": "string",
-        "constraints": {
-          "maxLength": 25
-        }
-      },
-      {
-        "name": "shrub_cover",
-        "title": "Shrub Cover",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)$/"
-        }
-      },
-      {
-        "name": "herb_forb_cover",
-        "title": "Herb/Forb Cover",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)$/"
-        }
-      },
-      {
-        "name": "grass_cover",
-        "title": "Grass Cover",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)$/"
-        }
-      },
-      {
-        "name": "moss_lichen_cover",
-        "title": "Moss/Lichen Cover",
-        "type": "integer",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)$/"
-        }
-      },
-      {
-        "name": "avi_field_call",
-        "title": "AVI Field Call",
-        "type": "string",
-        "raises": "warning",
-        "constraints": {
-          "required": true,
-          "maxLength": 80
-        }
-      },
-      {
-        "name": "plot_measurement_comment",
-        "title": "Plot Measurement Comment",
-        "type": "string",
-        "constraints": {
-          "maxLength": 250
-        }
+  "fields": [
+    {
+      "name": "company",
+      "title": "Company",
+      "type": "string",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(AINS|ALPC|ANC|APLY|BLUE|CFPL|CFS|DAIS|FOFP|GOA|HPFP|HLFP|MDFP|MWWC|SFPI|SLPC|SPRA|SUND|TOLK|TOSL|UNKN|UOA|VAND|WFML|WYGP|WYPM)$/"
       }
-    ]
-  },
+    },
+    {
+      "name": "company_plot_number",
+      "title": "Company Plot Number",
+      "type": "string",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "maxLength": 15
+      }
+    },
+    {
+      "name": "measurement_number",
+      "title": "Measurement Number",
+      "type": "integer",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "maxLength": 2
+      }
+    },
+    {
+      "name": "measurement_year",
+      "title": "Measurement Year",
+      "type": "integer",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "minimum": 1900,
+        "maximum": 2050
+      }
+    },
+    {
+      "name": "measurement_month",
+      "title": "Measurement Month",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "minimum": 1,
+        "maximum": 12
+      }
+    },
+    {
+      "name": "measurement_day",
+      "title": "Measurement Day",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "minimum": 1,
+        "maximum": 31
+      }
+    },
+    {
+      "name": "stand_origin",
+      "title": "Stand Origin",
+      "type": "string",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(A|B|C|F|L|N|P|R|S)$/"
+      }
+    },
+    {
+      "name": "plot_type",
+      "title": "Plot Type",
+      "type": "integer",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(1|2|3|4)$/"
+      }
+    },
+    {
+      "name": "stand_type",
+      "title": "Stand Type",
+      "type": "integer",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(1|2|3)$/"
+      }
+    },
+    {
+      "name": "plot_status",
+      "title": "Plot Status",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21)$/"
+      }
+    },
+    {
+      "name": "tree_plot_area",
+      "title": "Tree Plot Area",
+      "type": "number",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "minimum": 400.0,
+        "maximum": 2500.0,
+        "pattern": "/^[0-9]*.[0-9]{1}$/"
+      }
+    },
+    {
+      "name": "tree_plot_shape",
+      "title": "Tree Plot Shape",
+      "type": "string",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(C|R|S)$/"
+      }
+    },
+    {
+      "name": "tree_tagging_limit",
+      "title": "Tree Tagging Limit",
+      "type": "number",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "minimum": 0.1,
+        "maximum": 9.1,
+        "pattern": "/^[0-9].[0-9]{1}$/"
+      }
+    },
+    {
+      "name": "sapling_plot_area",
+      "title": "Sapling Plot Area",
+      "type": "number",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "minimum": 0.0,
+        "maximum": 2500.0,
+        "pattern": "/^[0-9]*.[0-9]{1}$/"
+      }
+    },
+    {
+      "name": "sapling_plot_shape",
+      "title": "Sapling Plot Shape",
+      "type": "string",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(C|R|S)$/"
+      }
+    },
+    {
+      "name": "sapling_tagging_limit_dbh",
+      "title": "Sapling Tagging Limit DBH",
+      "type": "number",
+      "constraints": {
+        "minimum": 0.1,
+        "maximum": 9.1,
+        "pattern": "/^[0-9].[0-9]{1}$/"
+      }
+    },
+    {
+      "name": "sapling_tagging_limit_height",
+      "title": "Sapling Tagging Limit Height",
+      "type": "number",
+      "constraints": {
+        "minimum": 1.30,
+        "maximum": 1.50,
+        "pattern": "/^[0-9].[0-9]{2}$/"
+      }
+    },
+    {
+      "name": "regen_plot_area",
+      "title": "Regen Plot Area",
+      "type": "number",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "minimum": 0.0,
+        "maximum": 2500.0,
+        "pattern": "/^[0-9]*.[0-9]{1}$/"
+      }
+    },
+    {
+      "name": "regen_plot_shape",
+      "title": "Regen Plot Shape",
+      "type": "string",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(C|R|S)$/"
+      }
+    },
+    {
+      "name": "regen_tagging_limit_conifer",
+      "title": "Regen Tagging Limit Conifer",
+      "type": "number",
+      "constraints": {
+        "minimum": 0.10,
+        "maximum": 1.30,
+        "pattern": "/^[0-9].[0-9]{2}$/"
+      }
+    },
+    {
+      "name": "regen_tagging_limit_decid",
+      "title": "Regen Tagging Limit Deciduous",
+      "type": "number",
+      "constraints": {
+        "minimum": 0.10,
+        "maximum": 1.30,
+        "pattern": "/^[0-9].[0-9]{2}$/"
+      }
+    },
+    {
+      "name": "number_regen_plots",
+      "title": "Number of Regen Plots",
+      "type": "integer",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "minimum": 0,
+        "maximum": 10
+      }
+    },
+    {
+      "name": "contractor",
+      "title": "Contractor",
+      "type": "string",
+      "constraints": {
+        "maxLength": 50
+      }
+    },
+    {
+      "name": "cruiser_1_name",
+      "title": "Cruiser 1 Name",
+      "type": "string",
+      "constraints": {
+        "maxLength": 25
+      }
+    },
+    {
+      "name": "cruiser_2_name",
+      "title": "Cruiser 2 Name",
+      "type": "string",
+      "constraints": {
+        "maxLength": 25
+      }
+    },
+    {
+      "name": "shrub_cover",
+      "title": "Shrub Cover",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)$/"
+      }
+    },
+    {
+      "name": "herb_forb_cover",
+      "title": "Herb/Forb Cover",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)$/"
+      }
+    },
+    {
+      "name": "grass_cover",
+      "title": "Grass Cover",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)$/"
+      }
+    },
+    {
+      "name": "moss_lichen_cover",
+      "title": "Moss/Lichen Cover",
+      "type": "integer",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)$/"
+      }
+    },
+    {
+      "name": "avi_field_call",
+      "title": "AVI Field Call",
+      "type": "string",
+      "raises": "warning",
+      "constraints": {
+        "required": true,
+        "maxLength": 80
+      }
+    },
+    {
+      "name": "plot_measurement_comment",
+      "title": "Plot Measurement Comment",
+      "type": "string",
+      "constraints": {
+        "maxLength": 250
+      }
+    }
+  ],
   "primaryKey": [
     "company",
     "company_plot_number",

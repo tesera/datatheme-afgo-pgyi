@@ -1,117 +1,111 @@
 {
-  "name": "trees",
-  "title": "Trees",
-  "path": "trees.csv",
-  "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/trees.awk",
-  "schema": {
-    "fields": [
-      {
-        "name": "company",
-        "title": "Company",
-        "type": "string",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(AINS|ALPC|ANC|APLY|BLUE|CFPL|CFS|DAIS|FOFP|GOA|HPFP|HLFP|MDFP|MWWC|SFPI|SLPC|SPRA|SUND|TOLK|TOSL|UNKN|UOA|VAND|WFML|WYGP|WYPM)$/"
-        }
-      },
-      {
-        "name": "company_plot_number",
-        "title": "Company Plot Number",
-        "type": "string",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "maxLength": 15
-        }
-      },
-      {
-        "name": "tree_number",
-        "title": "Tree Number",
-        "type": "integer",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "minimum": 0,
-          "maximum": 9999999
-        }
-      },
-      {
-        "name": "tree_label",
-        "title": "Tree Label",
-        "type": "string",
-        "constraints": {
-          "maxLength": 15
-        }
-      },
-      {
-        "name": "tree_location_id",
-        "title": "Tree Location Id",
-        "type": "integer",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(0|1|2|3)$/"
-        }
-      },
-      {
-        "name": "tree_origin",
-        "title": "Tree Origin",
-        "type": "integer",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(0|1|2|3|4|5|6|7|8|9|10)$/"
-        }
-      },
-      {
-        "name": "sector_or_quarter",
-        "title": "Sector Or Quarter",
-        "type": "string",
-        "constraints": {
-          "maxLength": 2
-        }
-      },
-      {
-        "name": "species",
-        "title": "Species",
-        "type": "string",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(A|Aw|Ax|Bw|Dc|Dd|Du|Fa|Fb|Fd|La|Ls|Lt|Lw|Ms|P|Pa|Pb|Pf|Pj|Pl|Pw|Px|Sb|Se|Sw|Sx|No)$/"
-        }
-      },
-      {
-        "name": "distance",
-        "title": "Distance",
-        "type": "number",
-        "constraints": {
-          "minimum": 0.01,
-          "maximum": 100.00,
-          "pattern": "/[0-9]*\\.[0-9]{2}/"
-        }
-      },
-      {
-        "name": "azimuth",
-        "title": "Azimuth",
-        "type": "number",
-        "constraints": {
-          "minimum": 0.0,
-          "maximum": 360.0,
-          "pattern": "/[0-9]*\\.[0-9]{1}/"
-        }
-      },
-      {
-        "name": "trees_comment",
-        "title": "Trees Comment",
-        "type": "string",
-        "constraints": {
-          "maxLength": 250
-        }
+  "fields": [
+    {
+      "name": "company",
+      "title": "Company",
+      "type": "string",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(AINS|ALPC|ANC|APLY|BLUE|CFPL|CFS|DAIS|FOFP|GOA|HPFP|HLFP|MDFP|MWWC|SFPI|SLPC|SPRA|SUND|TOLK|TOSL|UNKN|UOA|VAND|WFML|WYGP|WYPM)$/"
       }
-    ]
-  },
+    },
+    {
+      "name": "company_plot_number",
+      "title": "Company Plot Number",
+      "type": "string",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "maxLength": 15
+      }
+    },
+    {
+      "name": "tree_number",
+      "title": "Tree Number",
+      "type": "integer",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "minimum": 0,
+        "maximum": 9999999
+      }
+    },
+    {
+      "name": "tree_label",
+      "title": "Tree Label",
+      "type": "string",
+      "constraints": {
+        "maxLength": 15
+      }
+    },
+    {
+      "name": "tree_location_id",
+      "title": "Tree Location Id",
+      "type": "integer",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(0|1|2|3)$/"
+      }
+    },
+    {
+      "name": "tree_origin",
+      "title": "Tree Origin",
+      "type": "integer",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(0|1|2|3|4|5|6|7|8|9|10)$/"
+      }
+    },
+    {
+      "name": "sector_or_quarter",
+      "title": "Sector Or Quarter",
+      "type": "string",
+      "constraints": {
+        "maxLength": 2
+      }
+    },
+    {
+      "name": "species",
+      "title": "Species",
+      "type": "string",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(A|Aw|Ax|Bw|Dc|Dd|Du|Fa|Fb|Fd|La|Ls|Lt|Lw|Ms|P|Pa|Pb|Pf|Pj|Pl|Pw|Px|Sb|Se|Sw|Sx|No)$/"
+      }
+    },
+    {
+      "name": "distance",
+      "title": "Distance",
+      "type": "number",
+      "constraints": {
+        "minimum": 0.01,
+        "maximum": 100.00,
+        "pattern": "/^[0-9]*.[0-9]{2}$/"
+      }
+    },
+    {
+      "name": "azimuth",
+      "title": "Azimuth",
+      "type": "number",
+      "constraints": {
+        "minimum": 0.0,
+        "maximum": 360.0,
+        "pattern": "/^[0-9]*.[0-9]{1}$/"
+      }
+    },
+    {
+      "name": "trees_comment",
+      "title": "Trees Comment",
+      "type": "string",
+      "constraints": {
+        "maxLength": 250
+      }
+    }
+  ],
   "primaryKey": [
     "company",
     "company_plot_number",

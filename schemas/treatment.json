@@ -1,88 +1,82 @@
 {
-  "name": "treatment",
-  "title": "Treatment",
-  "path": "treatment.csv",
-  "validator": "http://s3.amazonaws.com/tesera.dataprofiles/dev.afgo.pgyi/awk/treatment.awk",
-  "schema": {
-    "fields": [
-      {
-        "name": "company",
-        "title": "Company",
-        "type": "string",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(AINS|ALPC|ANC|APLY|BLUE|CFPL|CFS|DAIS|FOFP|GOA|HPFP|HLFP|MDFP|MWWC|SFPI|SLPC|SPRA|SUND|TOLK|TOSL|UNKN|UOA|VAND|WFML|WYGP|WYPM)$/"
-        }
-      },
-      {
-        "name": "company_plot_number",
-        "title": "Company Plot Number",
-        "type": "string",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "maxLength": 15
-        }
-      },
-      {
-        "name": "treatment_number",
-        "title": "Treatment Number",
-        "type": "integer",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "minimum": 1,
-          "maximum": 12
-        }
-      },
-      {
-        "name": "treatment_code",
-        "title": "Treatment Code",
-        "type": "string",
-        "raises": "error",
-        "constraints": {
-          "required": true,
-          "pattern": "/^(B|C|CT|D|F|FI|H|M|NK|NT|P|PC|S|SA|SM|TH|TW|UP|UA)$/"
-        }
-      },
-      {
-        "name": "treatment_year",
-        "title": "Treatment Year",
-        "type": "integer",
-        "constraints": {
-          "minimum": 1900,
-          "maximum": 2050
-        }
-      },
-      {
-        "name": "treatment_month",
-        "title": "Treatment Month",
-        "type": "integer",
-        "constraints": {
-          "minimum": 1,
-          "maximum": 12
-        }
-      },
-      {
-        "name": "treatment_day",
-        "title": "Treatment Day",
-        "type": "integer",
-        "constraints": {
-          "minimum": 1,
-          "maximum": 31
-        }
-      },
-      {
-        "name": "treatment_comment",
-        "title": "Treatment Comment",
-        "type": "string",
-        "constraints": {
-          "maxLength": 250
-        }
+  "fields": [
+    {
+      "name": "company",
+      "title": "Company",
+      "type": "string",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(AINS|ALPC|ANC|APLY|BLUE|CFPL|CFS|DAIS|FOFP|GOA|HPFP|HLFP|MDFP|MWWC|SFPI|SLPC|SPRA|SUND|TOLK|TOSL|UNKN|UOA|VAND|WFML|WYGP|WYPM)$/"
       }
-    ]
-  },
+    },
+    {
+      "name": "company_plot_number",
+      "title": "Company Plot Number",
+      "type": "string",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "maxLength": 15
+      }
+    },
+    {
+      "name": "treatment_number",
+      "title": "Treatment Number",
+      "type": "integer",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "minimum": 1,
+        "maximum": 12
+      }
+    },
+    {
+      "name": "treatment_code",
+      "title": "Treatment Code",
+      "type": "string",
+      "raises": "error",
+      "constraints": {
+        "required": true,
+        "pattern": "/^(B|C|CT|D|F|FI|H|M|NK|NT|P|PC|S|SA|SM|TH|TW|UP|UA)$/"
+      }
+    },
+    {
+      "name": "treatment_year",
+      "title": "Treatment Year",
+      "type": "integer",
+      "constraints": {
+        "minimum": 1900,
+        "maximum": 2050
+      }
+    },
+    {
+      "name": "treatment_month",
+      "title": "Treatment Month",
+      "type": "integer",
+      "constraints": {
+        "minimum": 1,
+        "maximum": 12
+      }
+    },
+    {
+      "name": "treatment_day",
+      "title": "Treatment Day",
+      "type": "integer",
+      "constraints": {
+        "minimum": 1,
+        "maximum": 31
+      }
+    },
+    {
+      "name": "treatment_comment",
+      "title": "Treatment Comment",
+      "type": "string",
+      "constraints": {
+        "maxLength": 250
+      }
+    }
+  ],
   "primaryKey": [
     "company",
     "company_plot_number",
