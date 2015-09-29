@@ -38,3 +38,9 @@ $ cat datatheme.json
 ````
 $ node ./build.js > datapackage.json
 ````
+
+#####Options:
+````
+node ./build.js <datatheme_name>
+node ./build.js dev.afgo.pgyi
+````
