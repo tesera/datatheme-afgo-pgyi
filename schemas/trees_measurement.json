@@ -192,7 +192,9 @@
       "name": "cause1",
       "title": "Cause 1",
       "type": "integer",
+      "raises": "error",
       "constraints": {
+        "required": true,      
         "pattern": "/^(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|99)$/"
       }
     },
@@ -200,7 +202,9 @@
       "name": "severity1",
       "title": "Severity 1",
       "type": "integer",
+      "raises": "error",      
       "constraints": {
+        "required": true,           
         "pattern": "/^(1|2|3|9)$/"
       }
     },
