@@ -101,7 +101,7 @@
       "constraints": {
         "required": true,
         "minimum": 1,
-        "maximum": 26
+        "maximum": 30
       }
     },
     {
